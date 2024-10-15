@@ -1,0 +1,151 @@
+{
+  "entityType" : "DEVICE_PROFILE",
+  "entity" : {
+    "default" : false,
+    "defaultDashboardId" : {
+      "entityType" : "DASHBOARD",
+      "id" : "2c141860-8b25-11ef-a3bd-0f61fe9e8422"
+    },
+    "defaultEdgeRuleChainId" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "2c0e7310-8b25-11ef-a3bd-0f61fe9e8422"
+    },
+    "defaultQueueName" : "HighPriority",
+    "defaultRuleChainId" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "d751fc60-8b25-11ef-a3bd-0f61fe9e8422"
+    },
+    "description" : "This is Body Temperature Device Profile.",
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "161878f0-8b28-11ef-a3bd-0f61fe9e8422"
+    },
+    "image" : null,
+    "name" : "Body Temperature Device Profile",
+    "profileData" : {
+      "alarms" : [ {
+        "alarmType" : "Elevated Body Temperature Warning",
+        "clearRule" : null,
+        "createRules" : {
+          "WARNING" : {
+            "alarmDetails" : "Elevated Body Temperature Warning, Body Temperature is ${bodyTemperature}.",
+            "condition" : {
+              "condition" : [ {
+                "key" : {
+                  "key" : "bodyTemperature",
+                  "type" : "TIME_SERIES"
+                },
+                "predicate" : {
+                  "type" : "COMPLEX",
+                  "operation" : "AND",
+                  "predicates" : [ {
+                    "type" : "NUMERIC",
+                    "operation" : "GREATER",
+                    "value" : {
+                      "defaultValue" : 37.5,
+                      "dynamicValue" : null,
+                      "userValue" : null
+                    }
+                  }, {
+                    "type" : "NUMERIC",
+                    "operation" : "LESS_OR_EQUAL",
+                    "value" : {
+                      "defaultValue" : 38.5,
+                      "dynamicValue" : null,
+                      "userValue" : null
+                    }
+                  } ]
+                },
+                "value" : null,
+                "valueType" : "NUMERIC"
+              } ],
+              "spec" : {
+                "type" : "SIMPLE"
+              }
+            },
+            "dashboardId" : {
+              "entityType" : "DASHBOARD",
+              "id" : "2c141860-8b25-11ef-a3bd-0f61fe9e8422"
+            },
+            "schedule" : null
+          }
+        },
+        "id" : "02a5c705-06da-7912-0380-e0514195c87c",
+        "propagate" : false,
+        "propagateRelationTypes" : null,
+        "propagateToOwner" : false,
+        "propagateToTenant" : false
+      }, {
+        "alarmType" : "Critical Body Temperature Alarm",
+        "clearRule" : null,
+        "createRules" : {
+          "CRITICAL" : {
+            "alarmDetails" : "Critical Body Temperature Alarm, Body Temperature is ${bodyTemperature}.",
+            "condition" : {
+              "condition" : [ {
+                "key" : {
+                  "key" : "bodyTemperature",
+                  "type" : "TIME_SERIES"
+                },
+                "predicate" : {
+                  "type" : "NUMERIC",
+                  "operation" : "GREATER",
+                  "value" : {
+                    "defaultValue" : 38.5,
+                    "dynamicValue" : null,
+                    "userValue" : null
+                  }
+                },
+                "value" : null,
+                "valueType" : "NUMERIC"
+              } ],
+              "spec" : {
+                "type" : "SIMPLE"
+              }
+            },
+            "dashboardId" : {
+              "entityType" : "DASHBOARD",
+              "id" : "2c141860-8b25-11ef-a3bd-0f61fe9e8422"
+            },
+            "schedule" : null
+          }
+        },
+        "id" : "8740cebd-8def-88af-622a-03f6f0025642",
+        "propagate" : false,
+        "propagateRelationTypes" : null,
+        "propagateToOwner" : false,
+        "propagateToTenant" : false
+      } ],
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "provisionConfiguration" : {
+        "type" : "ALLOW_CREATE_NEW_DEVICES",
+        "provisionDeviceSecret" : "itrr57r3lhs8sgw5xwbp"
+      },
+      "transportConfiguration" : {
+        "type" : "MQTT",
+        "deviceAttributesSubscribeTopic" : "v1/devices/me/attributes",
+        "deviceAttributesTopic" : "v1/devices/me/attributes",
+        "deviceTelemetryTopic" : "v1/devices/me/telemetry",
+        "sendAckOnValidationException" : false,
+        "sparkplug" : false,
+        "sparkplugAttributesMetricNames" : [ "Properties/*", "Device Control/*", "Node Control/*" ],
+        "transportPayloadTypeConfiguration" : {
+          "transportPayloadType" : "JSON"
+        }
+      }
+    },
+    "provisionDeviceKey" : "ifamx2xt7fgtdlqtpopr",
+    "provisionType" : "ALLOW_CREATE_NEW_DEVICES",
+    "softwareId" : null,
+    "transportType" : "MQTT",
+    "type" : "DEFAULT"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

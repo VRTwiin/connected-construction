@@ -1,0 +1,151 @@
+{
+  "entityType" : "DEVICE_PROFILE",
+  "entity" : {
+    "default" : false,
+    "defaultDashboardId" : {
+      "entityType" : "DASHBOARD",
+      "id" : "2c141860-8b25-11ef-a3bd-0f61fe9e8422"
+    },
+    "defaultEdgeRuleChainId" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "2c0e7310-8b25-11ef-a3bd-0f61fe9e8422"
+    },
+    "defaultQueueName" : "HighPriority",
+    "defaultRuleChainId" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "df507ea0-8b25-11ef-a3bd-0f61fe9e8422"
+    },
+    "description" : "This is Temperature Device Profile.",
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "6fccc190-8b27-11ef-a3bd-0f61fe9e8422"
+    },
+    "image" : null,
+    "name" : "Temperature Device Profile",
+    "profileData" : {
+      "alarms" : [ {
+        "alarmType" : "High Temperature Warning",
+        "clearRule" : null,
+        "createRules" : {
+          "WARNING" : {
+            "alarmDetails" : "High Temperature Warning, Temperature is ${temperature}.",
+            "condition" : {
+              "condition" : [ {
+                "key" : {
+                  "key" : "temperature",
+                  "type" : "TIME_SERIES"
+                },
+                "predicate" : {
+                  "type" : "COMPLEX",
+                  "operation" : "AND",
+                  "predicates" : [ {
+                    "type" : "NUMERIC",
+                    "operation" : "GREATER",
+                    "value" : {
+                      "defaultValue" : 30.0,
+                      "dynamicValue" : null,
+                      "userValue" : null
+                    }
+                  }, {
+                    "type" : "NUMERIC",
+                    "operation" : "LESS_OR_EQUAL",
+                    "value" : {
+                      "defaultValue" : 35.0,
+                      "dynamicValue" : null,
+                      "userValue" : null
+                    }
+                  } ]
+                },
+                "value" : null,
+                "valueType" : "NUMERIC"
+              } ],
+              "spec" : {
+                "type" : "SIMPLE"
+              }
+            },
+            "dashboardId" : {
+              "entityType" : "DASHBOARD",
+              "id" : "2c141860-8b25-11ef-a3bd-0f61fe9e8422"
+            },
+            "schedule" : null
+          }
+        },
+        "id" : "e93f226b-e382-a201-c611-bcf51298b451",
+        "propagate" : false,
+        "propagateRelationTypes" : null,
+        "propagateToOwner" : false,
+        "propagateToTenant" : false
+      }, {
+        "alarmType" : "Critical Temperature Alarm",
+        "clearRule" : null,
+        "createRules" : {
+          "CRITICAL" : {
+            "alarmDetails" : "Critical Temperature Alarm, Temperature is ${temperature}.",
+            "condition" : {
+              "condition" : [ {
+                "key" : {
+                  "key" : "temperature",
+                  "type" : "TIME_SERIES"
+                },
+                "predicate" : {
+                  "type" : "NUMERIC",
+                  "operation" : "GREATER",
+                  "value" : {
+                    "defaultValue" : 35.0,
+                    "dynamicValue" : null,
+                    "userValue" : null
+                  }
+                },
+                "value" : null,
+                "valueType" : "NUMERIC"
+              } ],
+              "spec" : {
+                "type" : "SIMPLE"
+              }
+            },
+            "dashboardId" : {
+              "entityType" : "DASHBOARD",
+              "id" : "2c141860-8b25-11ef-a3bd-0f61fe9e8422"
+            },
+            "schedule" : null
+          }
+        },
+        "id" : "9a820e8f-cd55-78f8-e9bd-12710b73ff4e",
+        "propagate" : false,
+        "propagateRelationTypes" : null,
+        "propagateToOwner" : false,
+        "propagateToTenant" : false
+      } ],
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "provisionConfiguration" : {
+        "type" : "ALLOW_CREATE_NEW_DEVICES",
+        "provisionDeviceSecret" : "74rjh4o3yobqnfivxcql"
+      },
+      "transportConfiguration" : {
+        "type" : "MQTT",
+        "deviceAttributesSubscribeTopic" : "v1/devices/me/attributes",
+        "deviceAttributesTopic" : "v1/devices/me/attributes",
+        "deviceTelemetryTopic" : "v1/devices/me/telemetry",
+        "sendAckOnValidationException" : false,
+        "sparkplug" : false,
+        "sparkplugAttributesMetricNames" : [ "Properties/*", "Device Control/*", "Node Control/*" ],
+        "transportPayloadTypeConfiguration" : {
+          "transportPayloadType" : "JSON"
+        }
+      }
+    },
+    "provisionDeviceKey" : "izt5q3c2sx7pdx1h29we",
+    "provisionType" : "ALLOW_CREATE_NEW_DEVICES",
+    "softwareId" : null,
+    "transportType" : "MQTT",
+    "type" : "DEFAULT"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

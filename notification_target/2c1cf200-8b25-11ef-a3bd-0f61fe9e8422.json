@@ -1,0 +1,24 @@
+{
+  "entityType" : "NOTIFICATION_TARGET",
+  "entity" : {
+    "configuration" : {
+      "type" : "PLATFORM_USERS",
+      "description" : "Tenant administrators",
+      "usersFilter" : {
+        "type" : "TENANT_ADMINISTRATORS",
+        "tenantProfilesIds" : null,
+        "tenantsIds" : null
+      }
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "NOTIFICATION_TARGET",
+      "id" : "2c1cf200-8b25-11ef-a3bd-0f61fe9e8422"
+    },
+    "name" : "Tenant administrators"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}
