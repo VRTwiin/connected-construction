@@ -1,0 +1,75 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "gateway" : false,
+      "overwriteActivityTime" : false,
+      "description" : "CCTV 02 for Site B"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "d0ed9e70-9141-11ef-a3bd-0f61fe9e8422"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "2ecf6eb0-9142-11ef-a3bd-0f61fe9e8422"
+    },
+    "label" : "",
+    "name" : "CCTV 02",
+    "softwareId" : null,
+    "type" : "CCTV"
+  },
+  "credentials" : {
+    "credentialsId" : "mNpuq4V2RqYDxOBIWV2F",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "cebeb7e0-913e-11ef-a3bd-0f61fe9e8422"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "2ecf6eb0-9142-11ef-a3bd-0f61fe9e8422"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 689
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1729690504711,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1729690504711,
+      "longValue" : 1729690504710,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ ]
+  }
+}

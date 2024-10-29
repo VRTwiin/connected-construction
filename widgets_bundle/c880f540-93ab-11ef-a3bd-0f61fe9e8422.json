@@ -1,0 +1,22 @@
+{
+  "entityType" : "WIDGETS_BUNDLE",
+  "entity" : {
+    "alias" : "biulding",
+    "description" : "",
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGETS_BUNDLE",
+      "id" : "c880f540-93ab-11ef-a3bd-0f61fe9e8422"
+    },
+    "image" : "",
+    "name" : "Biulding",
+    "order" : null,
+    "scada" : false,
+    "title" : "Biulding"
+  },
+  "fqns" : [ "building_fill_indicator2", "3_building_stock", "alarm_table2", "static", "matin_chart2" ],
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

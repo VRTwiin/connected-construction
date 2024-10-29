@@ -1,0 +1,39 @@
+{
+  "entityType" : "WIDGET_TYPE",
+  "entity" : {
+    "fqn" : "alerts_test",
+    "name" : "Alerts test",
+    "deprecated" : false,
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "alarm",
+      "sizeX" : 10.5,
+      "sizeY" : 6.5,
+      "resources" : [ {
+        "url" : "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+      } ],
+      "templateHtml" : "<canvas id=\"alertsBarChart\"></canvas>\r\n",
+      "templateCss" : "canvas {\r\n    width: 100%;\r\n    height: 400px;\r\n}\r\n",
+      "controllerScript" : "var myBarChart;\r\n\r\nself.onInit = function() {\r\n    // Define the data for the chart\r\n    var chartData = {\r\n        labels: ['Fall Prevention', 'Fire', 'Caught Detection', 'Out of Geofence', 'Free Fall', 'SOS'],\r\n        datasets: [\r\n            {\r\n                label: 'Open',\r\n                backgroundColor: '#ff7043',  // Orange for \"Open\" alerts\r\n                data: [4, 7, 55, 172, 0, 6]  // Open alert counts\r\n            },\r\n            {\r\n                label: 'Assigned Open',\r\n                backgroundColor: '#29b6f6',  // Blue for \"Assigned Open\" alerts\r\n                data: [0, 0, 0, 112, 0, 0]  // Assigned Open alert counts\r\n            },\r\n            {\r\n                label: 'Resolved',\r\n                backgroundColor: '#66bb6a',  // Green for \"Resolved\" alerts\r\n                data: [0, 0, 55, 212, 0, 0]  // Resolved alert counts\r\n            }\r\n        ]\r\n    };\r\n\r\n    // Chart.js options\r\n    var options = {\r\n        maintainAspectRatio: false,\r\n        scales: {\r\n            xAxes: [{\r\n                stacked: true,  // Stack the bars\r\n                ticks: {\r\n                    beginAtZero: true\r\n                }\r\n            }],\r\n            yAxes: [{\r\n                stacked: true  // Stack the bars on the Y-axis as well\r\n            }]\r\n        },\r\n        legend: {\r\n            position: 'bottom',  // Legend at the bottom\r\n            labels: {\r\n                fontColor: '#333'\r\n            }\r\n        },\r\n        title: {\r\n            display: true,\r\n            text: 'Alerts Status Count by Category',\r\n            fontSize: 16,\r\n            fontColor: '#333'\r\n        }\r\n    };\r\n\r\n    // Select the canvas element and create the chart\r\n    var canvasElement = $('#alertsBarChart', self.ctx.$container)[0];\r\n    var canvasCtx = canvasElement.getContext('2d');\r\n    myBarChart = new Chart(canvasCtx, {\r\n        type: 'horizontalBar',  // Use horizontal bar chart type\r\n        data: chartData,\r\n        options: options\r\n    });\r\n    \r\n    // Resize when needed\r\n    self.onResize();\r\n};\r\n\r\nself.onResize = function() {\r\n    myBarChart.resize();\r\n};\r\n\r\n// If you want to update data dynamically (e.g., with telemetry data)\r\nself.onDataUpdated = function() {\r\n    // Example for updating the chart dynamically if needed\r\n    myBarChart.update();\r\n};\r\n",
+      "settingsSchema" : "",
+      "dataKeySettingsSchema" : "",
+      "settingsDirective" : "tb-alarms-table-widget-settings",
+      "dataKeySettingsDirective" : "tb-alarms-table-key-settings",
+      "hasBasicMode" : true,
+      "basicModeDirective" : "tb-alarms-table-basic-config",
+      "defaultConfig" : "{\"timewindow\":{\"realtime\":{\"interval\":1000,\"timewindowMs\":86400000},\"aggregation\":{\"type\":\"NONE\",\"limit\":200}},\"showTitle\":true,\"backgroundColor\":\"rgb(255, 255, 255)\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"4px\",\"settings\":{\"enableSelection\":true,\"enableSearch\":true,\"displayDetails\":true,\"allowAcknowledgment\":true,\"allowClear\":true,\"allowAssign\":true,\"displayActivity\":true,\"displayPagination\":true,\"defaultPageSize\":10,\"defaultSortOrder\":\"-createdTime\",\"enableSelectColumnDisplay\":true,\"enableStickyAction\":false,\"enableFilter\":true,\"entitiesTitle\":null,\"alarmsTitle\":\"Alarms\"},\"title\":\"Alerts test\",\"dropShadow\":true,\"enableFullscreen\":true,\"titleStyle\":{\"fontSize\":\"16px\",\"fontWeight\":400,\"padding\":\"5px 10px 5px 10px\"},\"useDashboardTimewindow\":false,\"showLegend\":false,\"alarmSource\":{\"type\":\"function\",\"dataKeys\":[{\"name\":\"createdTime\",\"type\":\"alarm\",\"label\":\"Created time\",\"color\":\"#2196f3\",\"settings\":{\"useCellStyleFunction\":false,\"cellStyleFunction\":\"\",\"useCellContentFunction\":false,\"cellContentFunction\":\"\"},\"_hash\":0.021092237451093787},{\"name\":\"originator\",\"type\":\"alarm\",\"label\":\"Originator\",\"color\":\"#4caf50\",\"settings\":{\"useCellStyleFunction\":false,\"cellStyleFunction\":\"\",\"useCellContentFunction\":false,\"cellContentFunction\":\"\"},\"_hash\":0.2780007688856758},{\"name\":\"type\",\"type\":\"alarm\",\"label\":\"Type\",\"color\":\"#f44336\",\"settings\":{\"useCellStyleFunction\":false,\"cellStyleFunction\":\"\",\"useCellContentFunction\":false,\"cellContentFunction\":\"\"},\"_hash\":0.7323586880398418},{\"name\":\"severity\",\"type\":\"alarm\",\"label\":\"Severity\",\"color\":\"#ffc107\",\"settings\":{\"useCellStyleFunction\":false,\"useCellContentFunction\":false},\"_hash\":0.09927019860088193},{\"name\":\"status\",\"type\":\"alarm\",\"label\":\"Status\",\"color\":\"#607d8b\",\"settings\":{\"useCellStyleFunction\":false,\"cellStyleFunction\":\"\",\"useCellContentFunction\":false,\"cellContentFunction\":\"\"},\"_hash\":0.6588418951443418},{\"name\":\"assignee\",\"type\":\"alarm\",\"label\":\"Assignee\",\"color\":\"#9c27b0\",\"settings\":{},\"_hash\":0.5008441077416634}],\"entityAliasId\":null,\"name\":\"alarms\"},\"alarmSearchStatus\":\"ANY\",\"alarmsPollingInterval\":5,\"showTitleIcon\":false,\"titleIcon\":\"warning\",\"iconColor\":\"rgba(0, 0, 0, 0.87)\",\"iconSize\":\"24px\",\"titleTooltip\":\"\",\"widgetStyle\":{},\"displayTimewindow\":true,\"actions\":{},\"alarmStatusList\":[],\"alarmSeverityList\":[],\"alarmTypeList\":[],\"searchPropagatedAlarms\":false,\"configMode\":\"basic\",\"alarmFilterConfig\":null}"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "8e1271f0-92c9-11ef-a3bd-0f61fe9e8422"
+    },
+    "scada" : false,
+    "tags" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

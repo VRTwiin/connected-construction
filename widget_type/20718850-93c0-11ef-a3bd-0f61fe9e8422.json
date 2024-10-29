@@ -1,0 +1,34 @@
+{
+  "entityType" : "WIDGET_TYPE",
+  "entity" : {
+    "fqn" : "alarm_table2",
+    "name" : "Alarm Table",
+    "deprecated" : false,
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "static",
+      "sizeX" : 10,
+      "sizeY" : 3.5,
+      "resources" : [ ],
+      "templateHtml" : "<div class=\"custom-widget\">\r\n    <table id=\"staticDataTable\">\r\n        <thead>\r\n            <tr>\r\n                <th>Alarm ID</th>\r\n                <th>Alarm Severity</th>\r\n                <th>Building</th>\r\n                <th>Alarm Detail</th>\r\n            </tr>\r\n        </thead>\r\n        <tbody id=\"staticDataBody\">\r\n            <tr>\r\n                <td>001</td>\r\n                <td>Critical</td>\r\n                <td>Building A</td>\r\n                <td>D100 materials are exhausted.</td>\r\n            </tr>\r\n            <tr>\r\n                <td>002</td>\r\n                <td>Warning</td>\r\n                <td>Building C</td>\r\n                <td>Building inventory is running out.</td>\r\n            </tr>\r\n            <tr>\r\n                <td>003</td>\r\n                <td>Info</td>\r\n                <td>Building B</td>\r\n                <td>C100 material capacity is full.</td>\r\n            </tr>\r\n        </tbody>\r\n    </table>\r\n</div>\r\n",
+      "templateCss" : ".custom-widget {\r\n    font-family: Arial, sans-serif;\r\n    margin: 20px;\r\n    overflow-x: auto; /* Enables horizontal scrolling on smaller screens */\r\n}\r\n\r\n#staticDataTable {\r\n    width: 100%; /* Table takes full width of its container */\r\n    border-collapse: collapse;\r\n    table-layout: auto; /* Allows the table to resize dynamically */\r\n}\r\n\r\n#staticDataTable th, #staticDataTable td {\r\n    border: 1px solid #ddd;\r\n    padding: 8px;\r\n    text-align: left;\r\n}\r\n\r\n#staticDataTable th {\r\n    background-color: #f2f2f2;\r\n}\r\n\r\n/* Optional: Media queries for smaller screens */\r\n@media (max-width: 600px) {\r\n    #staticDataTable th, #staticDataTable td {\r\n        padding: 5px; /* Adjust padding for smaller screens */\r\n        font-size: 14px; /* Smaller font size */\r\n    }\r\n}\r\n",
+      "controllerScript" : "// Placeholder for any future interactivity\r\ndocument.addEventListener('DOMContentLoaded', function() {\r\n    // You can add any future JavaScript functionality here\r\n});\r\n",
+      "settingsSchema" : "",
+      "dataKeySettingsSchema" : "",
+      "settingsDirective" : "tb-html-card-widget-settings",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"static\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":false,\"backgroundColor\":\"rgb(255, 255, 255)\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{\"cardHtml\":\"<div class='card'>HTML code here</div>\",\"cardCss\":\".card {\\n    font-weight: bold;\\n    font-size: 32px;\\n    color: #999;\\n    width: 100%;\\n    height: 100%;\\n    display: flex;\\n    align-items: center;\\n    justify-content: center;\\n}\"},\"title\":\"Alarm Table\",\"dropShadow\":true}"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "20718850-93c0-11ef-a3bd-0f61fe9e8422"
+    },
+    "scada" : false,
+    "tags" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

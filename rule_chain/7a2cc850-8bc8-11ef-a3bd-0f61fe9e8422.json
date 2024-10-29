@@ -2,20 +2,20 @@
   "entityType" : "RULE_CHAIN",
   "entity" : {
     "additionalInfo" : {
-      "description" : "This is Temperature Rule Chain."
+      "description" : "This is CO2 Rule Chain."
     },
     "configuration" : null,
     "debugMode" : false,
     "externalId" : null,
     "firstRuleNodeId" : {
       "entityType" : "RULE_NODE",
-      "id" : "df573560-8b25-11ef-a3bd-0f61fe9e8422"
+      "id" : "8676d6f0-8bc8-11ef-a3bd-0f61fe9e8422"
     },
     "id" : {
       "entityType" : "RULE_CHAIN",
-      "id" : "df507ea0-8b25-11ef-a3bd-0f61fe9e8422"
+      "id" : "7a2cc850-8bc8-11ef-a3bd-0f61fe9e8422"
     },
-    "name" : "Temperature Rule Chain",
+    "name" : "CO2 Rule Chain",
     "root" : false,
     "type" : "CORE"
   },
@@ -54,7 +54,7 @@
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "return msg.temperature !== undefined",
+        "jsScript" : "return msg.carbonDioxideLevel !== undefined",
         "tbelScript" : "return msg.temperature > 20;"
       },
       "configurationVersion" : 0,
@@ -63,7 +63,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "df56e740-8b25-11ef-a3bd-0f61fe9e8422"
+        "id" : "867688d0-8bc8-11ef-a3bd-0f61fe9e8422"
       },
       "name" : "validation",
       "queueName" : null,
@@ -72,8 +72,8 @@
       "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
     }, {
       "additionalInfo" : {
-        "layoutX" : 875,
-        "layoutY" : 308
+        "layoutX" : 955,
+        "layoutY" : 492
       },
       "configuration" : {
         "defaultTTL" : 0
@@ -84,7 +84,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "df570e50-8b25-11ef-a3bd-0f61fe9e8422"
+        "id" : "8676afe0-8bc8-11ef-a3bd-0f61fe9e8422"
       },
       "name" : "Save Timeseries",
       "queueName" : null,
@@ -93,8 +93,8 @@
       "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
     }, {
       "additionalInfo" : {
-        "layoutX" : 520,
-        "layoutY" : 221
+        "layoutX" : 576,
+        "layoutY" : 348
       },
       "configuration" : {
         "version" : 0
@@ -105,7 +105,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "df570e51-8b25-11ef-a3bd-0f61fe9e8422"
+        "id" : "8676afe1-8bc8-11ef-a3bd-0f61fe9e8422"
       },
       "name" : "Message Type Switch",
       "queueName" : null,
@@ -115,8 +115,8 @@
     }, {
       "additionalInfo" : {
         "description" : "Process incoming messages from devices with the alarm rules defined in the device profile. Dispatch all incoming messages with \"Success\" relation type.",
-        "layoutX" : 180,
-        "layoutY" : 288
+        "layoutX" : 295,
+        "layoutY" : 348
       },
       "configuration" : {
         "persistAlarmRulesState" : false,
@@ -128,7 +128,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "df573560-8b25-11ef-a3bd-0f61fe9e8422"
+        "id" : "8676d6f0-8bc8-11ef-a3bd-0f61fe9e8422"
       },
       "name" : "Device Profile Node",
       "queueName" : null,
@@ -144,7 +144,7 @@
       "configuration" : {
         "botToken" : "xoxb-",
         "useSystemSettings" : true,
-        "messageTemplate" : "Check Temperature Alarms!",
+        "messageTemplate" : "Check CO2 Alarms!",
         "conversationType" : "PUBLIC_CHANNEL",
         "conversation" : {
           "type" : "PUBLIC_CHANNEL",
@@ -161,7 +161,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "8ba6eed0-8b37-11ef-a3bd-0f61fe9e8422"
+        "id" : "8676d6f1-8bc8-11ef-a3bd-0f61fe9e8422"
       },
       "name" : "Alarm Notifs",
       "queueName" : null,

@@ -1,0 +1,29 @@
+{
+  "entityType" : "CUSTOMER",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : "",
+      "homeDashboardId" : null,
+      "homeDashboardHideToolbar" : true
+    },
+    "address" : "Ünalan, Libadiye Cd. No: 80 G Blok, 34700 Üsküdar/İstanbul, Türkiye",
+    "address2" : null,
+    "city" : "İstanbul",
+    "country" : null,
+    "email" : "Info.ADISH@addresshotels.com",
+    "externalId" : null,
+    "id" : {
+      "entityType" : "CUSTOMER",
+      "id" : "4a70b610-8e3b-11ef-a3bd-0f61fe9e8422"
+    },
+    "name" : "Turkish Co.",
+    "phone" : "+902162851111",
+    "state" : "İstanbul",
+    "title" : "Turkish Co.",
+    "zip" : "34000"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

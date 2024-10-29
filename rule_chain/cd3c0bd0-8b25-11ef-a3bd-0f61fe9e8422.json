@@ -32,6 +32,18 @@
       "fromIndex" : 3,
       "toIndex" : 2,
       "type" : "Success"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 4,
+      "type" : "Alarm Created"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 4,
+      "type" : "Alarm Severity Updated"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 4,
+      "type" : "Alarm Updated"
     } ],
     "firstNodeIndex" : 3,
     "nodes" : [ {
@@ -123,6 +135,39 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.profile.TbDeviceProfileNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "This is Alarm Notifs.",
+        "layoutX" : 185,
+        "layoutY" : 281
+      },
+      "configuration" : {
+        "botToken" : "xoxb-",
+        "useSystemSettings" : true,
+        "messageTemplate" : "Check Humidity Alarms!",
+        "conversationType" : "PUBLIC_CHANNEL",
+        "conversation" : {
+          "type" : "PUBLIC_CHANNEL",
+          "id" : "C07RTJ023HC",
+          "name" : "connected-construction-notifs",
+          "wholeName" : "connected-construction-notifs",
+          "email" : null,
+          "title" : "connected-construction-notifs"
+        }
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "3cffdaf0-8b2b-11ef-a3bd-0f61fe9e8422"
+      },
+      "name" : "Alarm Notifs",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.notification.TbSlackNode"
     } ],
     "ruleChainConnections" : null
   },

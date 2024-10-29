@@ -1,0 +1,113 @@
+{
+  "entityType" : "DEVICE_PROFILE",
+  "entity" : {
+    "default" : false,
+    "defaultDashboardId" : {
+      "entityType" : "DASHBOARD",
+      "id" : "2c141860-8b25-11ef-a3bd-0f61fe9e8422"
+    },
+    "defaultEdgeRuleChainId" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "2c0e7310-8b25-11ef-a3bd-0f61fe9e8422"
+    },
+    "defaultQueueName" : "HighPriority",
+    "defaultRuleChainId" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "061534a0-8bb1-11ef-a3bd-0f61fe9e8422"
+    },
+    "description" : "This is Accelerometer Device Profile.",
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "01261fd0-8bb2-11ef-a3bd-0f61fe9e8422"
+    },
+    "image" : null,
+    "name" : "Accelerometer Device Profile",
+    "profileData" : {
+      "alarms" : [ {
+        "alarmType" : "Fall Detected",
+        "clearRule" : null,
+        "createRules" : {
+          "CRITICAL" : {
+            "alarmDetails" : "Fall Detected.",
+            "condition" : {
+              "condition" : [ {
+                "key" : {
+                  "key" : "orientation",
+                  "type" : "TIME_SERIES"
+                },
+                "predicate" : {
+                  "type" : "COMPLEX",
+                  "operation" : "OR",
+                  "predicates" : [ {
+                    "type" : "STRING",
+                    "ignoreCase" : false,
+                    "operation" : "EQUAL",
+                    "value" : {
+                      "defaultValue" : "Lying Down",
+                      "dynamicValue" : null,
+                      "userValue" : null
+                    }
+                  }, {
+                    "type" : "STRING",
+                    "ignoreCase" : false,
+                    "operation" : "EQUAL",
+                    "value" : {
+                      "defaultValue" : "Inverted",
+                      "dynamicValue" : null,
+                      "userValue" : null
+                    }
+                  } ]
+                },
+                "value" : null,
+                "valueType" : "STRING"
+              } ],
+              "spec" : {
+                "type" : "SIMPLE"
+              }
+            },
+            "dashboardId" : {
+              "entityType" : "DASHBOARD",
+              "id" : "2c141860-8b25-11ef-a3bd-0f61fe9e8422"
+            },
+            "schedule" : null
+          }
+        },
+        "id" : "a5c72a15-2053-80c6-0ea5-5e0f6b6c1120",
+        "propagate" : false,
+        "propagateRelationTypes" : null,
+        "propagateToOwner" : false,
+        "propagateToTenant" : false
+      } ],
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "provisionConfiguration" : {
+        "type" : "ALLOW_CREATE_NEW_DEVICES",
+        "provisionDeviceSecret" : "rtikw6xjj59miktpkkys"
+      },
+      "transportConfiguration" : {
+        "type" : "MQTT",
+        "deviceAttributesSubscribeTopic" : "v1/devices/me/attributes",
+        "deviceAttributesTopic" : "v1/devices/me/attributes",
+        "deviceTelemetryTopic" : "v1/devices/me/telemetry",
+        "sendAckOnValidationException" : false,
+        "sparkplug" : false,
+        "sparkplugAttributesMetricNames" : [ "Properties/*", "Device Control/*", "Node Control/*" ],
+        "transportPayloadTypeConfiguration" : {
+          "transportPayloadType" : "JSON"
+        }
+      }
+    },
+    "provisionDeviceKey" : "4sk2cyfwn9gj9u55uxdz",
+    "provisionType" : "ALLOW_CREATE_NEW_DEVICES",
+    "softwareId" : null,
+    "transportType" : "MQTT",
+    "type" : "DEFAULT"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

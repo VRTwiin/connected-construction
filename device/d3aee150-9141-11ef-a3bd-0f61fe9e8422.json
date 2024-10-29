@@ -1,0 +1,83 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "gateway" : false,
+      "overwriteActivityTime" : false,
+      "description" : "CCTV 01 for Site A"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "d0ed9e70-9141-11ef-a3bd-0f61fe9e8422"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "d3aee150-9141-11ef-a3bd-0f61fe9e8422"
+    },
+    "label" : "",
+    "name" : "CCTV 01",
+    "softwareId" : null,
+    "type" : "CCTV"
+  },
+  "credentials" : {
+    "credentialsId" : "MoOtZCGSlGglt1lCjK1L",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "8a6c06b0-913e-11ef-a3bd-0f61fe9e8422"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "d3aee150-9141-11ef-a3bd-0f61fe9e8422"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 688
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1729690384710,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1729690384709,
+      "longValue" : 1729690384709,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "url",
+      "lastUpdateTs" : 1729777036124,
+      "longValue" : null,
+      "strValue" : "https://rtsp.me/embed/faN3T75N/?"
+    } ],
+    "SHARED_SCOPE" : [ ]
+  }
+}

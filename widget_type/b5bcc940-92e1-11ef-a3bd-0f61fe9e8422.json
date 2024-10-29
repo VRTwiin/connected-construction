@@ -1,0 +1,33 @@
+{
+  "entityType" : "WIDGET_TYPE",
+  "entity" : {
+    "fqn" : "fire_alerts",
+    "name" : "Fire Alerts",
+    "deprecated" : false,
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "latest",
+      "sizeX" : 7.5,
+      "sizeY" : 3,
+      "resources" : [ ],
+      "templateHtml" : "<div class=\"alert-widget fire-alert\">\r\n    <div class=\"alert-icon\">\r\n        <span>🔥</span> <!-- Replace this icon if needed -->\r\n    </div>\r\n    <div class=\"alert-content\">\r\n        <div class=\"alert-title\">Fire Alerts</div>\r\n        <div class=\"alert-value\">0</div> <!-- Default value, to be updated -->\r\n    </div>\r\n</div>\r\n",
+      "templateCss" : ".alert-widget {\r\n    display: flex;\r\n    align-items: center;\r\n    background-color: white;\r\n    border-radius: 10px;\r\n    padding: 10px;\r\n    width: 100%;\r\n    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);\r\n    font-family: Arial, sans-serif;\r\n    font-weight: bold;\r\n    color: #555;\r\n}\r\n\r\n.fire-alert {\r\n    background-color: #F4CCCC; /* Light red color for Fire Alerts */\r\n}\r\n\r\n.alert-icon {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    background-color: #F4CCCC; /* Icon background color */\r\n    border-radius: 50%;\r\n    width: 50px;\r\n    height: 50px;\r\n    margin-right: 15px;\r\n    color: white;\r\n    font-size: 18px;\r\n    font-weight: bold;\r\n}\r\n\r\n.alert-content {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n}\r\n\r\n.alert-title {\r\n    font-size: 16px;\r\n    color: #888;\r\n}\r\n\r\n.alert-value {\r\n    font-size: 28px;\r\n    color: #333;\r\n}\r\n",
+      "controllerScript" : "self.onInit = function() {\r\n    // Example static value for Fire Alerts\r\n    var fireAlertCount = 0;  // Default value, can be changed\r\n\r\n    // Update the value in the widget\r\n    $('.fire-alert .alert-value').text(fireAlertCount);\r\n};\r\n\r\nself.onDataUpdated = function() {\r\n    // Check if ThingsBoard has provided any telemetry data\r\n    if (self.ctx.data && self.ctx.data.length > 0) {\r\n        // Safely access the telemetry data for Fire Alerts\r\n        var dynamicFireAlertCount = self.ctx.data[0]?.value || 0;  // Use fallback of 0 if no data\r\n        // Update the value in the widget\r\n        $('.fire-alert .alert-value').text(dynamicFireAlertCount);\r\n    } else {\r\n        console.error('No telemetry data available for Fire Alerts.');\r\n    }\r\n};\r\n",
+      "settingsSchema" : "{}",
+      "dataKeySettingsSchema" : "{}\n",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"function\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":true,\"backgroundColor\":\"#fff\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{},\"title\":\"Fire Alerts\"}"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "b5bcc940-92e1-11ef-a3bd-0f61fe9e8422"
+    },
+    "scada" : false,
+    "tags" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

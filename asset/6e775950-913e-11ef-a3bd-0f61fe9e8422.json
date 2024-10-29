@@ -1,0 +1,67 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : "all owner working sites"
+    },
+    "assetProfileId" : {
+      "entityType" : "ASSET_PROFILE",
+      "id" : "dcf88450-9209-11ef-a3bd-0f61fe9e8422"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "6e775950-913e-11ef-a3bd-0f61fe9e8422"
+    },
+    "label" : "Group",
+    "name" : "District A",
+    "type" : "District"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "6e775950-913e-11ef-a3bd-0f61fe9e8422"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "8a6c06b0-913e-11ef-a3bd-0f61fe9e8422"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 685
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "6e775950-913e-11ef-a3bd-0f61fe9e8422"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "cebeb7e0-913e-11ef-a3bd-0f61fe9e8422"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 686
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "6e775950-913e-11ef-a3bd-0f61fe9e8422"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "d85feda0-913e-11ef-a3bd-0f61fe9e8422"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 687
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

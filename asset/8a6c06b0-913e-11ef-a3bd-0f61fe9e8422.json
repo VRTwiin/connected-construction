@@ -1,0 +1,78 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : "site A that is for all of the owner working site"
+    },
+    "assetProfileId" : {
+      "entityType" : "ASSET_PROFILE",
+      "id" : "e3224690-9209-11ef-a3bd-0f61fe9e8422"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "8a6c06b0-913e-11ef-a3bd-0f61fe9e8422"
+    },
+    "label" : null,
+    "name" : "Site_A",
+    "type" : "Site"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "8a6c06b0-913e-11ef-a3bd-0f61fe9e8422"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "d3aee150-9141-11ef-a3bd-0f61fe9e8422"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 688
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "6e775950-913e-11ef-a3bd-0f61fe9e8422"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "8a6c06b0-913e-11ef-a3bd-0f61fe9e8422"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 685
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "address",
+      "lastUpdateTs" : 1729763664851,
+      "longValue" : null,
+      "strValue" : "Vali Asr Square, Tehran, Iran"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 35.7006,
+      "jsonValue" : null,
+      "key" : "latitude",
+      "lastUpdateTs" : 1729763765312,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 51.4122,
+      "jsonValue" : null,
+      "key" : "longitude",
+      "lastUpdateTs" : 1729763820672,
+      "longValue" : null,
+      "strValue" : null
+    } ]
+  }
+}

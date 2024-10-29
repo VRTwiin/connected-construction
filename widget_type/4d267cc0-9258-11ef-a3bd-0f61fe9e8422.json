@@ -1,0 +1,37 @@
+{
+  "entityType" : "WIDGET_TYPE",
+  "entity" : {
+    "fqn" : "alert_status",
+    "name" : "Alert Status",
+    "deprecated" : false,
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "alarm",
+      "sizeX" : 10.5,
+      "sizeY" : 6.5,
+      "resources" : [ ],
+      "templateHtml" : "<div id=\"barChart\" style=\"width:100%;height:400px;\"></div>\r\n\r\n<!-- Ensure Plotly.js is loaded before your JavaScript runs -->\r\n<script src=\"https://cdn.plot.ly/plotly-latest.min.js\"></script>\r\n",
+      "templateCss" : "",
+      "controllerScript" : "self.onInit = function() {\r\n    // Check if Plotly is loaded and available\r\n    if (typeof Plotly !== 'undefined') {\r\n        var data = [\r\n            {\r\n                type: 'bar',\r\n                x: [4, 7, 55, 172, 0, 6],  // Data for \"Open\" alerts\r\n                y: ['Fall Prevention', 'Fire', 'Caught Detection', 'Out of Geofence', 'Free Fall', 'SOS'],\r\n                orientation: 'h',  // Horizontal bars\r\n                name: 'Open',\r\n                marker: {\r\n                    color: '#ff7043'\r\n                }\r\n            },\r\n            {\r\n                type: 'bar',\r\n                x: [0, 0, 0, 112, 0, 0],  // Data for \"Assigned Open\" alerts\r\n                y: ['Fall Prevention', 'Fire', 'Caught Detection', 'Out of Geofence', 'Free Fall', 'SOS'],\r\n                orientation: 'h',\r\n                name: 'Assigned Open',\r\n                marker: {\r\n                    color: '#29b6f6'\r\n                }\r\n            },\r\n            {\r\n                type: 'bar',\r\n                x: [0, 0, 55, 212, 0, 0],  // Data for \"Resolved\" alerts\r\n                y: ['Fall Prevention', 'Fire', 'Caught Detection', 'Out of Geofence', 'Free Fall', 'SOS'],\r\n                orientation: 'h',\r\n                name: 'Resolved',\r\n                marker: {\r\n                    color: '#66bb6a'\r\n                }\r\n            }\r\n        ];\r\n\r\n        var layout = {\r\n            title: 'Alerts Status Count by Category',\r\n            barmode: 'stack',  // Stack bars on top of each other\r\n            margin: {\r\n                l: 150  // Adjust left margin to fit long labels\r\n            },\r\n            xaxis: {\r\n                title: 'Alert Counts'\r\n            },\r\n            yaxis: {\r\n                automargin: true\r\n            },\r\n            showlegend: true,\r\n            legend: {\r\n                x: 1,\r\n                y: 1\r\n            }\r\n        };\r\n\r\n        // Render the bar chart using Plotly\r\n        Plotly.newPlot('barChart', data, layout);\r\n\r\n    } else {\r\n        console.error('Plotly is not loaded.');  // If Plotly is not loaded, log an error\r\n    }\r\n};\r\n\r\nself.onDataUpdated = function() {\r\n    // Optionally, you can dynamically update the data here\r\n};\r\n",
+      "settingsSchema" : "",
+      "dataKeySettingsSchema" : "",
+      "settingsDirective" : "tb-alarms-table-widget-settings",
+      "dataKeySettingsDirective" : "tb-alarms-table-key-settings",
+      "hasBasicMode" : true,
+      "basicModeDirective" : "tb-alarms-table-basic-config",
+      "defaultConfig" : "{\"timewindow\":{\"realtime\":{\"interval\":1000,\"timewindowMs\":86400000},\"aggregation\":{\"type\":\"NONE\",\"limit\":200}},\"showTitle\":true,\"backgroundColor\":\"rgb(255, 255, 255)\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"4px\",\"settings\":{\"enableSelection\":true,\"enableSearch\":true,\"displayDetails\":true,\"allowAcknowledgment\":true,\"allowClear\":true,\"allowAssign\":true,\"displayActivity\":true,\"displayPagination\":true,\"defaultPageSize\":10,\"defaultSortOrder\":\"-createdTime\",\"enableSelectColumnDisplay\":true,\"enableStickyAction\":false,\"enableFilter\":true,\"entitiesTitle\":null,\"alarmsTitle\":\"Alarms\"},\"title\":\"Alarms table\",\"dropShadow\":true,\"enableFullscreen\":true,\"titleStyle\":{\"fontSize\":\"16px\",\"fontWeight\":400,\"padding\":\"5px 10px 5px 10px\"},\"useDashboardTimewindow\":false,\"showLegend\":false,\"alarmSource\":{\"type\":\"function\",\"dataKeys\":[{\"name\":\"createdTime\",\"type\":\"alarm\",\"label\":\"Created time\",\"color\":\"#2196f3\",\"settings\":{\"useCellStyleFunction\":false,\"cellStyleFunction\":\"\",\"useCellContentFunction\":false,\"cellContentFunction\":\"\"},\"_hash\":0.021092237451093787},{\"name\":\"originator\",\"type\":\"alarm\",\"label\":\"Originator\",\"color\":\"#4caf50\",\"settings\":{\"useCellStyleFunction\":false,\"cellStyleFunction\":\"\",\"useCellContentFunction\":false,\"cellContentFunction\":\"\"},\"_hash\":0.2780007688856758},{\"name\":\"type\",\"type\":\"alarm\",\"label\":\"Type\",\"color\":\"#f44336\",\"settings\":{\"useCellStyleFunction\":false,\"cellStyleFunction\":\"\",\"useCellContentFunction\":false,\"cellContentFunction\":\"\"},\"_hash\":0.7323586880398418},{\"name\":\"severity\",\"type\":\"alarm\",\"label\":\"Severity\",\"color\":\"#ffc107\",\"settings\":{\"useCellStyleFunction\":false,\"useCellContentFunction\":false},\"_hash\":0.09927019860088193},{\"name\":\"status\",\"type\":\"alarm\",\"label\":\"Status\",\"color\":\"#607d8b\",\"settings\":{\"useCellStyleFunction\":false,\"cellStyleFunction\":\"\",\"useCellContentFunction\":false,\"cellContentFunction\":\"\"},\"_hash\":0.6588418951443418},{\"name\":\"assignee\",\"type\":\"alarm\",\"label\":\"Assignee\",\"color\":\"#9c27b0\",\"settings\":{},\"_hash\":0.5008441077416634}],\"entityAliasId\":null,\"name\":\"alarms\"},\"alarmSearchStatus\":\"ANY\",\"alarmsPollingInterval\":5,\"showTitleIcon\":false,\"titleIcon\":\"warning\",\"iconColor\":\"rgba(0, 0, 0, 0.87)\",\"iconSize\":\"24px\",\"titleTooltip\":\"\",\"widgetStyle\":{},\"displayTimewindow\":true,\"actions\":{},\"alarmStatusList\":[],\"alarmSeverityList\":[],\"alarmTypeList\":[],\"searchPropagatedAlarms\":false,\"configMode\":\"basic\",\"alarmFilterConfig\":null}"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "4d267cc0-9258-11ef-a3bd-0f61fe9e8422"
+    },
+    "scada" : false,
+    "tags" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

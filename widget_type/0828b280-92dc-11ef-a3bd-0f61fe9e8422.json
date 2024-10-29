@@ -1,0 +1,33 @@
+{
+  "entityType" : "WIDGET_TYPE",
+  "entity" : {
+    "fqn" : "assigned_open_alerts",
+    "name" : "Assigned Open Alerts",
+    "deprecated" : false,
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "latest",
+      "sizeX" : 11,
+      "sizeY" : 3.5,
+      "resources" : [ ],
+      "templateHtml" : "<div class=\"alert-widget assigned-alert\">\r\n    <div class=\"alert-title\">Assigned Open Alert</div>\r\n    <div class=\"alert-value\">0</div> <!-- Default value, to be updated -->\r\n</div>\r\n",
+      "templateCss" : ".alert-widget {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: center;\r\n    width: 100%; /* You can adjust the width */\r\n    padding: 20px;\r\n    border-radius: 10px;\r\n    background-color: #4682B4; /* Blue color */\r\n    color: white;\r\n    font-family: Arial, sans-serif;\r\n    font-weight: bold;\r\n    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);\r\n}\r\n\r\n.alert-title {\r\n    font-size: 18px;\r\n    margin-bottom: 10px;\r\n}\r\n\r\n.alert-value {\r\n    font-size: 36px;\r\n}\r\n",
+      "controllerScript" : "self.onInit = function() {\r\n    // Example static value for Assigned Open Alerts\r\n    var assignedOpenAlertCount = 4;  // Default value, can be changed\r\n\r\n    // Update the value in the widget\r\n    $('.assigned-alert .alert-value').text(assignedOpenAlertCount);\r\n};\r\n\r\nself.onDataUpdated = function() {\r\n    // Check if ThingsBoard has provided any telemetry data\r\n    if (self.ctx.data && self.ctx.data.length > 0) {\r\n        // Safely access the telemetry data for Assigned Open Alerts\r\n        var dynamicAssignedOpenAlertCount = self.ctx.data[0]?.value || 0;  // Use fallback of 0 if no data\r\n        // Update the value in the widget\r\n        $('.assigned-alert .alert-value').text(dynamicAssignedOpenAlertCount);\r\n    } else {\r\n        console.error('No telemetry data available for Assigned Open Alerts.');\r\n    }\r\n};\r\n",
+      "settingsSchema" : "{}",
+      "dataKeySettingsSchema" : "{}\n",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"function\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":true,\"backgroundColor\":\"#fff\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{},\"title\":\"Assigned Open Alerts\"}"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "0828b280-92dc-11ef-a3bd-0f61fe9e8422"
+    },
+    "scada" : false,
+    "tags" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

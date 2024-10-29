@@ -1,0 +1,22 @@
+{
+  "entityType" : "WIDGETS_BUNDLE",
+  "entity" : {
+    "alias" : "system_alerts",
+    "description" : null,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGETS_BUNDLE",
+      "id" : "9ba00d00-92dd-11ef-a3bd-0f61fe9e8422"
+    },
+    "image" : null,
+    "name" : "System Alerts",
+    "order" : null,
+    "scada" : false,
+    "title" : "System Alerts"
+  },
+  "fqns" : [ "sos", "fall_prevention_alerts", "free_fall_alerts", "out_of_geofence_alerts", "caught_in_alerts", "fire_alerts" ],
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "entityType" : "WIDGET_TYPE",
+  "entity" : {
+    "fqn" : "matin_chart2",
+    "name" : "Matin Chart",
+    "deprecated" : false,
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "static",
+      "sizeX" : 7.5,
+      "sizeY" : 3,
+      "resources" : [ ],
+      "templateHtml" : "<canvas id=\"lineChartCanvas\" width=\"400\" height=\"200\"></canvas>",
+      "templateCss" : "#lineChartCanvas {\n    max-width: 100%;\n    max-height: 100%;\n}\n",
+      "controllerScript" : "self.onInit = function() {\n    // Retrieve data values from the widget settings\n    const values = self.ctx.settings.dataValues\n        ? self.ctx.settings.dataValues.split(',').map(Number)\n        : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; // Fallback to default values if none set\n\n    const labels = values.map((_, index) => `Point ${index}`); // Labels for each point\n\n    // Load Chart.js if it isn't already loaded\n    if (typeof Chart === 'undefined') {\n        const script = document.createElement('script');\n        script.src = 'https://cdn.jsdelivr.net/npm/chart.js';\n        script.onload = renderChart;\n        document.head.appendChild(script);\n    } else {\n        renderChart();\n    }\n\n    function renderChart() {\n        // Get the canvas element\n        const ctx = document.getElementById('lineChartCanvas').getContext('2d');\n        \n        // Create the chart\n        new Chart(ctx, {\n            type: 'line',\n            data: {\n                labels: labels,\n                datasets: [{\n                    label: 'Dynamic Data Line Chart',\n                    data: values,\n                    borderColor: '#4CAF50',\n                    borderWidth: 2,\n                    fill: false,\n                    pointBackgroundColor: '#4CAF50',\n                    pointBorderColor: '#fff',\n                    pointBorderWidth: 2,\n                    pointRadius: 4\n                }]\n            },\n            options: {\n                responsive: true,\n                maintainAspectRatio: false,\n                scales: {\n                    x: {\n                        grid: {\n                            color: '#ddd',\n                        },\n                        title: {\n                            display: true,\n                            text: 'Data Points',\n                        }\n                    },\n                    y: {\n                        beginAtZero: true,\n                        grid: {\n                            color: '#ddd',\n                        },\n                        title: {\n                            display: true,\n                            text: 'Values',\n                        }\n                    }\n                },\n                plugins: {\n                    legend: {\n                        display: true,\n                        position: 'top',\n                    }\n                }\n            }\n        });\n    }\n};\n",
+      "settingsSchema" : "[\n    {\n        \"key\": \"dataValues\",\n        \"name\": \"Data Values\",\n        \"type\": \"string\",\n        \"defaultValue\": \"0,1,2,3,4,5,6,7,8,9,29\",\n        \"required\": true\n    }\n]\n",
+      "dataKeySettingsSchema" : "",
+      "settingsDirective" : "tb-html-card-widget-settings",
+      "dataKeySettingsDirective" : "",
+      "hasBasicMode" : false,
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"static\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":false,\"backgroundColor\":\"rgb(255, 255, 255)\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{\"cardHtml\":\"<div class='card'>HTML code here</div>\",\"cardCss\":\".card {\\n    font-weight: bold;\\n    font-size: 32px;\\n    color: #999;\\n    width: 100%;\\n    height: 100%;\\n    display: flex;\\n    align-items: center;\\n    justify-content: center;\\n}\"},\"title\":\"Matin Chart\",\"dropShadow\":true}"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "b667bb90-95dc-11ef-a3bd-0f61fe9e8422"
+    },
+    "scada" : false,
+    "tags" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

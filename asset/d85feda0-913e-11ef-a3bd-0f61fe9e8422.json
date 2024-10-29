@@ -1,0 +1,78 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : "site C that is for all of the owner working site"
+    },
+    "assetProfileId" : {
+      "entityType" : "ASSET_PROFILE",
+      "id" : "e3224690-9209-11ef-a3bd-0f61fe9e8422"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "d85feda0-913e-11ef-a3bd-0f61fe9e8422"
+    },
+    "label" : null,
+    "name" : "Site_C",
+    "type" : "Site"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "d85feda0-913e-11ef-a3bd-0f61fe9e8422"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "3d8f8660-9142-11ef-a3bd-0f61fe9e8422"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 690
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "6e775950-913e-11ef-a3bd-0f61fe9e8422"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "d85feda0-913e-11ef-a3bd-0f61fe9e8422"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 687
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "address",
+      "lastUpdateTs" : 1729764032635,
+      "longValue" : null,
+      "strValue" : "Tehranpars, Resalat Freeway, Tehran, Iran"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 35.7395,
+      "jsonValue" : null,
+      "key" : "latitude",
+      "lastUpdateTs" : 1729764056292,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 51.5029,
+      "jsonValue" : null,
+      "key" : "longitude",
+      "lastUpdateTs" : 1729764093457,
+      "longValue" : null,
+      "strValue" : null
+    } ]
+  }
+}

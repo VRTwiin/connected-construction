@@ -1,0 +1,22 @@
+{
+  "entityType" : "WIDGETS_BUNDLE",
+  "entity" : {
+    "alias" : "asra_widgets",
+    "description" : "",
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGETS_BUNDLE",
+      "id" : "891e9690-9609-11ef-a3bd-0f61fe9e8422"
+    },
+    "image" : "",
+    "name" : "Asra Widgets",
+    "order" : null,
+    "scada" : false,
+    "title" : "Asra Widgets"
+  },
+  "fqns" : [ "test_bar_chart" ],
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

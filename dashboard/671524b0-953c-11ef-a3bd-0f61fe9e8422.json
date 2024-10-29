@@ -1,0 +1,30 @@
+{
+  "entityType" : "DASHBOARD",
+  "entity" : {
+    "assignedCustomers" : [ {
+      "customerId" : {
+        "entityType" : "CUSTOMER",
+        "id" : "b4826080-914c-11ef-a3bd-0f61fe9e8422"
+      },
+      "title" : "Public",
+      "public" : true
+    } ],
+    "configuration" : {
+      "description" : ""
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "DASHBOARD",
+      "id" : "671524b0-953c-11ef-a3bd-0f61fe9e8422"
+    },
+    "image" : null,
+    "mobileHide" : false,
+    "mobileOrder" : null,
+    "name" : "Unexpected Machine Failure",
+    "title" : "Unexpected Machine Failure"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}
