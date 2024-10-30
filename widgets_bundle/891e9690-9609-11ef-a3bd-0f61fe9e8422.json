@@ -14,7 +14,7 @@
     "scada" : false,
     "title" : "Asra Widgets"
   },
-  "fqns" : [ "test_bar_chart" ],
+  "fqns" : [ "test_bar_chart", "weather_forecast", "weather" ],
   "relations" : [ ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]

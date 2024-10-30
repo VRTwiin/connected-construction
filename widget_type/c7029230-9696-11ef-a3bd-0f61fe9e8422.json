@@ -1,0 +1,36 @@
+{
+  "entityType" : "WIDGET_TYPE",
+  "entity" : {
+    "fqn" : "weather_forecast",
+    "name" : "Weather-forecast",
+    "deprecated" : false,
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "static",
+      "sizeX" : 7.5,
+      "sizeY" : 3,
+      "resources" : [ {
+        "url" : "https://cdn.jsdelivr.net/npm/chart.js"
+      } ],
+      "templateHtml" : "<div class=\"container\">\n    <h1>Weather Forecast</h1>\n    <canvas id=\"weatherChart\"></canvas>\n    <div id=\"prediction\" class=\"prediction\"></div>\n</div>\n",
+      "templateCss" : "body {\n    font-family: Arial, sans-serif;\n    background-color: #f4f4f4;\n    color: #333;\n    text-align: center;\n    padding: 10px;\n}\n\n.container {\n    width: 100%; \n    height: 100%;\n    max-width: 400px; /* تنظیم حداکثر عرض */\n    margin: auto;\n    background: white;\n    padding: 10px;\n    border-radius: 10px;\n    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);\n}\n\nh1 {\n    font-size: 1em;\n    margin-bottom: 10px;\n}\n\ncanvas {\n    width: 100%; /* عرض 100 درصدی برای پر کردن فضای موجود */\n    max-width: 100%; /* محدود کردن عرض به 100 درصد */\n    height: 200px; /* ارتفاع ثابت برای نمایش مناسب */\n}\n\n.prediction {\n    margin-top: 5px;\n    font-size: 0.9em;\n    color: #333;\n}\n",
+      "controllerScript" : "window.onload = function() {\n    // Generate random temperature data for demonstration\n    function generateRandomData(numPoints) {\n        const data = [];\n        for (let i = 0; i < numPoints; i++) {\n            const randomTemp = Math.floor(Math.random() * (40 - (-10) + 1)) + (-10);\n            data.push(randomTemp);\n        }\n        return data;\n    }\n\n    // Predict the next temperature using a simple linear regression approach\n    function predictNextTemperature(data) {\n        const n = data.length;\n        const x = Array.from({ length: n }, (_, i) => i);\n        const y = data;\n\n        const xSum = x.reduce((a, b) => a + b, 0);\n        const ySum = y.reduce((a, b) => a + b, 0);\n        const xySum = x.reduce((sum, xi, i) => sum + xi * y[i], 0);\n        const xSqSum = x.reduce((sum, xi) => sum + xi * xi, 0);\n\n        const m = (n * xySum - xSum * ySum) / (n * xSqSum - xSum * xSum);\n        const b = (ySum - m * xSum) / n;\n\n        const nextIndex = n;\n        const nextTemperature = m * nextIndex + b;\n        return nextTemperature;\n    }\n\n    // Days of the week\n    const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];\n\n    // Generate random data or use telemetry data from ThingsBoard\n    const data = generateRandomData(days.length);\n\n    // Predict the next temperature\n    const predictedTemperature = predictNextTemperature(data);\n\n    // Get the canvas context\n    const chartContext = document.getElementById('weatherChart').getContext('2d');\n\n    const weatherChart = new Chart(chartContext, {\n        type: 'line',\n        data: {\n            labels: [...days, 'Next Day'],\n            datasets: [{\n                label: 'Temperature Forecast (°C)',\n                data: [...data, predictedTemperature],\n                borderColor: 'rgba(75, 192, 192, 1)',\n                backgroundColor: 'rgba(75, 192, 192, 0.2)',\n                fill: true,\n            }]\n        },\n        options: {\n            responsive: true,\n            maintainAspectRatio: true, // به نسبت ابعاد صفحه پایبند باشد\n            aspectRatio: 2, // نسبت عرض به ارتفاع (کوچک‌تر کردن نمودار)\n            scales: {\n                y: {\n                    beginAtZero: true,\n                    min: -10,\n                    max: 40,\n                    title: {\n                        display: true,\n                        text: 'Temperature (°C)'\n                    }\n                },\n                x: {\n                    title: {\n                        display: true,\n                        text: 'Days'\n                    }\n                }\n            },\n            plugins: {\n                legend: {\n                    labels: {\n                        font: { size: 10 } // کوچک‌تر کردن فونت عنوان\n                    }\n                }\n            }\n        }\n    });\n\n    // Display the predicted temperature\n    document.getElementById('prediction').innerText = `Predicted Temperature for Next Day: ${predictedTemperature.toFixed(2)} °C`;\n};\n",
+      "settingsSchema" : "",
+      "dataKeySettingsSchema" : "",
+      "settingsDirective" : "tb-html-card-widget-settings",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"static\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":false,\"backgroundColor\":\"rgb(255, 255, 255)\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{\"cardHtml\":\"<div class='card'>HTML code here</div>\",\"cardCss\":\".card {\\n    font-weight: bold;\\n    font-size: 32px;\\n    color: #999;\\n    width: 100%;\\n    height: 100%;\\n    display: flex;\\n    align-items: center;\\n    justify-content: center;\\n}\"},\"title\":\"Weather-forecast\",\"dropShadow\":true}"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "c7029230-9696-11ef-a3bd-0f61fe9e8422"
+    },
+    "scada" : false,
+    "tags" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

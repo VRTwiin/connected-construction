@@ -1,0 +1,33 @@
+{
+  "entityType" : "WIDGET_TYPE",
+  "entity" : {
+    "fqn" : "worker_safety_protocols_v0_1",
+    "name" : "Worker Safety protocols v0.1",
+    "deprecated" : false,
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "latest",
+      "sizeX" : 9.5,
+      "sizeY" : 8,
+      "resources" : [ ],
+      "templateHtml" : "<div class=\"safety-checklist\">\r\n    <h3>Worker Safety Protocols</h3>\r\n    <ul id=\"checklist\">\r\n        <li>\r\n            <span>Helmet</span>\r\n            <span class=\"status\" id=\"helmet-status\">On</span>\r\n        </li>\r\n        <li>\r\n            <span>Gloves</span>\r\n            <span class=\"status\" id=\"gloves-status\">Off</span>\r\n        </li>\r\n        <li>\r\n            <span>Reflective Vest</span>\r\n            <span class=\"status\" id=\"vest-status\">On</span>\r\n        </li>\r\n        <li>\r\n            <span>Safety Boots</span>\r\n            <span class=\"status\" id=\"boots-status\">On</span>\r\n        </li>\r\n    </ul>\r\n</div>\r\n",
+      "templateCss" : ".safety-checklist {\r\n    max-width: 300px;\r\n    background-color: #f9f9f9;\r\n    border-radius: 8px;\r\n    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\r\n    padding: 20px;\r\n    font-family: Arial, sans-serif;\r\n}\r\n\r\n.safety-checklist h3 {\r\n    margin-bottom: 15px;\r\n    color: #333;\r\n    font-size: 18px;\r\n    text-align: center;\r\n}\r\n\r\n.safety-checklist ul {\r\n    list-style: none;\r\n    padding: 0;\r\n    margin: 0;\r\n}\r\n\r\n.safety-checklist li {\r\n    display: flex;\r\n    justify-content: space-between;\r\n    padding: 10px;\r\n    border-bottom: 1px solid #ddd;\r\n}\r\n\r\n.safety-checklist .status {\r\n    font-weight: bold;\r\n    color: #555;\r\n}\r\n\r\n.safety-checklist .status.on {\r\n    color: green;\r\n}\r\n\r\n.safety-checklist .status.off {\r\n    color: red;\r\n}\r\n",
+      "controllerScript" : "// Function to manually toggle the status\r\nfunction toggleStatus(elementId, currentState) {\r\n    const statusElement = document.getElementById(elementId);\r\n    if (statusElement) { // Check if element exists\r\n        if (currentState === \"On\") {\r\n            statusElement.textContent = \"Off\";\r\n            statusElement.classList.remove(\"on\");\r\n            statusElement.classList.add(\"off\");\r\n        } else {\r\n            statusElement.textContent = \"On\";\r\n            statusElement.classList.remove(\"off\");\r\n            statusElement.classList.add(\"on\");\r\n        }\r\n    } else {\r\n        console.error(`Element with ID ${elementId} not found.`);\r\n    }\r\n}\r\n\r\n// Initialize default statuses if elements exist\r\n[\"helmet-status\", \"gloves-status\", \"vest-status\", \"boots-status\"].forEach(id => {\r\n    const element = document.getElementById(id);\r\n    if (element) {\r\n        element.classList.add(\"on\"); // Set initial status to \"On\"\r\n    } else {\r\n        console.error(`Element with ID ${id} not found.`);\r\n    }\r\n});\r\n\r\n// Example: Manually toggle the \"Gloves\" status on click\r\nconst glovesStatusElement = document.getElementById(\"gloves-status\");\r\nif (glovesStatusElement) {\r\n    glovesStatusElement.onclick = function() {\r\n        toggleStatus(\"gloves-status\", this.textContent);\r\n    };\r\n} else {\r\n    console.error(\"Element with ID 'gloves-status' not found.\");\r\n}\r\n",
+      "settingsSchema" : "{}",
+      "dataKeySettingsSchema" : "{}\n",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"function\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":true,\"backgroundColor\":\"#fff\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{},\"title\":\"Worker Safety protocols v0.1\"}"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "897e1ae0-9639-11ef-a3bd-0f61fe9e8422"
+    },
+    "scada" : false,
+    "tags" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

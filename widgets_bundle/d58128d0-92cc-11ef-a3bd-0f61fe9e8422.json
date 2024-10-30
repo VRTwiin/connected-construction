@@ -14,7 +14,7 @@
     "scada" : false,
     "title" : "Data Table"
   },
-  "fqns" : [ "data_table", "data_table_2" ],
+  "fqns" : [ "data_table", "data_table_2", "worker_safety_protocols_v0_1", "worker_safety_protocols_v0_2", "worker_safety_protocols_v0_3", "worker_safety_protocols_v0_4", "incident_reports_and_alerts" ],
   "relations" : [ ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]

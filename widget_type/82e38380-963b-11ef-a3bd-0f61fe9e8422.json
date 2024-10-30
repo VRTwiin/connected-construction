@@ -1,0 +1,33 @@
+{
+  "entityType" : "WIDGET_TYPE",
+  "entity" : {
+    "fqn" : "worker_safety_protocols_v0_2",
+    "name" : "Worker Safety protocols v0.2",
+    "deprecated" : false,
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "latest",
+      "sizeX" : 9.5,
+      "sizeY" : 8,
+      "resources" : [ ],
+      "templateHtml" : "<div class=\"worker-table\">\r\n    <h3>Worker Safety Protocols</h3>\r\n    <table>\r\n        <thead>\r\n            <tr>\r\n                <th>Worker Name</th>\r\n                <th>Position</th>\r\n                <th>Helmet</th>\r\n                <th>Gloves</th>\r\n                <th>Vest</th>\r\n                <th>Boots</th>\r\n            </tr>\r\n        </thead>\r\n        <tbody id=\"worker-list\">\r\n            <!-- Rows will be populated by JavaScript -->\r\n        </tbody>\r\n    </table>\r\n</div>\r\n",
+      "templateCss" : ".worker-table {\r\n    width: 100%;\r\n    font-family: Arial, sans-serif;\r\n    font-size: 14px;\r\n    color: #333;\r\n}\r\n\r\n.worker-table h3 {\r\n    margin-bottom: 10px;\r\n}\r\n\r\n.worker-table table {\r\n    width: 100%;\r\n    border-collapse: collapse;\r\n}\r\n\r\n.worker-table th, .worker-table td {\r\n    padding: 8px;\r\n    text-align: center;\r\n    border: 1px solid #ddd;\r\n}\r\n\r\n.worker-table th {\r\n    background-color: #f4f4f4;\r\n}\r\n\r\n.status-on {\r\n    color: green;\r\n    font-weight: bold;\r\n}\r\n\r\n.status-off {\r\n    color: red;\r\n    font-weight: bold;\r\n}\r\n",
+      "controllerScript" : "document.addEventListener(\"DOMContentLoaded\", function() {\r\n    // Array of random worker names and positions\r\n    const workers = [\r\n        { name: \"John Doe\", position: \"Electrician\" },\r\n        { name: \"Jane Smith\", position: \"Welder\" },\r\n        { name: \"Mike Johnson\", position: \"Safety Officer\" },\r\n        { name: \"Emily Davis\", position: \"Supervisor\" }\r\n    ];\r\n\r\n    // Function to generate random compliance status (On/Off)\r\n    function getRandomStatus() {\r\n        return Math.random() > 0.5 ? \"On\" : \"Off\";\r\n    }\r\n\r\n    // Populate table with worker data\r\n    function populateWorkerTable() {\r\n        const tableBody = document.getElementById(\"worker-list\");\r\n        if (!tableBody) return;  // Check if the element exists\r\n\r\n        tableBody.innerHTML = \"\"; // Clear previous content\r\n\r\n        workers.forEach(worker => {\r\n            const row = document.createElement(\"tr\");\r\n\r\n            // Name and Position columns\r\n            row.innerHTML = `\r\n                <td>${worker.name}</td>\r\n                <td>${worker.position}</td>\r\n                <td class=\"status ${getRandomStatus() === 'On' ? 'status-on' : 'status-off'}\">${getRandomStatus()}</td>\r\n                <td class=\"status ${getRandomStatus() === 'On' ? 'status-on' : 'status-off'}\">${getRandomStatus()}</td>\r\n                <td class=\"status ${getRandomStatus() === 'On' ? 'status-on' : 'status-off'}\">${getRandomStatus()}</td>\r\n                <td class=\"status ${getRandomStatus() === 'On' ? 'status-on' : 'status-off'}\">${getRandomStatus()}</td>\r\n            `;\r\n\r\n            tableBody.appendChild(row);\r\n        });\r\n    }\r\n\r\n    // Initialize the table on page load\r\n    populateWorkerTable();\r\n});\r\n",
+      "settingsSchema" : "{}",
+      "dataKeySettingsSchema" : "{}\n",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"function\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":true,\"backgroundColor\":\"#fff\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{},\"title\":\"Worker Safety protocols v0.2\"}"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "82e38380-963b-11ef-a3bd-0f61fe9e8422"
+    },
+    "scada" : false,
+    "tags" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

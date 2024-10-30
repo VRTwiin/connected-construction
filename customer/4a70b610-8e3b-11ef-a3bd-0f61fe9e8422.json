@@ -2,25 +2,25 @@
   "entityType" : "CUSTOMER",
   "entity" : {
     "additionalInfo" : {
-      "description" : "",
-      "homeDashboardId" : null,
+      "description" : "In all our signature projects, we work with the Benesta Principles that guide us in bringing the best to you. With these principles, which combine engineering with a functional approach worldwide, enable us to create timeless structures using building materials that appreciate in value over time, and are indispensable in our architectural and design marvel projects, we always aim for better.\n\nWith our all-inclusive luxury approach, we redefine the concept of luxury with projects such as Benesta Acıbadem, Benesta Beyoğlu, and now Benesta Center, bringing elite living spaces to you.",
+      "homeDashboardId" : "4429e4a0-953b-11ef-a3bd-0f61fe9e8422",
       "homeDashboardHideToolbar" : true
     },
-    "address" : "Ünalan, Libadiye Cd. No: 80 G Blok, 34700 Üsküdar/İstanbul, Türkiye",
+    "address" : "",
     "address2" : null,
     "city" : "İstanbul",
-    "country" : null,
-    "email" : "Info.ADISH@addresshotels.com",
+    "country" : "Turkey",
+    "email" : "info@benesta.com",
     "externalId" : null,
     "id" : {
       "entityType" : "CUSTOMER",
       "id" : "4a70b610-8e3b-11ef-a3bd-0f61fe9e8422"
     },
-    "name" : "Turkish Co.",
-    "phone" : "+902162851111",
+    "name" : "BENESTA",
+    "phone" : "+904440899",
     "state" : "İstanbul",
-    "title" : "Turkish Co.",
-    "zip" : "34000"
+    "title" : "BENESTA",
+    "zip" : ""
   },
   "relations" : [ ],
   "attributes" : {

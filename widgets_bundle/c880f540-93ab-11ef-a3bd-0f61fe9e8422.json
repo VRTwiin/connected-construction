@@ -14,7 +14,7 @@
     "scada" : false,
     "title" : "Biulding"
   },
-  "fqns" : [ "building_fill_indicator2", "3_building_stock", "alarm_table2", "static", "matin_chart2" ],
+  "fqns" : [ "building_fill_indicator2", "3_building_stock", "alarm_table2", "static", "matin_chart2", "construction_site_safety_map", "construction_site_safety_map_v0_1" ],
   "relations" : [ ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]
