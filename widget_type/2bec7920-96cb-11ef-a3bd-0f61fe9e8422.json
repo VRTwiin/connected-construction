@@ -1,0 +1,36 @@
+{
+  "entityType" : "WIDGET_TYPE",
+  "entity" : {
+    "fqn" : "matin_line_chart",
+    "name" : "Matin Line Chart",
+    "deprecated" : false,
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "static",
+      "sizeX" : 7.5,
+      "sizeY" : 3,
+      "resources" : [ {
+        "url" : "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"
+      } ],
+      "templateHtml" : "<canvas id=\"staticChart\" style=\"width:100%; height:100%;\"></canvas>\n",
+      "templateCss" : "",
+      "controllerScript" : "self.onInit = function() {\n    function initializeStaticChart() {\n        const canvas = document.getElementById('staticChart');\n        if (canvas) {\n            const ctx = canvas.getContext('2d');\n\n            // Use settings from the widget configuration\n            const labels = self.ctx.settings.labels || [\"January\", \"February\", \"March\", \"April\", \"May\", \"June\"];\n            const dataValues = self.ctx.settings.dataValues || [100, 120, 130, 90, 150, 170];\n            const borderColor = self.ctx.settings.borderColor || \"#36A2EB\";\n            const backgroundColor = self.ctx.settings.backgroundColor || \"rgba(54, 162, 235, 0.2)\";\n\n            const data = {\n                labels: labels,\n                datasets: [\n                    {\n                        label: \"Custom Data\",\n                        backgroundColor: backgroundColor,\n                        borderColor: borderColor,\n                        data: dataValues,\n                        fill: false,\n                        borderWidth: 2,\n                        pointRadius: 5\n                    }\n                ]\n            };\n\n            const options = {\n                responsive: true,\n                title: {\n                    display: true,\n                    text: 'Static Customizable Chart'\n                },\n                scales: {\n                    yAxes: [{ ticks: { beginAtZero: true } }]\n                }\n            };\n\n            new Chart(ctx, { type: 'line', data: data, options: options });\n        }\n    }\n\n    setTimeout(initializeStaticChart, 500);\n};\n",
+      "settingsSchema" : "{\n    \"schema\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"labels\": {\n                \"title\": \"Labels\",\n                \"type\": \"array\",\n                \"items\": {\n                    \"type\": \"string\"\n                },\n                \"default\": [\"January\", \"February\", \"March\", \"April\", \"May\", \"June\"]\n            },\n            \"dataValues\": {\n                \"title\": \"Data Values\",\n                \"type\": \"array\",\n                \"items\": {\n                    \"type\": \"number\"\n                },\n                \"default\": [100, 120, 130, 90, 150, 170]\n            },\n            \"borderColor\": {\n                \"title\": \"Line Border Color\",\n                \"type\": \"string\",\n                \"default\": \"#36A2EB\"\n            },\n            \"backgroundColor\": {\n                \"title\": \"Background Color\",\n                \"type\": \"string\",\n                \"default\": \"rgba(54, 162, 235, 0.2)\"\n            }\n        }\n    },\n    \"form\": [\n        \"labels\",\n        \"dataValues\",\n        \"borderColor\",\n        \"backgroundColor\"\n    ]\n}\n",
+      "dataKeySettingsSchema" : "",
+      "settingsDirective" : "tb-html-card-widget-settings",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"static\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":false,\"backgroundColor\":\"rgb(255, 255, 255)\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{\"cardHtml\":\"<div class='card'>HTML code here</div>\",\"cardCss\":\".card {\\n    font-weight: bold;\\n    font-size: 32px;\\n    color: #999;\\n    width: 100%;\\n    height: 100%;\\n    display: flex;\\n    align-items: center;\\n    justify-content: center;\\n}\"},\"title\":\"Matin Line Chart\",\"dropShadow\":true}"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "2bec7920-96cb-11ef-a3bd-0f61fe9e8422"
+    },
+    "scada" : false,
+    "tags" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

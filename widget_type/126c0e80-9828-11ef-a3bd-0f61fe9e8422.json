@@ -1,0 +1,34 @@
+{
+  "entityType" : "WIDGET_TYPE",
+  "entity" : {
+    "fqn" : "card_healthy",
+    "name" : "card-healthy",
+    "deprecated" : false,
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "static",
+      "sizeX" : 7.5,
+      "sizeY" : 3,
+      "resources" : [ ],
+      "templateHtml" : "<div class=\"card-container\">\n    <div class=\"card\">\n        <div class=\"card-title\">Overall Worker Health</div>\n        <div class=\"card-value\" id=\"healthPercentage\">--%</div>\n    </div>\n    <div class=\"card\">\n        <div class=\"card-title\">Overall Worker Performance</div>\n        <div class=\"card-value\" id=\"performancePercentage\">--%</div>\n    </div>\n</div>\n",
+      "templateCss" : ".card-container {\n    display: flex;\n    justify-content: space-around;\n    padding: 20px;\n    background: #ffffff;\n    border-radius: 10px;\n}\n\n.card {\n    background: linear-gradient(135deg, #ffccf9, #ccf2ff);\n    border-radius: 8px;\n    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\n    padding: 20px;\n    text-align: center;\n    width: 45%;\n    transition: transform 0.3s;\n}\n\n.card:hover {\n    transform: translateY(-5px);\n}\n\n.card-title {\n    font-size: 1.2em;\n    color: #333;\n    margin-bottom: 10px;\n}\n\n.card-value {\n    font-size: 2em;\n    color: #007bff;\n}\n",
+      "controllerScript" : "self.onInit = function() {\n    function generateRandomData(numWorkers) {\n        let totalHealth = 0;\n        let totalPerformance = 0;\n\n        for (let i = 0; i < numWorkers; i++) {\n            const health = Math.floor(Math.random() * 21) + 80; // Between 80% and 100%\n            const performance = Math.floor(Math.random() * 21) + 80; // Between 80% and 100%\n\n            totalHealth += health;\n            totalPerformance += performance;\n        }\n\n        const averageHealth = (totalHealth / numWorkers).toFixed(2);\n        const averagePerformance = (totalPerformance / numWorkers).toFixed(2);\n\n        return { averageHealth, averagePerformance };\n    }\n\n    function updateCardValues() {\n        const numWorkers = 10; // Number of workers\n        const { averageHealth, averagePerformance } = generateRandomData(numWorkers);\n\n        document.getElementById('healthPercentage').innerText = `${averageHealth}%`;\n        document.getElementById('performancePercentage').innerText = `${averagePerformance}%`;\n    }\n\n    // Update card values\n    updateCardValues();\n\n    // Update values every 5 seconds\n    setInterval(updateCardValues, 5000);\n};\n",
+      "settingsSchema" : "",
+      "dataKeySettingsSchema" : "",
+      "settingsDirective" : "tb-html-card-widget-settings",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"static\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":false,\"backgroundColor\":\"rgb(255, 255, 255)\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{\"cardHtml\":\"<div class='card'>HTML code here</div>\",\"cardCss\":\".card {\\n    font-weight: bold;\\n    font-size: 32px;\\n    color: #999;\\n    width: 100%;\\n    height: 100%;\\n    display: flex;\\n    align-items: center;\\n    justify-content: center;\\n}\"},\"title\":\"card-healthy\",\"dropShadow\":true}"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "126c0e80-9828-11ef-a3bd-0f61fe9e8422"
+    },
+    "scada" : false,
+    "tags" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

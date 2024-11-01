@@ -54,23 +54,23 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "address",
-      "lastUpdateTs" : 1729764032635,
+      "lastUpdateTs" : 1730401732593,
       "longValue" : null,
-      "strValue" : "Tehranpars, Resalat Freeway, Tehran, Iran"
+      "strValue" : "Eminönü, Fatih, Istanbul, Turkey"
     }, {
       "booleanValue" : null,
-      "doubleValue" : 35.7395,
+      "doubleValue" : 41.0138,
       "jsonValue" : null,
       "key" : "latitude",
-      "lastUpdateTs" : 1729764056292,
+      "lastUpdateTs" : 1730401742303,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 51.5029,
+      "doubleValue" : 28.9702,
       "jsonValue" : null,
       "key" : "longitude",
-      "lastUpdateTs" : 1729764093457,
+      "lastUpdateTs" : 1730401751659,
       "longValue" : null,
       "strValue" : null
     } ]

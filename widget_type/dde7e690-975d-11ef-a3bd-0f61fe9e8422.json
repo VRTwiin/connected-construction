@@ -1,0 +1,36 @@
+{
+  "entityType" : "WIDGET_TYPE",
+  "entity" : {
+    "fqn" : "cost_prediction",
+    "name" : "cost-prediction",
+    "deprecated" : false,
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "static",
+      "sizeX" : 7.5,
+      "sizeY" : 3,
+      "resources" : [ {
+        "url" : "https://cdn.jsdelivr.net/npm/chart.js"
+      } ],
+      "templateHtml" : "<div class=\"chart-container\">\n    <div class=\"chart-title\">Dynamic Cost Prediction Overview</div>\n    <canvas id=\"dynamic-cost-prediction-chart\"></canvas>\n</div>\n",
+      "templateCss" : ".chart-container {\n    position: relative;\n    width: 100%;\n    height: 300px;\n    max-width: 500px;\n    margin: auto;\n    padding: 15px;\n    background: #ffffff; /* پس‌زمینه سفید */\n    border-radius: 10px;\n    text-align: center;\n}\n\n.chart-title {\n    font-size: 0.9em;\n    font-weight: bold;\n    margin-bottom: 10px;\n    color: #333;\n}\n",
+      "controllerScript" : "self.onInit = function() {\n    // Load Chart.js script dynamically\n    function loadScript(url, callback) {\n        const script = document.createElement(\"script\");\n        script.type = \"text/javascript\";\n        script.src = url;\n        script.onload = callback;\n        document.head.appendChild(script);\n    }\n\n    loadScript(\"https://cdn.jsdelivr.net/npm/chart.js\", function() {\n        const ctx = document.getElementById('dynamic-cost-prediction-chart').getContext('2d');\n\n        // Fixed data for the chart (Construction-specific logical values)\n        const labels = [\"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\"];\n        const actualCosts = [15000, 18000, 17000, 20000, 22000, 24000, 26000];\n        const predictedCosts = [15500, 18500, 17500, 21000, 23000, 25000, 27000];\n\n        // Create the chart\n        const costPredictionChart = new Chart(ctx, {\n            type: 'bar',\n            data: {\n                labels: labels,\n                datasets: [\n                    {\n                        label: \"Actual Costs (TL)\",\n                        data: actualCosts,\n                        backgroundColor: \"#1a237e\", // Dark blue for bars\n                        borderColor: \"#1a237e\",\n                        borderWidth: 1\n                    },\n                    {\n                        label: \"Predicted Costs (TL)\",\n                        data: predictedCosts,\n                        borderColor: \"#ffeb3b\", // Yellow for predicted line\n                        borderWidth: 2,\n                        type: 'line',\n                        fill: false,\n                        tension: 0.4,\n                        pointBackgroundColor: \"#ffeb3b\",\n                        pointRadius: 4,\n                        borderDash: [5, 5]\n                    }\n                ]\n            },\n            options: {\n                responsive: true,\n                maintainAspectRatio: true, // Maintain aspect ratio for full-screen view\n                scales: {\n                    y: {\n                        beginAtZero: true,\n                        grid: {\n                            color: \"#000000\", // Black grid lines for better visibility\n                            lineWidth: 1.5\n                        },\n                        title: {\n                            display: true,\n                            text: 'Cost (TL)',\n                            color: '#333',\n                            font: {\n                                size: 12\n                            }\n                        },\n                        ticks: {\n                            stepSize: 5000,\n                            color: '#333',\n                            font: {\n                                size: 10\n                            }\n                        }\n                    },\n                    x: {\n                        grid: {\n                            display: false\n                        },\n                        title: {\n                            display: true,\n                            text: 'Months',\n                            color: '#333',\n                            font: {\n                                size: 12\n                            }\n                        },\n                        ticks: {\n                            color: '#333',\n                            font: {\n                                size: 10\n                            }\n                        }\n                    }\n                },\n                plugins: {\n                    legend: {\n                        position: 'left',\n                        labels: {\n                            color: '#333',\n                            font: {\n                                size: 10\n                            }\n                        }\n                    },\n                    tooltip: {\n                        enabled: true,\n                        backgroundColor: '#f5f5f5',\n                        titleColor: '#333',\n                        bodyColor: '#333',\n                        borderColor: '#007bff',\n                        borderWidth: 1\n                    }\n                },\n                layout: {\n                    padding: {\n                        left: 0,\n                        right: 0,\n                        top: 0,\n                        bottom: 0\n                    }\n                }\n            }\n        });\n    });\n};\n",
+      "settingsSchema" : "",
+      "dataKeySettingsSchema" : "",
+      "settingsDirective" : "tb-html-card-widget-settings",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"static\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":false,\"backgroundColor\":\"rgb(255, 255, 255)\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{\"cardHtml\":\"<div class='card'>HTML code here</div>\",\"cardCss\":\".card {\\n    font-weight: bold;\\n    font-size: 32px;\\n    color: #999;\\n    width: 100%;\\n    height: 100%;\\n    display: flex;\\n    align-items: center;\\n    justify-content: center;\\n}\"},\"title\":\"cost-prediction\",\"dropShadow\":true}"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "dde7e690-975d-11ef-a3bd-0f61fe9e8422"
+    },
+    "scada" : false,
+    "tags" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

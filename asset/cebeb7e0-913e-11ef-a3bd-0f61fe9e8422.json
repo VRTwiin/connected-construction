@@ -54,23 +54,23 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "address",
-      "lastUpdateTs" : 1729763847135,
+      "lastUpdateTs" : 1730401684024,
       "longValue" : null,
-      "strValue" : "Azadi Square, Tehran, Iran"
+      "strValue" : "Close to Topkapi Palace and Gülhane Park"
     }, {
       "booleanValue" : null,
-      "doubleValue" : 35.6997,
+      "doubleValue" : 41.0128,
       "jsonValue" : null,
       "key" : "latitude",
-      "lastUpdateTs" : 1729763982352,
+      "lastUpdateTs" : 1730401705207,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 51.337,
+      "doubleValue" : 28.976,
       "jsonValue" : null,
       "key" : "longitude",
-      "lastUpdateTs" : 1729764002364,
+      "lastUpdateTs" : 1730401717140,
       "longValue" : null,
       "strValue" : null
     } ]

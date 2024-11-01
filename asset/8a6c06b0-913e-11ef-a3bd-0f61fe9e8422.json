@@ -54,23 +54,23 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "address",
-      "lastUpdateTs" : 1729763664851,
+      "lastUpdateTs" : 1730401583537,
       "longValue" : null,
-      "strValue" : "Vali Asr Square, Tehran, Iran"
+      "strValue" : "Near Hagia Sophia Museum and the Blue Mosque"
     }, {
       "booleanValue" : null,
-      "doubleValue" : 35.7006,
+      "doubleValue" : 41.0082,
       "jsonValue" : null,
       "key" : "latitude",
-      "lastUpdateTs" : 1729763765312,
+      "lastUpdateTs" : 1730401597388,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 51.4122,
+      "doubleValue" : 28.9784,
       "jsonValue" : null,
       "key" : "longitude",
-      "lastUpdateTs" : 1729763820672,
+      "lastUpdateTs" : 1730401607297,
       "longValue" : null,
       "strValue" : null
     } ]

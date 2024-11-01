@@ -19,424 +19,8 @@
     "configuration" : {
       "description" : "",
       "widgets" : {
-        "821e07e9-2eeb-1e8a-26c6-5d8d2ccf3d8c" : {
-          "typeFullFqn" : "system.line_chart",
-          "type" : "timeseries",
-          "sizeX" : 8,
-          "sizeY" : 5,
-          "config" : {
-            "datasources" : [ {
-              "type" : "function",
-              "name" : "",
-              "entityAliasId" : "2bda1aa8-804c-f777-5cb1-75d7c1d49df1",
-              "dataKeys" : [ {
-                "name" : "f(x)",
-                "type" : "function",
-                "label" : "Safety",
-                "color" : "#009688",
-                "settings" : {
-                  "yAxisId" : "default",
-                  "showInLegend" : true,
-                  "dataHiddenByDefault" : false,
-                  "type" : "line",
-                  "lineSettings" : {
-                    "showLine" : true,
-                    "step" : false,
-                    "stepType" : "start",
-                    "smooth" : false,
-                    "lineType" : "solid",
-                    "lineWidth" : 2,
-                    "showPoints" : false,
-                    "showPointLabel" : false,
-                    "pointLabelPosition" : "top",
-                    "pointLabelFont" : {
-                      "family" : "Roboto",
-                      "size" : 11,
-                      "sizeUnit" : "px",
-                      "style" : "normal",
-                      "weight" : "400",
-                      "lineHeight" : "1"
-                    },
-                    "pointLabelColor" : "rgba(0, 0, 0, 0.76)",
-                    "enablePointLabelBackground" : false,
-                    "pointLabelBackground" : "rgba(255,255,255,0.56)",
-                    "pointShape" : "emptyCircle",
-                    "pointSize" : 4,
-                    "fillAreaSettings" : {
-                      "type" : "none",
-                      "opacity" : 0.4,
-                      "gradient" : {
-                        "start" : 100,
-                        "end" : 0
-                      }
-                    }
-                  },
-                  "barSettings" : {
-                    "showBorder" : false,
-                    "borderWidth" : 2,
-                    "borderRadius" : 0,
-                    "showLabel" : false,
-                    "labelPosition" : "top",
-                    "labelFont" : {
-                      "family" : "Roboto",
-                      "size" : 11,
-                      "sizeUnit" : "px",
-                      "style" : "normal",
-                      "weight" : "400",
-                      "lineHeight" : "1"
-                    },
-                    "labelColor" : "rgba(0, 0, 0, 0.76)",
-                    "enableLabelBackground" : false,
-                    "labelBackground" : "rgba(255,255,255,0.56)",
-                    "backgroundSettings" : {
-                      "type" : "none",
-                      "opacity" : 0.4,
-                      "gradient" : {
-                        "start" : 100,
-                        "end" : 0
-                      }
-                    }
-                  },
-                  "comparisonSettings" : {
-                    "showValuesForComparison" : false,
-                    "comparisonValuesLabel" : "",
-                    "color" : ""
-                  }
-                },
-                "_hash" : 0.2643340866528009,
-                "funcBody" : "var value = Math.random() * 100; // تولید یک عدد تصادفی بین 0 تا 100\nvar multiplier = Math.pow(10, 2); // تنظیم دقت به 2 رقم اعشار\nvar value = Math.round(value * multiplier) / multiplier; // گرد کردن عدد به 2 رقم اعشار\nreturn value; // برگرداندن مقدار نهایی\n",
-                "aggregationType" : null,
-                "units" : "%",
-                "decimals" : null,
-                "usePostProcessing" : null,
-                "postFuncBody" : null
-              } ],
-              "alarmFilterConfig" : {
-                "statusList" : [ "ACTIVE" ]
-              },
-              "latestDataKeys" : null
-            } ],
-            "timewindow" : {
-              "hideAggregation" : false,
-              "hideAggInterval" : false,
-              "hideTimezone" : false,
-              "selectedTab" : 0,
-              "realtime" : {
-                "realtimeType" : 0,
-                "interval" : 10000,
-                "timewindowMs" : 120000,
-                "quickInterval" : "CURRENT_HOUR",
-                "hideInterval" : false,
-                "hideLastInterval" : false,
-                "hideQuickInterval" : false
-              },
-              "history" : {
-                "historyType" : 0,
-                "interval" : 1000,
-                "timewindowMs" : 60000,
-                "fixedTimewindow" : {
-                  "startTimeMs" : 1730122918318,
-                  "endTimeMs" : 1730209318318
-                },
-                "quickInterval" : "CURRENT_DAY",
-                "hideInterval" : false,
-                "hideLastInterval" : false,
-                "hideFixedInterval" : false,
-                "hideQuickInterval" : false
-              },
-              "aggregation" : {
-                "type" : "AVG",
-                "limit" : 25000
-              },
-              "timezone" : null
-            },
-            "showTitle" : true,
-            "backgroundColor" : "rgba(0, 0, 0, 0)",
-            "color" : "rgba(0, 0, 0, 0.87)",
-            "padding" : "0px",
-            "settings" : {
-              "comparisonEnabled" : false,
-              "timeForComparison" : "previousInterval",
-              "comparisonCustomIntervalValue" : 7200000,
-              "comparisonXAxis" : {
-                "show" : true,
-                "label" : "",
-                "labelFont" : {
-                  "family" : "Roboto",
-                  "size" : 12,
-                  "sizeUnit" : "px",
-                  "style" : "normal",
-                  "weight" : "600",
-                  "lineHeight" : "1"
-                },
-                "labelColor" : "rgba(0, 0, 0, 0.54)",
-                "position" : "top",
-                "showTickLabels" : true,
-                "tickLabelFont" : {
-                  "family" : "Roboto",
-                  "size" : 10,
-                  "sizeUnit" : "px",
-                  "style" : "normal",
-                  "weight" : "400",
-                  "lineHeight" : "1"
-                },
-                "tickLabelColor" : "rgba(0, 0, 0, 0.54)",
-                "ticksFormat" : { },
-                "showTicks" : true,
-                "ticksColor" : "rgba(0, 0, 0, 0.54)",
-                "showLine" : true,
-                "lineColor" : "rgba(0, 0, 0, 0.54)",
-                "showSplitLines" : true,
-                "splitLinesColor" : "rgba(0, 0, 0, 0.12)"
-              },
-              "yAxes" : {
-                "default" : {
-                  "units" : "%",
-                  "decimals" : 0,
-                  "show" : true,
-                  "label" : "Safety",
-                  "labelFont" : {
-                    "family" : "Roboto",
-                    "size" : 12,
-                    "sizeUnit" : "px",
-                    "style" : "normal",
-                    "weight" : "600",
-                    "lineHeight" : "1"
-                  },
-                  "labelColor" : "rgb(233, 30, 99)",
-                  "position" : "left",
-                  "showTickLabels" : true,
-                  "tickLabelFont" : {
-                    "family" : "Roboto",
-                    "size" : 12,
-                    "sizeUnit" : "px",
-                    "style" : "normal",
-                    "weight" : "400",
-                    "lineHeight" : "1"
-                  },
-                  "tickLabelColor" : "rgba(0, 0, 0, 0.54)",
-                  "ticksFormatter" : null,
-                  "showTicks" : true,
-                  "ticksColor" : "rgba(0, 0, 0, 0.54)",
-                  "showLine" : true,
-                  "lineColor" : "rgba(0, 0, 0, 0.54)",
-                  "showSplitLines" : true,
-                  "splitLinesColor" : "rgba(0, 0, 0, 0.12)",
-                  "id" : "default",
-                  "order" : 0,
-                  "min" : 0,
-                  "max" : 100,
-                  "ticksGenerator" : null,
-                  "interval" : null,
-                  "splitNumber" : null
-                }
-              },
-              "thresholds" : [ ],
-              "dataZoom" : false,
-              "stack" : false,
-              "grid" : {
-                "show" : false,
-                "backgroundColor" : "#009688",
-                "borderWidth" : 1,
-                "borderColor" : "#ccc"
-              },
-              "xAxis" : {
-                "show" : true,
-                "label" : "Time",
-                "labelFont" : {
-                  "family" : "Roboto",
-                  "size" : 12,
-                  "sizeUnit" : "px",
-                  "style" : "normal",
-                  "weight" : "600",
-                  "lineHeight" : "1"
-                },
-                "labelColor" : "rgb(233, 30, 99)",
-                "position" : "bottom",
-                "showTickLabels" : true,
-                "tickLabelFont" : {
-                  "family" : "Roboto",
-                  "size" : 10,
-                  "sizeUnit" : "px",
-                  "style" : "normal",
-                  "weight" : "400",
-                  "lineHeight" : "1"
-                },
-                "tickLabelColor" : "rgba(0, 0, 0, 0.54)",
-                "ticksFormat" : { },
-                "showTicks" : true,
-                "ticksColor" : "rgba(0, 0, 0, 0.54)",
-                "showLine" : true,
-                "lineColor" : "rgba(0, 0, 0, 0.54)",
-                "showSplitLines" : true,
-                "splitLinesColor" : "rgba(0, 0, 0, 0.12)"
-              },
-              "noAggregationBarWidthSettings" : {
-                "strategy" : "group",
-                "groupWidth" : {
-                  "relative" : true,
-                  "relativeWidth" : 2,
-                  "absoluteWidth" : 1000
-                },
-                "barWidth" : {
-                  "relative" : true,
-                  "relativeWidth" : 2,
-                  "absoluteWidth" : 1000
-                }
-              },
-              "showLegend" : true,
-              "legendColumnTitleFont" : {
-                "family" : "Roboto",
-                "size" : 12,
-                "sizeUnit" : "px",
-                "style" : "normal",
-                "weight" : "400",
-                "lineHeight" : "16px"
-              },
-              "legendColumnTitleColor" : "rgb(161, 173, 177)",
-              "legendLabelFont" : {
-                "family" : "Roboto",
-                "size" : 12,
-                "sizeUnit" : "px",
-                "style" : "normal",
-                "weight" : "400",
-                "lineHeight" : "16px"
-              },
-              "legendLabelColor" : "rgba(0, 0, 0, 0.76)",
-              "legendValueFont" : {
-                "family" : "Roboto",
-                "size" : 12,
-                "sizeUnit" : "px",
-                "style" : "normal",
-                "weight" : "500",
-                "lineHeight" : "16px"
-              },
-              "legendValueColor" : "rgb(233, 30, 99)",
-              "legendConfig" : {
-                "position" : "top",
-                "sortDataKeys" : true,
-                "showMin" : false,
-                "showMax" : false,
-                "showAvg" : true,
-                "showTotal" : false,
-                "showLatest" : false
-              },
-              "showTooltip" : true,
-              "tooltipTrigger" : "axis",
-              "tooltipLabelFont" : {
-                "family" : "Roboto",
-                "size" : 12,
-                "sizeUnit" : "px",
-                "style" : "normal",
-                "weight" : "400",
-                "lineHeight" : "16px"
-              },
-              "tooltipLabelColor" : "rgba(0, 0, 0, 0.76)",
-              "tooltipValueFont" : {
-                "family" : "Roboto",
-                "size" : 12,
-                "sizeUnit" : "px",
-                "style" : "normal",
-                "weight" : "500",
-                "lineHeight" : "16px"
-              },
-              "tooltipValueColor" : "rgba(0, 0, 0, 0.76)",
-              "tooltipValueFormatter" : null,
-              "tooltipShowDate" : true,
-              "tooltipDateFormat" : {
-                "format" : "MMM yyyy",
-                "lastUpdateAgo" : false,
-                "custom" : false,
-                "auto" : false,
-                "autoDateFormatSettings" : { }
-              },
-              "tooltipDateFont" : {
-                "family" : "Roboto",
-                "size" : 11,
-                "sizeUnit" : "px",
-                "style" : "normal",
-                "weight" : "400",
-                "lineHeight" : "16px"
-              },
-              "tooltipDateColor" : "rgba(0, 0, 0, 0.76)",
-              "tooltipDateInterval" : true,
-              "tooltipBackgroundColor" : "rgba(255, 255, 255, 0.76)",
-              "tooltipBackgroundBlur" : 4,
-              "animation" : {
-                "animation" : true,
-                "animationThreshold" : 2000,
-                "animationDuration" : 500,
-                "animationEasing" : "cubicOut",
-                "animationDelay" : 0,
-                "animationDurationUpdate" : 300,
-                "animationEasingUpdate" : "cubicOut",
-                "animationDelayUpdate" : 0
-              },
-              "background" : {
-                "type" : "color",
-                "color" : "#fff",
-                "overlay" : {
-                  "enabled" : false,
-                  "color" : "rgba(255,255,255,0.72)",
-                  "blur" : 3
-                }
-              },
-              "padding" : "12px"
-            },
-            "title" : "Worker Traking",
-            "dropShadow" : true,
-            "enableFullscreen" : true,
-            "titleStyle" : null,
-            "mobileHeight" : null,
-            "configMode" : "advanced",
-            "actions" : { },
-            "showTitleIcon" : false,
-            "titleIcon" : "thermostat",
-            "iconColor" : "#1F6BDD",
-            "useDashboardTimewindow" : false,
-            "displayTimewindow" : true,
-            "titleFont" : {
-              "size" : 16,
-              "sizeUnit" : "px",
-              "family" : "Roboto",
-              "weight" : "500",
-              "style" : "normal",
-              "lineHeight" : "24px"
-            },
-            "titleColor" : "rgba(0, 0, 0, 0.87)",
-            "titleTooltip" : "",
-            "widgetStyle" : { },
-            "widgetCss" : "",
-            "pageSize" : 1024,
-            "units" : null,
-            "decimals" : null,
-            "noDataDisplayMessage" : "",
-            "timewindowStyle" : {
-              "showIcon" : false,
-              "iconSize" : "24px",
-              "icon" : null,
-              "iconPosition" : "left",
-              "font" : {
-                "size" : 12,
-                "sizeUnit" : "px",
-                "family" : "Roboto",
-                "weight" : "400",
-                "style" : "normal",
-                "lineHeight" : "16px"
-              },
-              "color" : "rgba(0, 0, 0, 0.38)",
-              "displayTypePrefix" : true
-            },
-            "margin" : "0px",
-            "borderRadius" : "0px",
-            "iconSize" : "0px"
-          },
-          "row" : 0,
-          "col" : 0,
-          "id" : "821e07e9-2eeb-1e8a-26c6-5d8d2ccf3d8c"
-        },
-        "a9fbaf55-0c66-4740-bf4d-73331fb3cf3e" : {
-          "typeFullFqn" : "tenant.weather",
+        "60aa3669-6834-baca-7b4a-1ee8c85ba592" : {
+          "typeFullFqn" : "tenant.healthy_worker",
           "type" : "static",
           "sizeX" : 7.5,
           "sizeY" : 3,
@@ -467,12 +51,184 @@
               "cardHtml" : "<div class='card'>HTML code here</div>",
               "cardCss" : ".card {\n    font-weight: bold;\n    font-size: 32px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}"
             },
-            "title" : "weather",
+            "title" : "healthy-worker",
             "dropShadow" : true
           },
           "row" : 0,
           "col" : 0,
-          "id" : "a9fbaf55-0c66-4740-bf4d-73331fb3cf3e"
+          "id" : "60aa3669-6834-baca-7b4a-1ee8c85ba592"
+        },
+        "71d1ef4d-b531-a3db-d093-2efc7a5bf957" : {
+          "typeFullFqn" : "tenant.material_performance",
+          "type" : "static",
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "static",
+              "name" : "function",
+              "dataKeys" : [ {
+                "name" : "f(x)",
+                "type" : "function",
+                "label" : "Random",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.15479322438769105,
+                "funcBody" : "var value = prevValue + Math.random() * 100 - 50;\nvar multiplier = Math.pow(10, 2 || 0);\nvar value = Math.round(value * multiplier) / multiplier;\nif (value < -1000) {\n\tvalue = -1000;\n} else if (value > 1000) {\n\tvalue = 1000;\n}\nreturn value;"
+              } ]
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "cardHtml" : "<div class='card'>HTML code here</div>",
+              "cardCss" : ".card {\n    font-weight: bold;\n    font-size: 32px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}"
+            },
+            "title" : "material-performance",
+            "dropShadow" : true
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "71d1ef4d-b531-a3db-d093-2efc7a5bf957"
+        },
+        "7626693d-d8b5-adac-079a-0d5303f672f6" : {
+          "type" : "latest",
+          "sizeX" : 5,
+          "sizeY" : 3.5,
+          "config" : {
+            "datasources" : [ ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1682928998568,
+                  "endTimeMs" : 1683015398568
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 2500
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "useMarkdownTextFunction" : true,
+              "markdownTextPattern" : "# Markdown/HTML card \\n - **Current entity**: **${entityName}**. \\n - **Current value**: **${Random}**.",
+              "markdownTextFunction" : "\nvar dashboardPage = $('.tb-dashboard-page')[0];\n\nvar darkMode = $(dashboardPage).hasClass('dark');\nvar darkModeExpression = darkMode ? '(darkMode !== false)' : 'darkMode';\n\nreturn '<div class=\"header\" fxLayout=\"row\" fxLayoutAlign=\"start stretch\" fxLayoutGap=\"8px\">' +\n        '<div fxFlex fxLayout=\"column\" fxLayoutAlign=\"center\">' +\n           '<div class=\"title\">${entityLabel}</div>' +\n           '<div class=\"subtitle\">${entityName}</div>' +\n        '</div>' +\n        '<div fxLayout=\"column\" fxLayoutAlign=\"center\" style=\"padding-right: 24px;\">' +\n            '<button (click)=\"darkMode = '+darkModeExpression+' ? false : true\" id=\"dark-mode-switch\" mat-icon-button matTooltip=\"{{ '+ darkModeExpression +' ? &quot;Switch to light mode&quot; : &quot;Switch to dark mode&quot; }}\"><mat-icon>{{ '+ darkModeExpression +' ? &quot;light_mode&quot; : &quot;dark_mode&quot; }}</mat-icon></button>' +\n        '</div>' +\n'</div>';\n",
+              "applyDefaultMarkdownStyle" : false,
+              "markdownCss" : ".header {\n    height: 100%;\n    padding: 0 0 0 16px;\n} \n\n.header .mat-icon.title-icon {\n    width: 40px;\n    height: 40px;\n}\n\n.header .title {\n    font-size: 18px;\n    font-weight: 500;\n    color: #28232D;\n}\n\n.header .subtitle {\n    font-size: 13px;\n    font-weight: normal;\n    color: #757575;\n}\n"
+            },
+            "title" : "New Markdown/HTML Card",
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false,
+            "widgetCss" : "",
+            "noDataDisplayMessage" : "",
+            "actions" : {
+              "elementClick" : [ {
+                "name" : "go-back",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "custom",
+                "customFunction" : "widgetContext.stateController.navigatePrevState(0);",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "fd666ec9-cd5a-af01-47e1-b7e53911f87a"
+              }, {
+                "name" : "dark-mode-switch",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "custom",
+                "customFunction" : "var dashboardPage = $('.tb-dashboard-page')[0];\n$(dashboardPage).toggleClass('dark');",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "4431866e-87da-0a87-0fe0-1bd7bd404081"
+              } ]
+            },
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "7626693d-d8b5-adac-079a-0d5303f672f6",
+          "typeFullFqn" : "system.cards.markdown_card"
+        },
+        "af6e895f-8ab2-cc1a-3db4-a7378a939354" : {
+          "typeFullFqn" : "tenant.performances",
+          "type" : "static",
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "static",
+              "name" : "function",
+              "dataKeys" : [ {
+                "name" : "f(x)",
+                "type" : "function",
+                "label" : "Random",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.15479322438769105,
+                "funcBody" : "var value = prevValue + Math.random() * 100 - 50;\nvar multiplier = Math.pow(10, 2 || 0);\nvar value = Math.round(value * multiplier) / multiplier;\nif (value < -1000) {\n\tvalue = -1000;\n} else if (value > 1000) {\n\tvalue = 1000;\n}\nreturn value;"
+              } ]
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "cardHtml" : "<div class='card'>HTML code here</div>",
+              "cardCss" : ".card {\n    font-weight: bold;\n    font-size: 32px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}"
+            },
+            "title" : "performances",
+            "dropShadow" : true
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "af6e895f-8ab2-cc1a-3db4-a7378a939354"
         }
       },
       "states" : {
@@ -482,18 +238,29 @@
           "layouts" : {
             "main" : {
               "widgets" : {
-                "821e07e9-2eeb-1e8a-26c6-5d8d2ccf3d8c" : {
-                  "sizeX" : 8,
-                  "sizeY" : 6,
-                  "mobileHeight" : null,
-                  "row" : 0,
-                  "col" : 9
+                "60aa3669-6834-baca-7b4a-1ee8c85ba592" : {
+                  "sizeX" : 12,
+                  "sizeY" : 8,
+                  "row" : 10,
+                  "col" : 0
                 },
-                "a9fbaf55-0c66-4740-bf4d-73331fb3cf3e" : {
-                  "sizeX" : 9,
-                  "sizeY" : 6,
+                "71d1ef4d-b531-a3db-d093-2efc7a5bf957" : {
+                  "sizeX" : 24,
+                  "sizeY" : 9,
+                  "row" : 1,
+                  "col" : 0
+                },
+                "7626693d-d8b5-adac-079a-0d5303f672f6" : {
+                  "sizeX" : 24,
+                  "sizeY" : 1,
                   "row" : 0,
                   "col" : 0
+                },
+                "af6e895f-8ab2-cc1a-3db4-a7378a939354" : {
+                  "sizeX" : 12,
+                  "sizeY" : 8,
+                  "row" : 10,
+                  "col" : 12
                 }
               },
               "gridSettings" : {
@@ -502,7 +269,14 @@
                 "columns" : 24,
                 "margin" : 10,
                 "outerMargin" : true,
-                "backgroundSizeMode" : "100%"
+                "backgroundSizeMode" : "100%",
+                "minColumns" : 24,
+                "viewFormat" : "grid",
+                "autoFillHeight" : true,
+                "rowHeight" : 70,
+                "backgroundImageUrl" : null,
+                "mobileAutoFillHeight" : false,
+                "mobileRowHeight" : 70
               }
             }
           }
@@ -571,7 +345,14 @@
         "showEntitiesSelect" : true,
         "showDashboardTimewindow" : true,
         "showDashboardExport" : true,
-        "toolbarAlwaysOpen" : true
+        "toolbarAlwaysOpen" : true,
+        "titleColor" : "rgba(0,0,0,0.870588)",
+        "showDashboardLogo" : true,
+        "dashboardLogoUrl" : "tb-image:YmVuZXN0YV9sb2dvLnN2Zw==:YmVuZXN0YV9sb2dvLnN2Zw==:SU1BR0U=;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTUzLjM2NSIgaGVpZ2h0PSIxNzMuNDk0IiB2aWV3Qm94PSIwIDAgMTUzLjM2NSAxNzMuNDk0Ij48ZGVmcz48Y2xpcFBhdGggaWQ9ImEiPjxyZWN0IHdpZHRoPSIxNTMuMzY1IiBoZWlnaHQ9IjE3My40OTQiIGZpbGw9IiNhMTcyNGEiLz48L2NsaXBQYXRoPjwvZGVmcz48ZyBjbGlwLXBhdGg9InVybCgjYSkiPjxwYXRoIGQ9Ik0xNjEuNDY4LDg0LjhWMTkuMjg5bC0xLjUyMS0xLjM0M0MxNDQuMzIxLDQuMTUxLDExMS41NTkuNDQ0LDEwNy4xNzUuMDExVjBoLS4wMjJDMTAyLjc1OC40NDQsNzAuMTI5LDQuMTUxLDU0LjUsMTcuOTQ2bC0xLjUyMSwxLjM0M1Y4NC44Yy0uMDc3LDEuNTY1LS4wNTUsOC45MzQsNi4xMzcsMTguOGE2OS42NTYsNjkuNjU2LDAsMCwwLDE1LjgxNSwxNy4wOGM4LjI0Niw2LjU0OCwxOC42NzgsMTIuNTQxLDMwLjk4NiwxNy44NDZsMS4zNjUuNTMzLDEuMjQzLS41MzNjMTIuMzA4LTUuMywyMi43NC0xMS4zLDMwLjk4Ni0xNy44NDZhNjkuNjYyLDY5LjY2MiwwLDAsMCwxNS44MTUtMTcuMDhjNi4xOTMtOS44NjYsNi4yMjYtMTcuMjM2LDYuMTM3LTE4LjhtLTguNjIzLDE2LjUzNkE2NS42MDcsNjUuNjA3LDAsMCwxLDEzOC4wNCwxMTcuNDNjLTcuNzE0LDYuMTctMTcuNDgsMTEuODMxLTI5LjAxMSwxNi44MjVsLTEuNzQzLjc1NC0xLjc1NC0uNzY1Qzk0LDEyOS4yNjEsODQuMjM2LDEyMy42LDc2LjUyMiwxMTcuNDNhNjUuNiw2NS42LDAsMCwxLTE0LjgwNS0xNi4wOTNjLTUuOC05LjI4OS01LjgxNS0xNi4yMzctNS43MzgtMTcuNzEzVjIxLjg4NmwxLjQxLTEuMjY1QzcyLjAxNiw3LjYxMywxMDIuNTcsNC4xMTgsMTA2LjY2NSwzLjcwN2EzLjU3MywzLjU3MywwLDAsMSwuNDg4LS4wMzNoLjAyMmMuMTg5LDAsLjUyMi4wMTEuNzIxLjAzMyw0LjEwNi40MTEsMzQuNjYsMy45MDYsNDkuMjc2LDE2LjkxM2wxLjQyMSwxLjI2NVY4My42MjVjLjA3OCwxLjQ3Ni4wNTUsOC40MjMtNS43NDksMTcuNzEzTTExNC4wODksMjguMjc1YTY5LjI5MSw2OS4yOTEsMCwwLDEsMTAuODU5LTE2LjUxM0ExMDUuOTE5LDEwNS45MTksMCwwLDEsMTQwLDE2LjQzM2E5Mi4wMTcsOTIuMDE3LDAsMCwwLTE0LjcwOCw3LjE1MSw2LjY5LDYuNjksMCwwLDAtLjkwOS0uMDY5Yy0yLjYwNywwLTQuNjE2LDEuNTkzLTUuNjczLDQuNDg0YTExLjY2NCwxMS42NjQsMCwwLDAtLjM4NSwxLjI4MiwzNy4yMTEsMzcuMjExLDAsMCwwLTQuMjM4LTEuMDA2bTE0LjM1NC0zLjZhODkuMiw4OS4yLDAsMCwxLDE0Ljk1LTYuNzczLDQyLjkzLDQyLjkzLDAsMCwxLDEwLjAyNiw2LjI3NXY2Ljk3MWE2MC43NDEsNjAuNzQxLDAsMCwwLTE0LjQ1OS0zLjQ1OGMtMy4xMS0uMzgyLTUuNzktLjUzMS03LjUzOC0uNTg0YTEyLjAzNiwxMi4wMzYsMCwwLDAtMi45NzktMi40MzFtNi4yMzIsOC45NjVhMy43ODQsMy43ODQsMCwwLDAtLjI4Mi0xLjk1MSwxNi41MTUsMTYuNTE1LDAsMCwwLTEuMDE3LTEuOTQ3YzQuODExLjI4NSwxMy4yNjYsMS4yLDIwLjA0Myw0LjE1NlY1Mi42ODZBMTA2LjY3NSwxMDYuNjc1LDAsMCwwLDE0MS4zMDYsMzkuMTFhNjUuOTczLDY1Ljk3MywwLDAsMC02LjYzMS01LjQ2OW00LjA5LDMzLjA3MmEyNjAuNzc0LDI2MC43NzQsMCwwLDEsNy4yMTUsMzUuMjU0LDY3LjUyMSw2Ny41MjEsMCwwLDEtMTMuMjczLDEyLjg1NCwxNzAuMDE1LDE3MC4wMTUsMCwwLDAsMy40NzUtMjkuMDc2Yy4zMTktNy41NTYuMjI2LTEzLjkwOC4xMzgtMTcuMTJsLjI2OC0uMTc0YTEwLjcyOCwxMC43MjgsMCwwLDAsMi4xNzctMS43MzhNMTMzLjY1LDg1LjY1Yy0uMzY3LDguNi0xLjM3MSwyMS4wMjktNC4xMTcsMzEuNDQ3YTEyOS4zLDEyOS4zLDAsMCwxLTE5LjM5MiwxMC43OUEzNTcuMjIyLDM1Ny4yMjIsMCwwLDAsMTI1LjM4Myw4OS42M2MyLjgyNC04LjUsNC41Ni0xNC44MTgsNS4yLTE3LjI0OC43NTMtLjUsMS45OC0xLjMsMy4yMzctMi4xMjQuMDYzLDMuMTA5LjEsOC44MjItLjE2OCwxNS4zOTFtMTQuNDYyLDEzLjI4MWMtMy4yNTEtMjIuMTIxLTcuOTQ4LTM3LjQ5MS0xMS4zMzctNDYuNTIzTDEzNi42MjQsNTJhODcuMDI4LDg3LjAyOCwwLDAsMC0zLjQtOC4xNjRjLTEuMTMtMi40NDctMi4wNzgtNC4yMzktMi43MTgtNS4zNzNhNy4wNyw3LjA3LDAsMCwwLDMuMjEzLTIuMzgyLDY2LjM1MSw2Ni4zNTEsMCwwLDEsNS44NTgsNC44ODksMTA3LDEwNywwLDAsMSwxMy44NDUsMTZWODMuNDgyYy4wMTkuMjkxLjM4LDYuNjA2LTUuMzA3LDE1LjQ0OW0tMjYuNjYtNi43NDctLjA3OC4xNjdjLS40NzEuOTQ2LTMuMDc0LDMuMDQzLTcuNjkyLDMuMDQzSDEwMC43OWMtNC42NjMsMC03LjItMi4wNjQtNy43LTMuMDY5LS4wMjItLjA0Mi0uMDUtLjA5NS0uMDc2LS4xNTVhMjguMjkxLDI4LjI5MSwwLDAsMSwxNC4yMzYtNC4wOTJsLjEyMywwYTI2Ljc2OSwyNi43NjksMCwwLDEsMTQuMDgxLDQuMTA4bS42OTQtODEuMDQ2QTc0LjksNzQuOSwwLDAsMCwxMTMuNywyMy4zNzNjLTEuMDQyLDEuOTE1LTEuNzY4LDMuNDcyLTIuMjIsNC41MDgtLjgtLjEtMS42LS4xNzktMi4zNzgtLjIzNWwtLjExLS4wMTYtLjI2OC0uMDMyLTEuMzg0LS4wMzRoLS4xNTFhNDEuNDQ3LDQxLjQ0NywwLDAsMC00LjE5NC4zMThjLS40NDctMS4wMzgtMS4xNzctMi42LTIuMjE3LTQuNTA4YTc1LjYzLDc1LjYzLDAsMCwwLTguNDM5LTEyLjIzNUExNDAuODgxLDE0MC44ODEsMCwwLDEsMTA3LjE3LDguNzI3YS4zNjguMzY4LDAsMCwxLC4wNjQtLjAwNiwxNDEuOTI4LDE0MS45MjgsMCwwLDEsMTQuOTExLDIuNDE4bTEzLjA2NSw1NS4xODNjLTIuMzE3LDEuNDkzLTYuMSwzLjk4MS02LjY3LDQuMzYxbC0uMjYxLjE3MS0uMDU1LjIxM2MtLjAxOC4wODUtMi4wNyw4LjE4My00LjQ2MywxNS4xMzlhMy43MiwzLjcyLDAsMCwxLTMuMSwxLjc1Niw1LjIsNS4yLDAsMCwxLTEuODI2LS4zN2MtLjU0NS0uMi0xLjA1LS40LTEuNTMxLS41ODlhMjQuNTIxLDI0LjUyMSwwLDAsMC05LjIzMy0yLjE2MmMtLjA5MS0yLjE2NC4xNDktOCw1LjA2NS05LjU4Ny4yODgtLjA5My41NjktLjE4Ny44NTctLjI3NmwuMDc3LS4wMzJjMi43LS44NTMsNS43NjMtMS44MTgsNC45NzEtNS4xMDVsLS4wNjktLjI3Ni0xLjA5NC4xODUuMDMyLjI3OWExLjA3LDEuMDcsMCwwLDEtLjI4NS43NDQsMi40MTEsMi40MTEsMCwwLDEtMS44MTkuNTU4Yy0xLjMyMSwwLTIuNzctLjAzNC00LjE3Mi0uMDY2LTEuMzMyLS4wMjQtMi42LS4wNTgtMy43MTctLjA1OGwtLjY4NiwwLS42OCwwYy0xLjEyMSwwLTIuMzgyLjAzNC0zLjcyNi4wNTgtMS4zOTIuMDMyLTIuODQuMDY2LTQuMTY0LjA2NmEyLjQsMi40LDAsMCwxLTEuODI3LS41NjYsMS4xLDEuMSwwLDAsMS0uMjc3LS43NGwuMDIyLS4yNzMtLjI3LS4wNTItLjgyMS0uMTM1LS4wNjQuMjc2Yy0uNzksMy4yODcsMi40LDQuMyw0Ljk2Nyw1LjEwNWwuMTczLjA1OGMuMjYuMDguNTA5LjE2MS43NjUuMjQ5LDQuOTE4LDEuNTg3LDUuMTU4LDcuNDIzLDUuMDY5LDkuNTg3QTI0LjUwOSwyNC41MDksMCwwLDAsOTcuMTcxLDg3Yy0uNDgzLjE4OS0uOTg5LjM4Ni0xLjUzOS41ODlhNS4xNzMsNS4xNzMsMCwwLDEtMS44Mi4zNywzLjc0OCwzLjc0OCwwLDAsMS0zLjEwNi0xLjc1NmMtMi4yODktNi42Ny00LjI0NS0xNC4yOC00LjQ1NC0xNS4xMjdsLS4wNjItLjIyNkw4Niw3MC43MzNjLS4yMzUtLjE1NS00LjMtMi44My02LjczOS00LjQxMS0yLjM5Mi0xLjU0OS0yLjM2Ny0yLjA4NC0xLjg4Ni0zLjcxM2E4Ni42NzIsODYuNjcyLDAsMCwxLDMuOTU4LTEyLjY1My44OTIuODkyLDAsMCwxLC43NC0uNDM0LDEuMzcyLDEuMzcyLDAsMCwxLC42NTYuMTkxQzg0LjIxNCw1MC43MzEsOTEuMjMxLDU1LDk1LDU3LjNjMS4yODEuNzc2LDIuMTg3LDEuMzI2LDIuNDEsMS40NjZhMy4wNjQsMy4wNjQsMCwwLDAsMS42LjU1OSwxLjc0MSwxLjc0MSwwLDAsMCwuNzg3LS4xODMsMTYuNTc4LDE2LjU3OCwwLDAsMCwzLjk3OS0yLjgxOGMuMzc2LS40MjcuNzI0LS44MzcuNTgtMS4zYS42ODYuNjg2LDAsMCwwLS40OTUtLjQ2NUM4OS40MSw1MS4yMzEsODMuNSw0OC4yNDYsODMuNDQyLDQ4LjIxNGExLjIyMSwxLjIyMSwwLDAsMS0uNzE4LTEuNTI3LDcyLjAwOSw3Mi4wMDksMCwwLDEsNC43LTguODc3Yy4yNTYtLjQwOC40MzMtLjcuMTExLTEuMDI4bC0uMTQ5LS4xNDMtLjItLjAyMmMtMi45NzktLjMtNC4xMjItMS41NjEtNC41MzQtMi4yODdhMS44OCwxLjg4LDAsMCwxLS4yNTEtMS42Yy4yMjUtLjUyMywyLjI3My01LjA0MSw2LjAxLTYuMzU4YTUuMjI5LDUuMjI5LDAsMCwxLDEuNjgyLS4zMTJjMy42NzEsMCwzLjg4OSw1LjgsMy44ODksNS44NThsLjAxNi44MjcuNzY2LS4zYTQwLjQ4Nyw0MC40ODcsMCwwLDEsMTIuNDA5LTIuMzM1aC4xMTlsLjA1My0uMDA2YTQwLjkyNCw0MC45MjQsMCwwLDEsMTIuMzY5LDIuMzQxbC43ODQuMzF2LS44NDVjLjAwNi0uMDUyLjIxOC01Ljg0OSwzLjg5MS01Ljg0OWE1LjEyOSw1LjEyOSwwLDAsMSwxLjY4NS4zMThjMy42NTEsMS4yODUsNS42NDEsNS41MDYsNiw2LjMzNGExLjg4NSwxLjg4NSwwLDAsMS0uMjQsMS42MTljLS40MTQuNzI2LTEuNTU3LDEuOTgzLTQuNTQsMi4yODdsLS4yLjAyMi0uMTQzLjEzN2MtLjMzNi4zMzItLjE1Ny42MjYuMSwxLjAzNmE3Mi42NDcsNzIuNjQ3LDAsMCwxLDQuNzI1LDguOTQ1LDEuMjA3LDEuMjA3LDAsMCwxLS43NDYsMS40NTZjLS4wNTYuMDMyLTUuOTcxLDMuMDIxLTIwLjQsNi4zNDdhLjY4Mi42ODIsMCwwLDAtLjUxNS40NzJjLS4xMzkuNDU1LjIyMS44ODMuNTgsMS4yOTJhMTYuMzc3LDE2LjM3NywwLDAsMCwzLjk2LDIuODEsMS43NzYsMS43NzYsMCwwLDAsLjguMTkxLDMuMDU3LDMuMDU3LDAsMCwwLDEuNi0uNTU5Yy4yMjEtLjE0MSwxLjExOC0uNjg2LDIuMzg0LTEuNDUzbC4wNjYtLjA0YzMuNzYyLTIuMjg5LDEwLjc1Ni02LjU0NSwxMi4yNjQtNy41ODdhMS4zMzYsMS4zMzYsMCwwLDEsLjYxOC0uMTY1LjkuOSwwLDAsMSwuNzQuNDM0LDg3LjYzNCw4Ny42MzQsMCwwLDEsMy45NTEsMTIuNjIxYy40ODMsMS42NTQuNTEzLDIuMi0xLjg3NSwzLjc0NW0tNTMuNDQsNDguNWE3MS40NTIsNzEuNDUyLDAsMCwxLTEwLjQ0My05LjQ0NWMtLjA3OC0uMDg4LS4xNTYtLjE3Ny0uMjQ0LS4yNjYtLjMzMy0uMzc3LS42NTUtLjc1NS0uOTc3LTEuMTMyLS40MTEtLjUxLTEuMjIxLTEuNTItMS4yMjEtMS41MmwtLjQtLjQ4Ni4wMS0uMDQ3czQuMTg0LTI0LjU0OSw3LjIxNC0zNS4yMTVhMTAuNDc3LDEwLjQ3NywwLDAsMCwyLjE3NSwxLjc0M2wuMjY2LjE2NmMtLjA4OSwzLjIxOS0uMTc3LDkuNTY3LjE0NCwxNy4xMjVhMTY5LjcxMywxNjkuNzEzLDAsMCwwLDMuNDc0LDI5LjA3N20yMi41NjMsMTMuMDYzYy00LjA2Mi0xLjg1NC03Ljg2OC0zLjgwNy0xMS40Mi01LjgyNy0yLjgzLTEuNjEtNS41LTMuMjYzLTcuOTY4LTQuOTYxLTIuNzUzLTEwLjQyMS0zLjc1MS0yMi44NTEtNC4xMTgtMzEuNDUyLS4yNzctNi41ODEtLjIzMy0xMi4yODYtLjE2Ni0xNS4zODIsMS4yMS43ODgsMy4yMywyLjEyLDMuMjMsMi4xMi42NDMsMi40MywyLjM3NSw4Ljc1Nyw1LjE5NCwxNy4yNDcsMy4wNTIsOS4xNDUsMTUuMjM4LDM4LjIzNCwxNS4yNDksMzguMjU2TTg5LjE3OSwyMy41ODRBOTEuNjUyLDkxLjY1MiwwLDAsMCw3NC41NSwxNi40NjNhMTAyLjU4OSwxMDIuNTg5LDAsMCwxLDEzLjQtNC4zMTFjLjUyMi0uMTMyLDEuMDQ0LS4yNiwxLjU4LS4zODlhNjkuMjU5LDY5LjI1OSwwLDAsMSwxMC44NTEsMTYuNTEzLDM3LjksMzcuOSwwLDAsMC00LjI0LDEuMDA2QTExLjA5LDExLjA5LDAsMCwwLDk1Ljc1OSwyOGMtMS4wNTUtMi44OTItMy4wNjUtNC40OC01LjY2OS00LjQ4NWE2Ljc2LDYuNzYsMCwwLDAtLjkxMS4wNjlNMTIwLjM0LDk2LjQzOWMtMy45MzUsMTAuOTkzLTguMzMsMjEuNi0xMy4wNTksMzEuNTUzLS4wMTYuMDM0LS4wMzIuMDYyLS4wNDQuMDk0LTQuNzUtOS45ODEtOS4xNTUtMjAuNjIyLTEzLjEtMzEuNjQ4YTE0LjQyMSwxNC40MjEsMCwwLDAsNi42NTYsMS41aDEyLjg5MmExNC40MTYsMTQuNDE2LDAsMCwwLDYuNjU5LTEuNW0tNTkuMjQ4LTQzLjhWMzMuODgzYzYuNzY4LTIuOTM1LDE1LjItMy44NTUsMjAtNC4xNGExNy42NDEsMTcuNjQxLDAsMCwwLTEuMDIsMS45NSwzLjc1LDMuNzUsMCwwLDAtLjI3OSwxLjk0OCw2NC45NDgsNjQuOTQ4LDAsMCwwLTYuNjMzLDUuNDY5QTEwNi4yLDEwNi4yLDAsMCwwLDYxLjA5Miw1Mi42MzlNNzUuNTE0LDI3LjY5MmE2MC41MjcsNjAuNTI3LDAsMCwwLTE0LjQyMiwzLjQ0NHYtNi45OWE0My41NSw0My41NSwwLDAsMSwxMC4wNjQtNi4yMTMsODkuOTIzLDg5LjkyMywwLDAsMSwxNC44OCw2Ljc0MywxMi4wNDksMTIuMDQ5LDAsMCwwLTIuOTg0LDIuNDMxYy0xLjc0NC4wNTMtNC40MzQuMi03LjUzNy41ODRNNzcuNyw1Mi40MDhjLTMuMzgyLDkuMDI1LTguMDcsMjQuMzcyLTExLjMzMyw0Ni40NTgtLjA1Mi0uMDgzLS4xMDctLjE3LS4xNjMtLjI1LTUuMTYyLTguMjc3LTUuMTI4LTE0LjE1OS01LjExNC0xNC44NDFsMC0yNi44NTVBMTA3LjYyNiwxMDcuNjI2LDAsMCwxLDc0Ljg0OCw0MS4wMTVhNjYuNDE2LDY2LjQxNiwwLDAsMSw1LjkxNC00LjkzNCw3LjAyMiw3LjAyMiwwLDAsMCwzLjIxMSwyLjM4MmMtLjY0NCwxLjEzNi0xLjU5MiwyLjkyNi0yLjcyNCw1LjM4YTg3LjI3OCw4Ny4yNzgsMCwwLDAtMy40LDguMTY3WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTMwLjU0NCkiIGZpbGw9IiNhMTcyNGEiLz48cGF0aCBkPSJNMTguNDY2LDM3OC40MTh2LS4wN2EzLjUxMiwzLjUxMiwwLDAsMCwxLjc4OS0xLDQuNjMzLDQuNjMzLDAsMCwwLC43LTIuODU2LDMuODQ2LDMuODQ2LDAsMCwwLTEuNTExLTMuNDM5LDguMzMxLDguMzMxLDAsMCwwLTQuNi0uOTc2SDBWMzg2LjlIMTYuNDIzYTYuNDE3LDYuNDE3LDAsMCwwLDMuNjY5LS44MzcsNC4xNDksNC4xNDksMCwwLDAsMS40NjQtMy42MjEsNC43NjksNC43NjksMCwwLDAtLjcwNy0yLjg3MSwzLjM1LDMuMzUsMCwwLDAtMi4zODMtMS4xNW0tMTMuMzEtNC4zaDkuMTI5YzEuMDA4LDAsMS41MDkuNDQzLDEuNTA5LDEuMzIycy0uNSwxLjMtMS41MDksMS4zSDUuMTU2Wm05LjI0Nyw4LjczNEg1LjE1NnYtMi42MjZIMTQuNHExLjg1NywwLDEuODU4LDEuNCwwLDEuMjMtMS44NTgsMS4yMzEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLTIxMy40MDQpIiBmaWxsPSIjYTE3MjRhIi8+PHBhdGggZD0iTTEyMS44NzcsMzgyLjNoLS4wNDhsLTkuNjg3LTEyLjIyMmgtNy45OVYzODYuOWg1LjE1NnYtMTIuMjJoLjA0NGw5LjY5LDEyLjIyaDcuOTkxdi0xNi44MmgtNS4xNTZaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjAuMDU4IC0yMTMuNDAzKSIgZmlsbD0iI2ExNzI0YSIvPjxwYXRoIGQ9Ik01NS40NTQsMzg2Ljk0NWwxOC4xLjAwOFYzODMuMmwtMTMuMjg0LjAxNi0uMDEtMi45NDdINzAuNDM1bC4wMTMtMy4yNzdINjAuMjU3di0yLjg3M2wxMy4zLjAwNS4wMzEtMy43MzhINTUuNDU0WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTMxLjk3OCAtMjEzLjU4NCkiIGZpbGw9IiNhMTcyNGEiLz48cGF0aCBkPSJNMzIwLjQ3OCwzNzAuNTI4aC02LjAzOWwtOS4wMSwxNi42MjloNS4yODVsMS41MjktMi45NjdoMTAuNDMzbDEuNTMsMi45NjdoNS4yODRabS0zLjAwNiwxMC4xMTdoLTMuNDE5bDMuNDA3LTYuNTQ0LDMuNDE4LDYuNTQ5WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTE3Ni4xMjQgLTIxMy42NjMpIiBmaWxsPSIjYTE3MjRhIi8+PHBhdGggZD0iTTE2NC4xNDIsMzg3LjE0OWwxOC4xNzMuMDA4di0zLjc2NGwtMTMuMzM3LjAxNS0uMDEtMi45NThIMTc5LjE4bC4wMTMtMy4yOUgxNjguOTYydi0yLjg4NWwxMy4zNTIuMDA2LjAzMS0zLjc1MmgtMTguMloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC05NC42NTIgLTIxMy42NjQpIiBmaWxsPSIjYTE3MjRhIi8+PHBhdGggZD0iTTI4NC4xMDksMzcwLjUyOEgyNjQuMDI5bDAsMy43MzMsNy40NTYtLjAwNS0uMDA4LDEyLjlIMjc2LjZsMC0xMi45aDcuNTA2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTE1Mi4yNTEgLTIxMy42NjMpIiBmaWxsPSIjYTE3MjRhIi8+PHBhdGggZD0iTTIyOC42ODgsMzc2LjU2N2MtLjk3NC0uMDc0LTMuMTItLjEyNC0zLjU3MS0uMTI0aC00Ljc1NWExMC42NTUsMTAuNjU1LDAsMCwxLTIuMDYxLS4xLDEuMTc4LDEuMTc4LDAsMCwxLTEuMDkxLTEuMjI2YzAtLjc1NC40MTktMS4yNjUsMS43ODgtMS4zLjY1OS0uMDIyLDIuMjI5LjAwNywzLjY1Ni0uMDA1LjM0NS0uMDA2Ljc2MiwwLDEuMDc4LDAsLjI4NiwwLC45NDUtLjAxMSwxLjE4OS0uMDA2aDcuNDVhMy43NjEsMy43NjEsMCwwLDAtMS40NzYtMi45NWMtMS4xNTYtLjc3Mi0yLjY0OC0uOTIzLTguNDg5LS45MjNhMzIuOTg4LDMyLjk4OCwwLDAsMC03LC40NzNjLTIuNDE4LjU3OC0zLjI2NywxLjg0Ni0zLjIyOSw0Ljg0LjAyOCwyLjI2OC42LDMuNTksMS44MDksNC4yMTMsMS4wODYuNTQ4LDIuMzY4LjY5NSw1LjQ1LjY5NWg0LjYxNWMyLjQ4OS4wMjQsMi42MzUtLjAxNiwzLjE4Ny4xNTdhMS4xNjMsMS4xNjMsMCwwLDEsLjg1NCwxLjMwOGMtLjAxNSwxLjAzLS4zNzQsMS4zMDctMi45NTUsMS4zMDctLjY5MSwwLTQuOTItLjAwNi01LjU0MSwwbC03LjIwNiwwYy4xNzksMS40LjcsMi42LDEuNTM1LDMuMDEyLDEuNDgzLjc0OCwyLjc1NC44NzMsOC41MTcuODczYTQxLjAzNyw0MS4wMzcsMCwwLDAsNy4zMjktLjQyNWMyLjQ0Ny0uNTI0LDMuMzQ1LTEuODY3LDMuMzUzLTQuOTM1LjAxMy0zLjM0My0xLjIzNi00LjczNi00LjQzMS00Ljg4NyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEyMi4zNDkgLTIxMy4zMikiIGZpbGw9IiNhMTcyNGEiLz48L2c+PC9zdmc+",
+        "hideToolbar" : false,
+        "showFilters" : true,
+        "showUpdateDashboardImage" : true,
+        "dashboardCss" : "\n.tb-widget-container > .tb-widget .tb-markdown-view .tb-progress-cover, .tb-widget-container > .tb-widget .tb-markdown-view .mat-drawer-container {\n    background-color: #fff;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-markdown-view .tb-progress-cover, .tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-markdown-view .mat-drawer-container {\n    background: #0D2743;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-widget-loading {\n    background: rgba(13, 39, 67, 0.15);\n}\n\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget img.leaflet-tile {\n    filter: invert(1) saturate(0) brightness(2);\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .leaflet-tile-pane {\n    opacity: 0.4;\n}\n\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .leaflet-container {\n    background-color: #0D2743;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .leaflet-control-container + div {\n    background-color: rgba(13, 39, 67, 0.7) !important;\n}\n\n\n.tb-widget-container > .tb-widget {\n    border-radius: 8px;\n}\n\ngridster-item:not(.tb-noselect) > .tb-widget-container > .tb-widget {\n    cursor: default !important;\n}\n\n.tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-row {\n    cursor: pointer;\n}\n\n.tb-widget-container > .tb-widget .tb-legend-keys {\n    cursor: pointer;\n}\n\n.tb-dashboard-page.dark tb-dashboard > div {\n    background-color: #0A1F36 !important; /* rgb(238, 238, 238)*/\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget {\n    background: #0D2743 !important;\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-time-series-chart-legend-type-label {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-time-series-chart-legend-item-label div {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-time-series-chart-legend-value {\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .flot-text {\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .flot-text > div > div {\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-header-row {\n    background-color: #0D2743 !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-header-cell.mat-mdc-table-sticky {\n    background-color: #0D2743 !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-row .mat-mdc-cell.mat-mdc-table-sticky {\n    background-color: #0D2743 !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-header-cell {\n    color: rgba(255, 255, 255, 0.87) !important;\n    border-bottom-color: rgba(255, 255, 255, 0.2) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-cell {\n    color: rgba(255, 255, 255, 0.87) !important;\n    border-bottom-color: rgba(255, 255, 255, 0.2) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-header-cell .mat-sort-header-arrow {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-divider {\n    border-top-color: rgba(255, 255, 255, 0.2) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-input-element::placeholder {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-input-element::-moz-placeholder {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-input-element::-webkit-input-placeholder {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-input-element:-ms-input-placeholder {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-cell .mdc-checkbox__background,.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-header-cell .mdc-checkbox__background {\n    border-color : rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-cell button.mat-mdc-icon-button mat-icon {\n    color : rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget mat-toolbar.mat-mdc-table-toolbar:not([color=\"primary\"]) button.mat-mdc-icon-button mat-icon {\n    color : rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-cell button.mat-mdc-icon-button[disabled][disabled] mat-icon {\n    color : rgba(255, 255, 255, 0.2) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-paginator {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget button.mat-mdc-icon-button mat-icon,\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget button.mat-mdc-icon-button,\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-paginator button.mat-mdc-icon-button {\n    color : rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget button.mat-mdc-icon-button[disabled][disabled],\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-paginator button.mat-mdc-icon-button[disabled][disabled] {\n    color : rgba(255, 255, 255, 0.2) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .mat-mdc-select-value,\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-paginator .mat-mdc-select-value {\n    color : rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .mat-mdc-select-arrow {\n    color : rgba(255, 255, 255, 0.57);\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple:before {\n    border-bottom-color: rgba(255, 255, 255, 0.4);\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading, \n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing {\n    border-color: rgba(255, 255, 255, 0.4);\n}\n\n.tb-dashboard-page.dark .tb-markdown-view div,\n.tb-dashboard-page.dark .tb-markdown-view div.param,\n.tb-dashboard-page.dark .tb-markdown-view .header .title,\n.tb-dashboard-page.dark .tb-markdown-view p {\n    color : rgba(255, 255, 255, 0.87);\n}\n\n.tb-dashboard-page.dark .tb-markdown-view div.param-title,\n.tb-dashboard-page.dark .tb-markdown-view .header .subtitle {\n    color : rgba(255, 255, 255, 0.6);\n}\n\n.tb-dashboard-page.dark .tb-powered-by-footer {\n    color : rgba(255, 255, 255, 0.87) !important;\n}\n\n.mat-toolbar {\n    background-color: #5e432b !important; /* Green color */\n}"
       }
     },
     "externalId" : null,
@@ -582,8 +363,8 @@
     "image" : null,
     "mobileHide" : false,
     "mobileOrder" : null,
-    "name" : "Overall Progress",
-    "title" : "Overall Progress"
+    "name" : "Dependency Analytics",
+    "title" : "Dependency Analytics"
   },
   "relations" : [ ],
   "attributes" : {
