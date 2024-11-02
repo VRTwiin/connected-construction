@@ -1,0 +1,34 @@
+{
+  "entityType" : "WIDGET_TYPE",
+  "entity" : {
+    "fqn" : "recycled_by_category_year_to_date",
+    "name" : "Recycled by Category Year to Date",
+    "deprecated" : false,
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "static",
+      "sizeX" : 7.5,
+      "sizeY" : 3,
+      "resources" : [ ],
+      "templateHtml" : "<div class=\"category-summary-widget\">\r\n    <h3>Recycled by Category Year to Date</h3>\r\n    <div class=\"category-item\">\r\n        <img src=\"/api/images/public/E9du0hWpXkYqc5ea1RdTRwbDadFA3wH8\" alt=\"cardboard.png\" />\r\n        <div class=\"label\">Cardboard</div>\r\n        <div class=\"value\" id=\"cardboard-count\">0</div>\r\n    </div>\r\n    <div class=\"category-item\">\r\n        <img src=\"/api/images/public/UhpXe5AAUHGcre8D3OoTjfgNLAF5ShjJ\" alt=\"paper.png\" />\r\n        <div class=\"label\">Paper</div>\r\n        <div class=\"value\" id=\"paper-count\">0</div>\r\n    </div>\r\n    <div class=\"category-item\">\r\n        <img src=\"/api/images/public/aKrCn7SKwwmroEk36x0KVzf2Eqk0kbid\" alt=\"Metal.png\" />\r\n        <div class=\"label\">Metal</div>\r\n        <div class=\"value\" id=\"metal-count\">0</div>\r\n    </div>\r\n    <div class=\"category-item\">\r\n        <img src=\"/api/images/public/0dcJ42OxS52OVG0P5Lm3KtkTbCBnLrae\" alt=\"plastic.png\" />\r\n        <div class=\"label\">Plastic</div>\r\n        <div class=\"value\" id=\"plastic-count\">0</div>\r\n    </div>\r\n    <div class=\"category-item\">\r\n        <img src=\"/api/images/public/mMvdlmkPy61N2qontadAJboeKDt2WFys\" alt=\"OilGrease.png\" />\r\n        <div class=\"label\">Oil & Grease</div>\r\n        <div class=\"value\" id=\"oil-count\">0</div>\r\n    </div>\r\n</div>\r\n",
+      "templateCss" : ".category-summary-widget {\r\n    text-align: center;\r\n    font-family: Arial, sans-serif;\r\n    background-color: #f2f2f2;\r\n    padding: 10px;\r\n    border-radius: 8px;\r\n    width: 100%;\r\n}\r\n\r\n.category-summary-widget h3 {\r\n    background-color: #c1a100;\r\n    color: white;\r\n    padding: 8px;\r\n    margin: 0;\r\n    font-size: 1.2em;\r\n}\r\n\r\n.category-item {\r\n    display: inline-block;\r\n    width: 100px;\r\n    margin: 10px;\r\n    text-align: center;\r\n}\r\n\r\n.category-item img {\r\n    width: 50px;\r\n    height: 50px;\r\n    margin-bottom: 5px;\r\n}\r\n\r\n.category-item .label {\r\n    font-weight: bold;\r\n    margin-top: 5px;\r\n}\r\n\r\n.category-item .value {\r\n    font-size: 1.2em;\r\n    color: #333;\r\n    font-weight: bold;\r\n}\r\n",
+      "controllerScript" : "self.onInit = function() {\r\n    function updateCategoryValues() {\r\n        document.getElementById(\"cardboard-count\").innerText = Math.floor(Math.random() * 100);\r\n        document.getElementById(\"paper-count\").innerText = Math.floor(Math.random() * 100);\r\n        document.getElementById(\"metal-count\").innerText = Math.floor(Math.random() * 100);\r\n        document.getElementById(\"plastic-count\").innerText = Math.floor(Math.random() * 1500);\r\n        document.getElementById(\"oil-count\").innerText = Math.floor(Math.random() * 20);\r\n    }\r\n\r\n    updateCategoryValues();\r\n    setInterval(updateCategoryValues, 5000); // Update every 5 seconds\r\n};\r\n",
+      "settingsSchema" : "",
+      "dataKeySettingsSchema" : "",
+      "settingsDirective" : "tb-html-card-widget-settings",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"static\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":false,\"backgroundColor\":\"rgb(255, 255, 255)\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{\"cardHtml\":\"<div class='card'>HTML code here</div>\",\"cardCss\":\".card {\\n    font-weight: bold;\\n    font-size: 32px;\\n    color: #999;\\n    width: 100%;\\n    height: 100%;\\n    display: flex;\\n    align-items: center;\\n    justify-content: center;\\n}\"},\"title\":\"Recycled by Category Year to Date\",\"dropShadow\":true}"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "e6ea9310-98b5-11ef-a3bd-0f61fe9e8422"
+    },
+    "scada" : false,
+    "tags" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "entityType" : "WIDGETS_BUNDLE",
+  "entity" : {
+    "alias" : "mixed_card",
+    "description" : null,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGETS_BUNDLE",
+      "id" : "89c03780-98ab-11ef-a3bd-0f61fe9e8422"
+    },
+    "image" : null,
+    "name" : "Mixed Card",
+    "order" : null,
+    "scada" : false,
+    "title" : "Mixed Card"
+  },
+  "fqns" : [ "recycled_year_to_date", "recycled_year_to_date_v0_1", "compact_summary_widget", "recycled_by_category_year_to_date", "co2_emissions_data_for_each_year" ],
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

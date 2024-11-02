@@ -1,0 +1,36 @@
+{
+  "entityType" : "WIDGET_TYPE",
+  "entity" : {
+    "fqn" : "healthy_card",
+    "name" : "Healthy-Card",
+    "deprecated" : false,
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "static",
+      "sizeX" : 7.5,
+      "sizeY" : 3,
+      "resources" : [ {
+        "url" : "https://cdn.jsdelivr.net/npm/chart.js"
+      } ],
+      "templateHtml" : "<div class=\"battery-container\">\n    <div class=\"battery-label\">Vehicle Health</div>\n    <div class=\"battery\">\n        <div class=\"battery-tip\"></div>\n        <div class=\"battery-level\" id=\"battery-level\">\n            <div class=\"battery-segment\" id=\"segment-1\"></div>\n            <div class=\"battery-segment\" id=\"segment-2\"></div>\n            <div class=\"battery-segment\" id=\"segment-3\"></div>\n        </div>\n    </div>\n    <div class=\"battery-status\" id=\"battery-status\">75%</div>\n    <div class=\"battery-legend\">\n        <div class=\"legend-item\">\n            <div class=\"legend-color\" style=\"background-color: #4CAF50;\"></div>\n            <div class=\"legend-label\">Good</div>\n        </div>\n        <div class=\"legend-item\">\n            <div class=\"legend-color\" style=\"background-color: #FFEB3B;\"></div>\n            <div class=\"legend-label\">Moderate</div>\n        </div>\n        <div class=\"legend-item\">\n            <div class=\"legend-color\" style=\"background-color: #F44336;\"></div>\n            <div class=\"legend-label\">Poor</div>\n        </div>\n    </div>\n</div>\n",
+      "templateCss" : ".battery-container {\n    width: 100%;\n    max-width: 250px;\n    margin: auto;\n    text-align: center;\n    font-family: Arial, sans-serif;\n}\n\n.battery-label {\n    font-size: 18px;\n    margin-bottom: 10px;\n    color: #333;\n}\n\n.battery {\n    width: 100%;\n    height: 50px;\n    border: 2px solid #333;\n    border-radius: 5px;\n    position: relative;\n    background-color: #ccc;\n    display: flex;\n    overflow: hidden;\n}\n\n.battery-tip {\n    width: 8%;\n    height: 60%;\n    background-color: #333;\n    position: absolute;\n    top: 20%;\n    right: -10%;\n    border-radius: 2px;\n}\n\n.battery-level {\n    display: flex;\n    width: 100%;\n    height: 100%;\n}\n\n.battery-segment {\n    flex: 1;\n    transition: background-color 0.5s;\n}\n\n#segment-1 { background-color: #F44336; } /* Red */\n#segment-2 { background-color: #FFEB3B; } /* Yellow */\n#segment-3 { background-color: #4CAF50; } /* Green */\n\n.battery-status {\n    margin-top: 10px;\n    font-size: 16px;\n    font-weight: bold;\n    color: #333;\n}\n\n.battery-legend {\n    display: flex;\n    justify-content: space-between;\n    margin-top: 15px;\n    gap: 10px;\n}\n\n.legend-item {\n    display: flex;\n    align-items: center;\n}\n\n.legend-color {\n    width: 12px;\n    height: 12px;\n    border-radius: 50%;\n    margin-right: 5px;\n}\n\n.legend-label {\n    font-size: 14px;\n    color: #333;\n}\n",
+      "controllerScript" : "self.onInit = function() {\n    // Vehicle health value (as a percentage)\n    var vehicleHealth = 75;\n\n    // Selecting battery segments and status elements\n    var segment1 = document.getElementById('segment-1');\n    var segment2 = document.getElementById('segment-2');\n    var segment3 = document.getElementById('segment-3');\n    var batteryStatusElement = document.getElementById('battery-status');\n\n    // Set battery percentage\n    batteryStatusElement.innerText = vehicleHealth + '%';\n\n    // Adjust battery segment colors based on health level\n    if (vehicleHealth > 80) {\n        segment1.style.backgroundColor = '#4CAF50';\n        segment2.style.backgroundColor = '#4CAF50';\n        segment3.style.backgroundColor = '#4CAF50';\n    } else if (vehicleHealth > 50) {\n        segment1.style.backgroundColor = '#FFEB3B';\n        segment2.style.backgroundColor = '#FFEB3B';\n        segment3.style.backgroundColor = '#ccc';\n    } else {\n        segment1.style.backgroundColor = '#F44336';\n        segment2.style.backgroundColor = '#ccc';\n        segment3.style.backgroundColor = '#ccc';\n    }\n};\n",
+      "settingsSchema" : "",
+      "dataKeySettingsSchema" : "",
+      "settingsDirective" : "tb-html-card-widget-settings",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"static\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":false,\"backgroundColor\":\"rgb(255, 255, 255)\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{\"cardHtml\":\"<div class='card'>HTML code here</div>\",\"cardCss\":\".card {\\n    font-weight: bold;\\n    font-size: 32px;\\n    color: #999;\\n    width: 100%;\\n    height: 100%;\\n    display: flex;\\n    align-items: center;\\n    justify-content: center;\\n}\"},\"title\":\"Healthy-Card\",\"dropShadow\":true}"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "40737dc0-98e8-11ef-a3bd-0f61fe9e8422"
+    },
+    "scada" : false,
+    "tags" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

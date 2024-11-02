@@ -1,7 +1,21 @@
 {
   "entityType" : "DASHBOARD",
   "entity" : {
-    "assignedCustomers" : [ ],
+    "assignedCustomers" : [ {
+      "customerId" : {
+        "entityType" : "CUSTOMER",
+        "id" : "4a70b610-8e3b-11ef-a3bd-0f61fe9e8422"
+      },
+      "title" : "BENESTA",
+      "public" : false
+    }, {
+      "customerId" : {
+        "entityType" : "CUSTOMER",
+        "id" : "b4826080-914c-11ef-a3bd-0f61fe9e8422"
+      },
+      "title" : "Public",
+      "public" : true
+    } ],
     "configuration" : {
       "description" : "",
       "widgets" : {

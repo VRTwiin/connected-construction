@@ -429,7 +429,7 @@
                 "color" : "#4caf50",
                 "settings" : { },
                 "_hash" : 0.8257877009495165,
-                "funcBody" : "const baseLatitude = 41.0082;\nconst variation = (Math.random() - 0.5) *\n0.001; // Generate a small random variation between -0.00005 and +0.00005\nreturn baseLatitude + variation;",
+                "funcBody" : "const baseLatitude = 28.9784;\nconst variation = (Math.random() - 0.5) *\n0.001; // Generate a small random variation between -0.00005 and +0.00005\nreturn baseLatitude + variation;",
                 "aggregationType" : null,
                 "units" : null,
                 "decimals" : null,
