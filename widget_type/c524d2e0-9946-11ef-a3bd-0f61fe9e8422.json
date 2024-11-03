@@ -1,0 +1,34 @@
+{
+  "entityType" : "WIDGET_TYPE",
+  "entity" : {
+    "fqn" : "garbage_collection_needed",
+    "name" : "Garbage Collection Needed",
+    "deprecated" : false,
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "static",
+      "sizeX" : 7.5,
+      "sizeY" : 3,
+      "resources" : [ ],
+      "templateHtml" : "<div class=\"alarm-widget\">\r\n    <div id=\"alarm-status\" class=\"status-alarm\">Garbage Collection Needed</div>\r\n</div>\r\n",
+      "templateCss" : ".alarm-widget {\r\n    text-align: center;\r\n    font-family: Arial, sans-serif;\r\n    padding: 20px;\r\n    border-radius: 8px;\r\n    background-color: white;\r\n    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);\r\n    max-width: 250px;\r\n    margin: 0 auto;\r\n}\r\n\r\n.status-normal {\r\n    font-size: 1.5em;\r\n    color: green;\r\n}\r\n\r\n.status-alarm {\r\n    font-size: 1.5em;\r\n    color: red;\r\n    font-weight: bold;\r\n}\r\n",
+      "controllerScript" : "self.onInit = function() {\r\n    // This static widget will always show the \"Garbage Collection Needed\" alarm\r\n    const alarmStatusElement = document.getElementById(\"alarm-status\");\r\n    alarmStatusElement.classList.add(\"status-alarm\");\r\n    alarmStatusElement.innerText = \"Garbage Collection Needed\";\r\n};\r\n",
+      "settingsSchema" : "",
+      "dataKeySettingsSchema" : "",
+      "settingsDirective" : "tb-html-card-widget-settings",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"static\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":false,\"backgroundColor\":\"rgb(255, 255, 255)\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{\"cardHtml\":\"<div class='card'>HTML code here</div>\",\"cardCss\":\".card {\\n    font-weight: bold;\\n    font-size: 32px;\\n    color: #999;\\n    width: 100%;\\n    height: 100%;\\n    display: flex;\\n    align-items: center;\\n    justify-content: center;\\n}\"},\"title\":\"Garbage Collection Needed\",\"dropShadow\":true}"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "c524d2e0-9946-11ef-a3bd-0f61fe9e8422"
+    },
+    "scada" : false,
+    "tags" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

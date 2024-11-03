@@ -1,0 +1,52 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "assetProfileId" : {
+      "entityType" : "ASSET_PROFILE",
+      "id" : "7b22c1b0-9a19-11ef-a3bd-0f61fe9e8422"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "4a70b610-8e3b-11ef-a3bd-0f61fe9e8422"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "cc84cd50-9a19-11ef-a3bd-0f61fe9e8422"
+    },
+    "label" : null,
+    "name" : "Site A - Section 3",
+    "type" : "Site and Section"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "Address",
+      "lastUpdateTs" : 1730662493201,
+      "longValue" : null,
+      "strValue" : "Hacıosman Metro Station, Sarıyer"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 41.1282,
+      "jsonValue" : null,
+      "key" : "Latitude",
+      "lastUpdateTs" : 1730662157365,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 29.0348,
+      "jsonValue" : null,
+      "key" : "Longitude",
+      "lastUpdateTs" : 1730662187652,
+      "longValue" : null,
+      "strValue" : null
+    } ]
+  }
+}

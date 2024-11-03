@@ -1,0 +1,34 @@
+{
+  "entityType" : "WIDGET_TYPE",
+  "entity" : {
+    "fqn" : "material_cart",
+    "name" : "material-cart",
+    "deprecated" : false,
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "static",
+      "sizeX" : 7.5,
+      "sizeY" : 3,
+      "resources" : [ ],
+      "templateHtml" : "<div class=\"battery-status-card\">\n    <div class=\"battery-info\">\n        <div class=\"card-title\">Material Supply Impact</div>\n        <div class=\"battery-circle\">\n            <canvas id=\"batteryCanvas\" width=\"100\" height=\"100\"></canvas>\n            <div class=\"battery-icon-and-percentage\">\n                <img src=\"https://cdn-icons-png.flaticon.com/512/3103/3103446.png\" alt=\"Battery Icon\" class=\"battery-icon\"/>\n                <div id=\"batteryLevel\">90%</div>\n            </div>\n        </div>\n    </div>\n    <div class=\"card-legend\">\n        <div class=\"legend-item\">\n            <span class=\"legend-color\" style=\"background-color: #4CAF50;\"></span> High Supply (80-100%)\n        </div>\n        <div class=\"legend-item\">\n            <span class=\"legend-color\" style=\"background-color: #FFEB3B;\"></span> Moderate Supply (60-79%)\n        </div>\n        <div class=\"legend-item\">\n            <span class=\"legend-color\" style=\"background-color: #F44336;\"></span> Low Supply (below 60%)\n        </div>\n    </div>\n</div>\n",
+      "templateCss" : ".battery-status-card {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    width: 300px;\n    height: auto;\n    padding: 10px;\n    font-family: Arial, sans-serif;\n    color: #333;\n    background-color: transparent;\n}\n\n.battery-info {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    text-align: center;\n}\n\n.card-title {\n    font-size: 16px;\n    font-weight: bold;\n    color: #333;\n    margin-bottom: 10px;\n}\n\n.battery-circle {\n    position: relative;\n    width: 100px;\n    height: 100px;\n}\n\n.battery-icon-and-percentage {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    text-align: center;\n    color: #333;\n    font-weight: bold;\n}\n\n.battery-icon {\n    width: 30px;\n    height: auto;\n    margin-bottom: 5px;\n}\n\n#batteryLevel {\n    font-size: 16px;\n}\n\n.card-legend {\n    display: flex;\n    flex-direction: column;\n    align-items: flex-start;\n    gap: 5px;\n    font-size: 12px;\n    color: #333;\n    margin-left: 10px;\n}\n\n.legend-item {\n    display: flex;\n    align-items: center;\n}\n\n.legend-color {\n    width: 10px;\n    height: 10px;\n    border-radius: 50%;\n    margin-right: 6px;\n}\n",
+      "controllerScript" : "self.onInit = function() {\n    var batteryLevel = 90; // Adjust this value as needed (0 to 100)\n\n    // Update the battery level in the card\n    document.getElementById('batteryLevel').innerText = batteryLevel + '%';\n\n    // Drawing the circular progress\n    var canvas = document.getElementById('batteryCanvas');\n    var context = canvas.getContext('2d');\n    var startAngle = -0.5 * Math.PI; // Start at the top\n    var endAngle = ((batteryLevel / 100) * 2 - 0.5) * Math.PI; // Calculate end angle based on battery level\n\n    // Clear the canvas\n    context.clearRect(0, 0, canvas.width, canvas.height);\n\n    // Draw background circle\n    context.beginPath();\n    context.arc(canvas.width / 2, canvas.height / 2, 40, 0, 2 * Math.PI);\n    context.lineWidth = 8;\n    context.strokeStyle = '#e0e0e0'; // Light gray background\n    context.stroke();\n\n    // Draw battery level circle\n    context.beginPath();\n    context.arc(canvas.width / 2, canvas.height / 2, 40, startAngle, endAngle);\n    context.lineWidth = 8;\n    context.strokeStyle = batteryLevel >= 80 ? '#4CAF50' : batteryLevel >= 60 ? '#FFEB3B' : '#F44336';\n    context.stroke();\n};\n",
+      "settingsSchema" : "",
+      "dataKeySettingsSchema" : "",
+      "settingsDirective" : "tb-html-card-widget-settings",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"static\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":false,\"backgroundColor\":\"rgb(255, 255, 255)\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{\"cardHtml\":\"<div class='card'>HTML code here</div>\",\"cardCss\":\".card {\\n    font-weight: bold;\\n    font-size: 32px;\\n    color: #999;\\n    width: 100%;\\n    height: 100%;\\n    display: flex;\\n    align-items: center;\\n    justify-content: center;\\n}\"},\"title\":\"material-cart\",\"dropShadow\":true}"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "b836e350-996b-11ef-a3bd-0f61fe9e8422"
+    },
+    "scada" : false,
+    "tags" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

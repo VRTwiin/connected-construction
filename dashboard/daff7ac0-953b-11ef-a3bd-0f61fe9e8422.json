@@ -229,38 +229,353 @@
           "row" : 0,
           "col" : 0,
           "id" : "af6e895f-8ab2-cc1a-3db4-a7378a939354"
+        },
+        "c247a2c2-6594-898c-4b78-07b78c1f9ea1" : {
+          "typeFullFqn" : "tenant.safty_worker",
+          "type" : "static",
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "static",
+              "name" : "function",
+              "dataKeys" : [ {
+                "name" : "f(x)",
+                "type" : "function",
+                "label" : "Random",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.15479322438769105,
+                "funcBody" : "var value = prevValue + Math.random() * 100 - 50;\nvar multiplier = Math.pow(10, 2 || 0);\nvar value = Math.round(value * multiplier) / multiplier;\nif (value < -1000) {\n\tvalue = -1000;\n} else if (value > 1000) {\n\tvalue = 1000;\n}\nreturn value;"
+              } ]
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "cardHtml" : "<div class='card'>HTML code here</div>",
+              "cardCss" : ".card {\n    font-weight: bold;\n    font-size: 32px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}"
+            },
+            "title" : "safty-worker",
+            "dropShadow" : true
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "c247a2c2-6594-898c-4b78-07b78c1f9ea1"
+        },
+        "c19cc6ad-4199-ee72-216f-748216a1602d" : {
+          "typeFullFqn" : "tenant.cart_average_safty",
+          "type" : "static",
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "static",
+              "name" : "function",
+              "dataKeys" : [ {
+                "name" : "f(x)",
+                "type" : "function",
+                "label" : "Random",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.15479322438769105,
+                "funcBody" : "var value = prevValue + Math.random() * 100 - 50;\nvar multiplier = Math.pow(10, 2 || 0);\nvar value = Math.round(value * multiplier) / multiplier;\nif (value < -1000) {\n\tvalue = -1000;\n} else if (value > 1000) {\n\tvalue = 1000;\n}\nreturn value;"
+              } ]
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "cardHtml" : "<div class='card'>HTML code here</div>",
+              "cardCss" : ".card {\n    font-weight: bold;\n    font-size: 32px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}"
+            },
+            "title" : "cart-average-safty",
+            "dropShadow" : true
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "c19cc6ad-4199-ee72-216f-748216a1602d"
+        },
+        "ca190c58-ab47-bc7f-b29b-2e2fa6efe0c9" : {
+          "typeFullFqn" : "tenant.material_cart",
+          "type" : "static",
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "static",
+              "name" : "function",
+              "dataKeys" : [ {
+                "name" : "f(x)",
+                "type" : "function",
+                "label" : "Random",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.15479322438769105,
+                "funcBody" : "var value = prevValue + Math.random() * 100 - 50;\nvar multiplier = Math.pow(10, 2 || 0);\nvar value = Math.round(value * multiplier) / multiplier;\nif (value < -1000) {\n\tvalue = -1000;\n} else if (value > 1000) {\n\tvalue = 1000;\n}\nreturn value;"
+              } ]
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "cardHtml" : "<div class='card'>HTML code here</div>",
+              "cardCss" : ".card {\n    font-weight: bold;\n    font-size: 32px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}"
+            },
+            "title" : "material-cart",
+            "dropShadow" : true
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "ca190c58-ab47-bc7f-b29b-2e2fa6efe0c9"
+        },
+        "f31b2e07-4e86-c23b-72da-14c3abb8ea8f" : {
+          "typeFullFqn" : "tenant.weather_card",
+          "type" : "static",
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "static",
+              "name" : "function",
+              "dataKeys" : [ {
+                "name" : "f(x)",
+                "type" : "function",
+                "label" : "Random",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.15479322438769105,
+                "funcBody" : "var value = prevValue + Math.random() * 100 - 50;\nvar multiplier = Math.pow(10, 2 || 0);\nvar value = Math.round(value * multiplier) / multiplier;\nif (value < -1000) {\n\tvalue = -1000;\n} else if (value > 1000) {\n\tvalue = 1000;\n}\nreturn value;"
+              } ]
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "cardHtml" : "<div class='card'>HTML code here</div>",
+              "cardCss" : ".card {\n    font-weight: bold;\n    font-size: 32px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}"
+            },
+            "title" : "weather-card",
+            "dropShadow" : true
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "f31b2e07-4e86-c23b-72da-14c3abb8ea8f"
+        },
+        "4f36edeb-8f91-013e-113b-458c29d06c0a" : {
+          "typeFullFqn" : "tenant.healthy_card2",
+          "type" : "static",
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "static",
+              "name" : "function",
+              "dataKeys" : [ {
+                "name" : "f(x)",
+                "type" : "function",
+                "label" : "Random",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.15479322438769105,
+                "funcBody" : "var value = prevValue + Math.random() * 100 - 50;\nvar multiplier = Math.pow(10, 2 || 0);\nvar value = Math.round(value * multiplier) / multiplier;\nif (value < -1000) {\n\tvalue = -1000;\n} else if (value > 1000) {\n\tvalue = 1000;\n}\nreturn value;"
+              } ]
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "cardHtml" : "<div class='card'>HTML code here</div>",
+              "cardCss" : ".card {\n    font-weight: bold;\n    font-size: 32px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}"
+            },
+            "title" : "healthy card",
+            "dropShadow" : true
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "4f36edeb-8f91-013e-113b-458c29d06c0a"
+        },
+        "9c16ca3f-5595-d786-8fd6-e9c4c641ba6e" : {
+          "typeFullFqn" : "tenant.elevator_worker",
+          "type" : "static",
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "static",
+              "name" : "function",
+              "dataKeys" : [ {
+                "name" : "f(x)",
+                "type" : "function",
+                "label" : "Random",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.15479322438769105,
+                "funcBody" : "var value = prevValue + Math.random() * 100 - 50;\nvar multiplier = Math.pow(10, 2 || 0);\nvar value = Math.round(value * multiplier) / multiplier;\nif (value < -1000) {\n\tvalue = -1000;\n} else if (value > 1000) {\n\tvalue = 1000;\n}\nreturn value;"
+              } ]
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "cardHtml" : "<div class='card'>HTML code here</div>",
+              "cardCss" : ".card {\n    font-weight: bold;\n    font-size: 32px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}"
+            },
+            "title" : "elevator-worker",
+            "dropShadow" : true
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "9c16ca3f-5595-d786-8fd6-e9c4c641ba6e"
+        },
+        "f1488a5e-c52c-c64e-15ac-cff8e0ebd288" : {
+          "typeFullFqn" : "tenant.elevatore_card",
+          "type" : "static",
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "static",
+              "name" : "function",
+              "dataKeys" : [ {
+                "name" : "f(x)",
+                "type" : "function",
+                "label" : "Random",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.15479322438769105,
+                "funcBody" : "var value = prevValue + Math.random() * 100 - 50;\nvar multiplier = Math.pow(10, 2 || 0);\nvar value = Math.round(value * multiplier) / multiplier;\nif (value < -1000) {\n\tvalue = -1000;\n} else if (value > 1000) {\n\tvalue = 1000;\n}\nreturn value;"
+              } ]
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "cardHtml" : "<div class='card'>HTML code here</div>",
+              "cardCss" : ".card {\n    font-weight: bold;\n    font-size: 32px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}"
+            },
+            "title" : "elevatore-card",
+            "dropShadow" : true
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "f1488a5e-c52c-c64e-15ac-cff8e0ebd288"
         }
       },
       "states" : {
         "default" : {
-          "name" : "Overall Progress",
+          "name" : " Dependency Analytics",
           "root" : true,
           "layouts" : {
             "main" : {
               "widgets" : {
                 "60aa3669-6834-baca-7b4a-1ee8c85ba592" : {
-                  "sizeX" : 12,
-                  "sizeY" : 8,
-                  "row" : 10,
-                  "col" : 0
+                  "sizeX" : 10,
+                  "sizeY" : 9,
+                  "row" : 17,
+                  "col" : 22
                 },
                 "71d1ef4d-b531-a3db-d093-2efc7a5bf957" : {
-                  "sizeX" : 24,
+                  "sizeX" : 11,
                   "sizeY" : 9,
-                  "row" : 1,
+                  "row" : 8,
                   "col" : 0
                 },
                 "7626693d-d8b5-adac-079a-0d5303f672f6" : {
-                  "sizeX" : 24,
+                  "sizeX" : 32,
                   "sizeY" : 1,
                   "row" : 0,
                   "col" : 0
                 },
                 "af6e895f-8ab2-cc1a-3db4-a7378a939354" : {
-                  "sizeX" : 12,
-                  "sizeY" : 8,
-                  "row" : 10,
-                  "col" : 12
+                  "sizeX" : 11,
+                  "sizeY" : 9,
+                  "row" : 8,
+                  "col" : 11
+                },
+                "c247a2c2-6594-898c-4b78-07b78c1f9ea1" : {
+                  "sizeX" : 11,
+                  "sizeY" : 9,
+                  "row" : 17,
+                  "col" : 0
+                },
+                "c19cc6ad-4199-ee72-216f-748216a1602d" : {
+                  "sizeX" : 8,
+                  "sizeY" : 7,
+                  "row" : 1,
+                  "col" : 0
+                },
+                "ca190c58-ab47-bc7f-b29b-2e2fa6efe0c9" : {
+                  "sizeX" : 7,
+                  "sizeY" : 7,
+                  "row" : 1,
+                  "col" : 8
+                },
+                "f31b2e07-4e86-c23b-72da-14c3abb8ea8f" : {
+                  "sizeX" : 10,
+                  "sizeY" : 9,
+                  "row" : 8,
+                  "col" : 22
+                },
+                "4f36edeb-8f91-013e-113b-458c29d06c0a" : {
+                  "sizeX" : 7,
+                  "sizeY" : 7,
+                  "row" : 1,
+                  "col" : 15
+                },
+                "9c16ca3f-5595-d786-8fd6-e9c4c641ba6e" : {
+                  "sizeX" : 11,
+                  "sizeY" : 9,
+                  "row" : 17,
+                  "col" : 11
+                },
+                "f1488a5e-c52c-c64e-15ac-cff8e0ebd288" : {
+                  "sizeX" : 10,
+                  "sizeY" : 7,
+                  "row" : 1,
+                  "col" : 22
                 }
               },
               "gridSettings" : {

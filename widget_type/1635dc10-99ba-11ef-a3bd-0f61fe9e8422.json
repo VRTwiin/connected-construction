@@ -1,0 +1,34 @@
+{
+  "entityType" : "WIDGET_TYPE",
+  "entity" : {
+    "fqn" : "elevatore_card",
+    "name" : "elevatore-card",
+    "deprecated" : false,
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "static",
+      "sizeX" : 7.5,
+      "sizeY" : 3,
+      "resources" : [ ],
+      "templateHtml" : "<div class=\"card-container\">\n    <div class=\"card-title\">Elevator Congestion & Worker Efficiency</div>\n    <div class=\"card-content\">\n        <div class=\"card-item\">\n            <span class=\"card-label\">Elevator Usage:</span>\n            <span id=\"elevatorUsagePercentage\" class=\"card-value\">0%</span>\n        </div>\n        <div class=\"card-item\">\n            <span class=\"card-label\">Worker Efficiency:</span>\n            <span id=\"workerEfficiencyPercentage\" class=\"card-value\">0%</span>\n        </div>\n    </div>\n</div>\n",
+      "templateCss" : ".card-container {\n    width: 100%;\n    height: 100%;\n    background-color: #f0f0f5; /* Light holographic background */\n    border-radius: 12px;\n    padding: 20px;\n    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Subtle shadow for visual effect */\n    border: 1px solid rgba(186, 85, 211, 0.5); /* Purple holographic border */\n}\n\n.card-title {\n    font-size: 20px;\n    font-weight: bold;\n    margin-bottom: 20px;\n    text-align: center;\n    color: #6a0dad; /* Deep holographic purple */\n}\n\n.card-content {\n    display: flex;\n    flex-direction: column;\n    gap: 15px;\n}\n\n.card-item {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 15px;\n    border-radius: 10px;\n    background: #ffffff; /* White background for card items */\n    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Light shadow for separation */\n}\n\n.card-label {\n    font-size: 18px;\n    font-weight: normal;\n    color: #6a0dad; /* Holographic purple for labels */\n}\n\n.card-value {\n    font-size: 22px;\n    font-weight: bold;\n}\n",
+      "controllerScript" : "self.onInit = function() {\n    function updateCardValues() {\n        // Generate random percentages for elevator usage and worker efficiency\n        const elevatorUsagePercentage = Math.floor(Math.random() * 41) + 60; // Random percentage between 60-100\n        const workerEfficiencyPercentage = Math.floor(Math.random() * 21) + 70; // Random percentage between 70-90\n\n        // Update values in the card\n        document.getElementById('elevatorUsagePercentage').innerText = elevatorUsagePercentage + '%';\n        document.getElementById('workerEfficiencyPercentage').innerText = workerEfficiencyPercentage + '%';\n\n        // Set color for elevator usage based on level\n        const elevatorUsageElement = document.getElementById('elevatorUsagePercentage');\n        if (elevatorUsagePercentage >= 80) {\n            elevatorUsageElement.style.color = '#FFEA00'; // Bright yellow for high congestion\n        } else if (elevatorUsagePercentage >= 60) {\n            elevatorUsageElement.style.color = '#FFC300'; // Yellow for moderate congestion\n        } else {\n            elevatorUsageElement.style.color = '#BA55D3'; // Purple for low congestion\n        }\n\n        // Set color for worker efficiency based on level\n        const workerEfficiencyElement = document.getElementById('workerEfficiencyPercentage');\n        if (workerEfficiencyPercentage >= 80) {\n            workerEfficiencyElement.style.color = '#FFEA00'; // Bright yellow for high efficiency\n        } else if (workerEfficiencyPercentage >= 60) {\n            workerEfficiencyElement.style.color = '#FFC300'; // Yellow for moderate efficiency\n        } else {\n            workerEfficiencyElement.style.color = '#BA55D3'; // Purple for low efficiency\n        }\n    }\n\n    // Update values initially and every minute thereafter\n    updateCardValues();\n    setInterval(updateCardValues, 60000); // Update every 1 minute\n};\n",
+      "settingsSchema" : "",
+      "dataKeySettingsSchema" : "",
+      "settingsDirective" : "tb-html-card-widget-settings",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"static\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":false,\"backgroundColor\":\"rgb(255, 255, 255)\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{\"cardHtml\":\"<div class='card'>HTML code here</div>\",\"cardCss\":\".card {\\n    font-weight: bold;\\n    font-size: 32px;\\n    color: #999;\\n    width: 100%;\\n    height: 100%;\\n    display: flex;\\n    align-items: center;\\n    justify-content: center;\\n}\"},\"title\":\"elevatore-card\",\"dropShadow\":true}"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "1635dc10-99ba-11ef-a3bd-0f61fe9e8422"
+    },
+    "scada" : false,
+    "tags" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

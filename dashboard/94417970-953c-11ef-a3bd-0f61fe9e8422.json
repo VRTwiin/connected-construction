@@ -319,7 +319,7 @@
               "useIconCreateFunction" : false,
               "clusterMarkerFunction" : null
             },
-            "title" : "OpenStreet Map",
+            "title" : "Elevators Location ",
             "dropShadow" : true,
             "enableFullscreen" : true,
             "titleStyle" : {
@@ -346,7 +346,22 @@
                 "id" : "0e627f92-0a75-a17d-5918-88d90c583525"
               } ]
             },
-            "displayTimewindow" : true
+            "displayTimewindow" : true,
+            "titleFont" : {
+              "size" : 18,
+              "sizeUnit" : "px",
+              "family" : null,
+              "weight" : "bold",
+              "style" : null
+            },
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "titleIcon" : "",
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px"
           },
           "row" : 0,
           "col" : 0,
@@ -822,7 +837,7 @@
                 "limit" : 25000
               }
             },
-            "showTitle" : false,
+            "showTitle" : true,
             "backgroundColor" : "rgba(0, 0, 0, 0)",
             "color" : "rgba(0, 0, 0, 0.87)",
             "padding" : "0px",
@@ -928,7 +943,7 @@
               },
               "padding" : ""
             },
-            "title" : "Horizontal flooding level card",
+            "title" : "Floor Level",
             "dropShadow" : true,
             "enableFullscreen" : false,
             "titleStyle" : {
@@ -1905,31 +1920,617 @@
           "col" : 0,
           "id" : "640ee227-0457-c0bc-f458-83f8bbcde9e0",
           "typeFullFqn" : "system.cards.markdown_card"
+        },
+        "2167ee8f-be03-0088-a8a3-517a60632c10" : {
+          "typeFullFqn" : "system.bar_chart",
+          "type" : "timeseries",
+          "sizeX" : 8,
+          "sizeY" : 5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "function",
+              "name" : "Elevators Idel Time(%)",
+              "dataKeys" : [ {
+                "name" : "f(x)",
+                "type" : "function",
+                "label" : "Elevator A",
+                "color" : "#2196f3",
+                "settings" : {
+                  "yAxisId" : "default",
+                  "showInLegend" : true,
+                  "dataHiddenByDefault" : false,
+                  "type" : "bar",
+                  "lineSettings" : {
+                    "showLine" : true,
+                    "step" : false,
+                    "stepType" : "start",
+                    "smooth" : false,
+                    "lineType" : "solid",
+                    "lineWidth" : 2,
+                    "showPoints" : false,
+                    "showPointLabel" : false,
+                    "pointLabelPosition" : "top",
+                    "pointLabelFont" : {
+                      "family" : "Roboto",
+                      "size" : 11,
+                      "sizeUnit" : "px",
+                      "style" : "normal",
+                      "weight" : "400",
+                      "lineHeight" : "1"
+                    },
+                    "pointLabelColor" : "rgba(0, 0, 0, 0.76)",
+                    "enablePointLabelBackground" : false,
+                    "pointLabelBackground" : "rgba(255,255,255,0.56)",
+                    "pointShape" : "emptyCircle",
+                    "pointSize" : 4,
+                    "fillAreaSettings" : {
+                      "type" : "none",
+                      "opacity" : 0.4,
+                      "gradient" : {
+                        "start" : 100,
+                        "end" : 0
+                      }
+                    }
+                  },
+                  "barSettings" : {
+                    "showBorder" : false,
+                    "borderWidth" : 2,
+                    "borderRadius" : 0,
+                    "showLabel" : false,
+                    "labelPosition" : "top",
+                    "labelFont" : {
+                      "family" : "Roboto",
+                      "size" : 11,
+                      "sizeUnit" : "px",
+                      "style" : "normal",
+                      "weight" : "400",
+                      "lineHeight" : "1"
+                    },
+                    "labelColor" : "rgba(0, 0, 0, 0.76)",
+                    "enableLabelBackground" : false,
+                    "labelBackground" : "rgba(255,255,255,0.56)",
+                    "backgroundSettings" : {
+                      "type" : "none",
+                      "opacity" : 0.4,
+                      "gradient" : {
+                        "start" : 100,
+                        "end" : 0
+                      }
+                    }
+                  },
+                  "tooltipValueFormatter" : null,
+                  "comparisonSettings" : {
+                    "showValuesForComparison" : false,
+                    "comparisonValuesLabel" : "",
+                    "color" : ""
+                  }
+                },
+                "_hash" : 0.12089651469390783,
+                "funcBody" : "// Define states\r\nvar states = [\"idle\", \"up\", \"down\"];\r\n// Generate a random state\r\nvar randomState = states[Math.floor(Math.random() * states.length)];\r\nvar globalStateCount;\r\n// Initialize counters if they don't exist\r\nif (!globalStateCount) {\r\n    globalStateCount = { idle: 0, up: 0, down: 0 };\r\n}\r\n\r\n// Increment the counter for the generated state\r\n globalStateCount[randomState] += 1;\r\n\r\n// Calculate total occurrences\r\nvar total = globalStateCount.idle + globalStateCount.up + globalStateCount.down;\r\n\r\n// Calculate percentages\r\nvar idlePercentage = (globalStateCount.idle / total) * 100;\r\nvar upPercentage = (globalStateCount.up / total) * 100;\r\nvar downPercentage = (globalStateCount.down / total) * 100;\r\n\r\n// Prepare payload with the current state and percentages\r\nvar payload = {\r\n   // elevatorState: randomState,\r\n    idlePercentage: idlePercentage.toFixed(2),  // Rounded to 2 decimal places\r\n    //upPercentage: upPercentage.toFixed(2),\r\n    //downPercentage: downPercentage.toFixed(2)\r\n};\r\n\r\nreturn idlePercentage;\r\n",
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "f(x)",
+                "type" : "function",
+                "label" : "Elevator B",
+                "color" : "#4caf50",
+                "settings" : {
+                  "yAxisId" : "default",
+                  "showInLegend" : true,
+                  "dataHiddenByDefault" : false,
+                  "type" : "bar",
+                  "lineSettings" : {
+                    "showLine" : true,
+                    "step" : false,
+                    "stepType" : "start",
+                    "smooth" : false,
+                    "lineType" : "solid",
+                    "lineWidth" : 2,
+                    "showPoints" : false,
+                    "showPointLabel" : false,
+                    "pointLabelPosition" : "top",
+                    "pointLabelFont" : {
+                      "family" : "Roboto",
+                      "size" : 11,
+                      "sizeUnit" : "px",
+                      "style" : "normal",
+                      "weight" : "400",
+                      "lineHeight" : "1"
+                    },
+                    "pointLabelColor" : "rgba(0, 0, 0, 0.76)",
+                    "enablePointLabelBackground" : false,
+                    "pointLabelBackground" : "rgba(255,255,255,0.56)",
+                    "pointShape" : "emptyCircle",
+                    "pointSize" : 4,
+                    "fillAreaSettings" : {
+                      "type" : "none",
+                      "opacity" : 0.4,
+                      "gradient" : {
+                        "start" : 100,
+                        "end" : 0
+                      }
+                    }
+                  },
+                  "barSettings" : {
+                    "showBorder" : false,
+                    "borderWidth" : 2,
+                    "borderRadius" : 0,
+                    "showLabel" : false,
+                    "labelPosition" : "top",
+                    "labelFont" : {
+                      "family" : "Roboto",
+                      "size" : 11,
+                      "sizeUnit" : "px",
+                      "style" : "normal",
+                      "weight" : "400",
+                      "lineHeight" : "1"
+                    },
+                    "labelColor" : "rgba(0, 0, 0, 0.76)",
+                    "enableLabelBackground" : false,
+                    "labelBackground" : "rgba(255,255,255,0.56)",
+                    "backgroundSettings" : {
+                      "type" : "none",
+                      "opacity" : 0.4,
+                      "gradient" : {
+                        "start" : 100,
+                        "end" : 0
+                      }
+                    }
+                  },
+                  "comparisonSettings" : {
+                    "showValuesForComparison" : false,
+                    "comparisonValuesLabel" : "",
+                    "color" : ""
+                  }
+                },
+                "_hash" : 0.5979250662596356,
+                "funcBody" : "// Define states\r\nvar states = [\"idle\", \"up\", \"down\"];\r\n// Generate a random state\r\nvar randomState = states[Math.floor(Math.random() * states.length)];\r\nvar globalStateCount;\r\n// Initialize counters if they don't exist\r\nif (!globalStateCount) {\r\n    globalStateCount = { idle: 0, up: 0, down: 0 };\r\n}\r\n\r\n// Increment the counter for the generated state\r\n globalStateCount[randomState] += 1;\r\n\r\n// Calculate total occurrences\r\nvar total = globalStateCount.idle + globalStateCount.up + globalStateCount.down;\r\n\r\n// Calculate percentages\r\nvar idlePercentage = (globalStateCount.idle / total) * 100;\r\nvar upPercentage = (globalStateCount.up / total) * 100;\r\nvar downPercentage = (globalStateCount.down / total) * 100;\r\n\r\n// Prepare payload with the current state and percentages\r\nvar payload = {\r\n   // elevatorState: randomState,\r\n    idlePercentage: idlePercentage.toFixed(2),  // Rounded to 2 decimal places\r\n    //upPercentage: upPercentage.toFixed(2),\r\n    //downPercentage: downPercentage.toFixed(2)\r\n};\r\n\r\nreturn idlePercentage;\r\n",
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "f(x)",
+                "type" : "function",
+                "label" : "Elevator C",
+                "color" : "#f44336",
+                "settings" : {
+                  "yAxisId" : "default",
+                  "showInLegend" : true,
+                  "dataHiddenByDefault" : false,
+                  "type" : "bar",
+                  "lineSettings" : {
+                    "showLine" : true,
+                    "step" : false,
+                    "stepType" : "start",
+                    "smooth" : false,
+                    "lineType" : "solid",
+                    "lineWidth" : 2,
+                    "showPoints" : false,
+                    "showPointLabel" : false,
+                    "pointLabelPosition" : "top",
+                    "pointLabelFont" : {
+                      "family" : "Roboto",
+                      "size" : 11,
+                      "sizeUnit" : "px",
+                      "style" : "normal",
+                      "weight" : "400",
+                      "lineHeight" : "1"
+                    },
+                    "pointLabelColor" : "rgba(0, 0, 0, 0.76)",
+                    "enablePointLabelBackground" : false,
+                    "pointLabelBackground" : "rgba(255,255,255,0.56)",
+                    "pointShape" : "emptyCircle",
+                    "pointSize" : 4,
+                    "fillAreaSettings" : {
+                      "type" : "none",
+                      "opacity" : 0.4,
+                      "gradient" : {
+                        "start" : 100,
+                        "end" : 0
+                      }
+                    }
+                  },
+                  "barSettings" : {
+                    "showBorder" : false,
+                    "borderWidth" : 2,
+                    "borderRadius" : 0,
+                    "showLabel" : false,
+                    "labelPosition" : "top",
+                    "labelFont" : {
+                      "family" : "Roboto",
+                      "size" : 11,
+                      "sizeUnit" : "px",
+                      "style" : "normal",
+                      "weight" : "400",
+                      "lineHeight" : "1"
+                    },
+                    "labelColor" : "rgba(0, 0, 0, 0.76)",
+                    "enableLabelBackground" : false,
+                    "labelBackground" : "rgba(255,255,255,0.56)",
+                    "backgroundSettings" : {
+                      "type" : "none",
+                      "opacity" : 0.4,
+                      "gradient" : {
+                        "start" : 100,
+                        "end" : 0
+                      }
+                    }
+                  },
+                  "comparisonSettings" : {
+                    "showValuesForComparison" : false,
+                    "comparisonValuesLabel" : "",
+                    "color" : ""
+                  }
+                },
+                "_hash" : 0.9434097543598814,
+                "funcBody" : "// Define states\r\nvar states = [\"idle\", \"up\", \"down\"];\r\n// Generate a random state\r\nvar randomState = states[Math.floor(Math.random() * states.length)];\r\nvar globalStateCount;\r\n// Initialize counters if they don't exist\r\nif (!globalStateCount) {\r\n    globalStateCount = { idle: 0, up: 0, down: 0 };\r\n}\r\n\r\n// Increment the counter for the generated state\r\n globalStateCount[randomState] += 1;\r\n\r\n// Calculate total occurrences\r\nvar total = globalStateCount.idle + globalStateCount.up + globalStateCount.down;\r\n\r\n// Calculate percentages\r\nvar idlePercentage = (globalStateCount.idle / total) * 100;\r\nvar upPercentage = (globalStateCount.up / total) * 100;\r\nvar downPercentage = (globalStateCount.down / total) * 100;\r\n\r\n// Prepare payload with the current state and percentages\r\nvar payload = {\r\n   // elevatorState: randomState,\r\n    idlePercentage: idlePercentage.toFixed(2),  // Rounded to 2 decimal places\r\n    //upPercentage: upPercentage.toFixed(2),\r\n    //downPercentage: downPercentage.toFixed(2)\r\n};\r\n\r\nreturn idlePercentage;\r\n",
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              },
+              "latestDataKeys" : null
+            } ],
+            "timewindow" : {
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 0,
+                "interval" : 1800000,
+                "timewindowMs" : 7200000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1730486500006,
+                  "endTimeMs" : 1730572900006
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              },
+              "timezone" : null
+            },
+            "showTitle" : true,
+            "backgroundColor" : "rgba(0, 0, 0, 0)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "comparisonEnabled" : false,
+              "timeForComparison" : "previousInterval",
+              "comparisonCustomIntervalValue" : 7200000,
+              "comparisonXAxis" : {
+                "show" : true,
+                "label" : "",
+                "labelFont" : {
+                  "family" : "Roboto",
+                  "size" : 12,
+                  "sizeUnit" : "px",
+                  "style" : "normal",
+                  "weight" : "600",
+                  "lineHeight" : "1"
+                },
+                "labelColor" : "rgba(0, 0, 0, 0.54)",
+                "position" : "top",
+                "showTickLabels" : true,
+                "tickLabelFont" : {
+                  "family" : "Roboto",
+                  "size" : 10,
+                  "sizeUnit" : "px",
+                  "style" : "normal",
+                  "weight" : "400",
+                  "lineHeight" : "1"
+                },
+                "tickLabelColor" : "rgba(0, 0, 0, 0.54)",
+                "ticksFormat" : { },
+                "showTicks" : true,
+                "ticksColor" : "rgba(0, 0, 0, 0.54)",
+                "showLine" : true,
+                "lineColor" : "rgba(0, 0, 0, 0.54)",
+                "showSplitLines" : true,
+                "splitLinesColor" : "rgba(0, 0, 0, 0.12)"
+              },
+              "yAxes" : {
+                "default" : {
+                  "units" : "%",
+                  "decimals" : 0,
+                  "show" : true,
+                  "label" : "Idle State ",
+                  "labelFont" : {
+                    "family" : "Roboto",
+                    "size" : 12,
+                    "sizeUnit" : "px",
+                    "style" : "normal",
+                    "weight" : "600",
+                    "lineHeight" : "1"
+                  },
+                  "labelColor" : "rgba(0, 0, 0, 0.54)",
+                  "position" : "left",
+                  "showTickLabels" : true,
+                  "tickLabelFont" : {
+                    "family" : "Roboto",
+                    "size" : 12,
+                    "sizeUnit" : "px",
+                    "style" : "normal",
+                    "weight" : "400",
+                    "lineHeight" : "1"
+                  },
+                  "tickLabelColor" : "rgba(0, 0, 0, 0.54)",
+                  "ticksFormatter" : null,
+                  "showTicks" : true,
+                  "ticksColor" : "rgba(0, 0, 0, 0.54)",
+                  "showLine" : true,
+                  "lineColor" : "rgba(0, 0, 0, 0.54)",
+                  "showSplitLines" : true,
+                  "splitLinesColor" : "rgba(0, 0, 0, 0.12)",
+                  "id" : "default",
+                  "order" : 0,
+                  "ticksGenerator" : null,
+                  "interval" : null,
+                  "splitNumber" : null,
+                  "min" : 0,
+                  "max" : 100
+                }
+              },
+              "thresholds" : [ ],
+              "dataZoom" : true,
+              "stack" : false,
+              "grid" : {
+                "show" : false,
+                "backgroundColor" : null,
+                "borderWidth" : 1,
+                "borderColor" : "#ccc"
+              },
+              "xAxis" : {
+                "show" : true,
+                "label" : "",
+                "labelFont" : {
+                  "family" : "Roboto",
+                  "size" : 12,
+                  "sizeUnit" : "px",
+                  "style" : "normal",
+                  "weight" : "600",
+                  "lineHeight" : "1"
+                },
+                "labelColor" : "rgba(0, 0, 0, 0.54)",
+                "position" : "bottom",
+                "showTickLabels" : true,
+                "tickLabelFont" : {
+                  "family" : "Roboto",
+                  "size" : 10,
+                  "sizeUnit" : "px",
+                  "style" : "normal",
+                  "weight" : "400",
+                  "lineHeight" : "1"
+                },
+                "tickLabelColor" : "rgba(0, 0, 0, 0.54)",
+                "ticksFormat" : { },
+                "showTicks" : true,
+                "ticksColor" : "rgba(0, 0, 0, 0.54)",
+                "showLine" : true,
+                "lineColor" : "rgba(0, 0, 0, 0.54)",
+                "showSplitLines" : true,
+                "splitLinesColor" : "rgba(0, 0, 0, 0.12)"
+              },
+              "noAggregationBarWidthSettings" : {
+                "strategy" : "group",
+                "groupWidth" : {
+                  "relative" : true,
+                  "relativeWidth" : 2,
+                  "absoluteWidth" : 1000
+                },
+                "barWidth" : {
+                  "relative" : true,
+                  "relativeWidth" : 2,
+                  "absoluteWidth" : 1000
+                }
+              },
+              "showLegend" : true,
+              "legendColumnTitleFont" : {
+                "family" : "Roboto",
+                "size" : 12,
+                "sizeUnit" : "px",
+                "style" : "normal",
+                "weight" : "400",
+                "lineHeight" : "16px"
+              },
+              "legendColumnTitleColor" : "rgba(0, 0, 0, 0.38)",
+              "legendLabelFont" : {
+                "family" : "Roboto",
+                "size" : 12,
+                "sizeUnit" : "px",
+                "style" : "normal",
+                "weight" : "400",
+                "lineHeight" : "16px"
+              },
+              "legendLabelColor" : "rgba(0, 0, 0, 0.76)",
+              "legendValueFont" : {
+                "family" : "Roboto",
+                "size" : 12,
+                "sizeUnit" : "px",
+                "style" : "normal",
+                "weight" : "500",
+                "lineHeight" : "16px"
+              },
+              "legendValueColor" : "rgba(0, 0, 0, 0.87)",
+              "legendConfig" : {
+                "position" : "top",
+                "sortDataKeys" : false,
+                "showMin" : false,
+                "showMax" : false,
+                "showAvg" : true,
+                "showTotal" : false,
+                "showLatest" : false
+              },
+              "showTooltip" : true,
+              "tooltipTrigger" : "axis",
+              "tooltipLabelFont" : {
+                "family" : "Roboto",
+                "size" : 12,
+                "sizeUnit" : "px",
+                "style" : "normal",
+                "weight" : "400",
+                "lineHeight" : "16px"
+              },
+              "tooltipLabelColor" : "rgba(0, 0, 0, 0.76)",
+              "tooltipValueFont" : {
+                "family" : "Roboto",
+                "size" : 12,
+                "sizeUnit" : "px",
+                "style" : "normal",
+                "weight" : "500",
+                "lineHeight" : "16px"
+              },
+              "tooltipValueColor" : "rgba(0, 0, 0, 0.76)",
+              "tooltipValueFormatter" : null,
+              "tooltipShowDate" : true,
+              "tooltipDateFormat" : {
+                "format" : null,
+                "lastUpdateAgo" : false,
+                "custom" : false,
+                "auto" : true,
+                "autoDateFormatSettings" : { }
+              },
+              "tooltipDateFont" : {
+                "family" : "Roboto",
+                "size" : 11,
+                "sizeUnit" : "px",
+                "style" : "normal",
+                "weight" : "400",
+                "lineHeight" : "16px"
+              },
+              "tooltipDateColor" : "rgba(0, 0, 0, 0.76)",
+              "tooltipDateInterval" : true,
+              "tooltipBackgroundColor" : "rgba(255, 255, 255, 0.76)",
+              "tooltipBackgroundBlur" : 4,
+              "animation" : {
+                "animation" : true,
+                "animationThreshold" : 2000,
+                "animationDuration" : 500,
+                "animationEasing" : "cubicOut",
+                "animationDelay" : 0,
+                "animationDurationUpdate" : 300,
+                "animationEasingUpdate" : "cubicOut",
+                "animationDelayUpdate" : 0
+              },
+              "background" : {
+                "type" : "color",
+                "color" : "#fff",
+                "overlay" : {
+                  "enabled" : false,
+                  "color" : "rgba(255,255,255,0.72)",
+                  "blur" : 3
+                }
+              },
+              "padding" : "12px"
+            },
+            "title" : "Elevators Idle State (%)",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : null,
+            "mobileHeight" : null,
+            "configMode" : "advanced",
+            "actions" : { },
+            "showTitleIcon" : false,
+            "titleIcon" : "thermostat",
+            "iconColor" : "#1F6BDD",
+            "useDashboardTimewindow" : false,
+            "displayTimewindow" : true,
+            "titleFont" : {
+              "size" : 16,
+              "sizeUnit" : "px",
+              "family" : "Roboto",
+              "weight" : "500",
+              "style" : "normal",
+              "lineHeight" : "24px"
+            },
+            "titleColor" : "rgba(0, 0, 0, 0.87)",
+            "titleTooltip" : "",
+            "widgetStyle" : { },
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "units" : "",
+            "decimals" : null,
+            "noDataDisplayMessage" : "",
+            "timewindowStyle" : {
+              "showIcon" : false,
+              "iconSize" : "24px",
+              "icon" : null,
+              "iconPosition" : "left",
+              "font" : {
+                "size" : 12,
+                "sizeUnit" : "px",
+                "family" : "Roboto",
+                "weight" : "400",
+                "style" : "normal",
+                "lineHeight" : "16px"
+              },
+              "color" : "rgba(0, 0, 0, 0.38)",
+              "displayTypePrefix" : true
+            },
+            "margin" : "0px",
+            "borderRadius" : "0px",
+            "iconSize" : "0px",
+            "enableDataExport" : true
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "2167ee8f-be03-0088-a8a3-517a60632c10"
         }
       },
       "states" : {
         "default" : {
-          "name" : "Elevator Monitoring",
+          "name" : "Elevators",
           "root" : true,
           "layouts" : {
             "main" : {
               "widgets" : {
                 "f4fb0639-b623-6a57-ff66-2e6a2868c188" : {
-                  "sizeX" : 11,
+                  "sizeX" : 13,
                   "sizeY" : 6,
-                  "row" : 1,
-                  "col" : 13
+                  "row" : 7,
+                  "col" : 12
                 },
                 "81473fcd-8a0b-062e-ad13-a133ab485121" : {
                   "sizeX" : 13,
                   "sizeY" : 6,
                   "row" : 1,
-                  "col" : 0
+                  "col" : 12
                 },
                 "640ee227-0457-c0bc-f458-83f8bbcde9e0" : {
                   "sizeX" : 24,
                   "sizeY" : 1,
                   "row" : 0,
+                  "col" : 0
+                },
+                "2167ee8f-be03-0088-a8a3-517a60632c10" : {
+                  "sizeX" : 12,
+                  "sizeY" : 10,
+                  "mobileHeight" : null,
+                  "row" : 1,
                   "col" : 0
                 }
               },

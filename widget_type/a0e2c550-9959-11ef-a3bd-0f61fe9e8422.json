@@ -1,0 +1,36 @@
+{
+  "entityType" : "WIDGET_TYPE",
+  "entity" : {
+    "fqn" : "safty_worker",
+    "name" : "safty-worker",
+    "deprecated" : false,
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "static",
+      "sizeX" : 7.5,
+      "sizeY" : 3,
+      "resources" : [ {
+        "url" : "https://cdn.jsdelivr.net/npm/chart.js"
+      } ],
+      "templateHtml" : "<canvas id=\"safetyComfortChart\"></canvas>\n",
+      "templateCss" : "canvas {\n    width: 100% !important;\n    height: auto !important;\n}\n",
+      "controllerScript" : "self.onInit = function() {\n    // Delay to ensure canvas loads\n    setTimeout(function() {\n        var ctx = document.getElementById('safetyComfortChart').getContext('2d');\n\n        // Logical safety and comfort data\n        var safetyLevels = [95, 85, 60, 90, 75, 50, 80]; // Safety levels in %\n        var comfortLevels = safetyLevels.map(level => {\n            if (level >= 80) return level - 10;       // High comfort when safety is high\n            else if (level >= 60) return level - 20;  // Moderate comfort when safety is moderate\n            else return level - 30;                   // Low comfort when safety is low\n        });\n\n        new Chart(ctx, {\n            type: 'bar',\n            data: {\n                labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],\n                datasets: [\n                    {\n                        type: 'bar',\n                        label: 'Safety Level (%)',\n                        data: safetyLevels,\n                        backgroundColor: 'rgba(204, 51, 255, 0.5)', // Light purple (#cc33ff)\n                        borderColor: 'rgba(204, 51, 255, 1)',\n                        borderWidth: 1,\n                        yAxisID: 'y'\n                    },\n                    {\n                        type: 'line',\n                        label: 'Worker Comfort Level (%)',\n                        data: comfortLevels,\n                        borderColor: 'rgba(51, 255, 51, 1)', // Light green (#33ff33)\n                        backgroundColor: 'rgba(51, 255, 51, 0.2)',\n                        borderWidth: 2,\n                        fill: false,\n                        tension: 0.4,\n                        pointStyle: 'circle',\n                        pointRadius: 4,\n                        yAxisID: 'y1'\n                    }\n                ]\n            },\n            options: {\n                responsive: true,\n                maintainAspectRatio: false,\n                scales: {\n                    y: {\n                        beginAtZero: true,\n                        max: 100,\n                        position: 'left',\n                        title: {\n                            display: true,\n                            text: 'Safety Level (%)',\n                            font: {\n                                weight: 'bold'\n                            }\n                        },\n                        grid: {\n                            color: 'rgba(153, 102, 255, 0.2)' // Light grid for purple consistency\n                        }\n                    },\n                    y1: {\n                        beginAtZero: true,\n                        max: 100,\n                        position: 'right',\n                        title: {\n                            display: true,\n                            text: 'Comfort Level (%)',\n                            font: {\n                                weight: 'bold'\n                            }\n                        },\n                        grid: {\n                            drawOnChartArea: false\n                        }\n                    },\n                    x: {\n                        title: {\n                            display: true,\n                            text: 'Days of the Week',\n                            font: {\n                                weight: 'bold'\n                            }\n                        },\n                        grid: {\n                            color: 'rgba(153, 102, 255, 0.2)' // Light grid for x-axis\n                        }\n                    }\n                },\n                plugins: {\n                    legend: {\n                        display: true,\n                        position: 'top',\n                        labels: {\n                            usePointStyle: true,\n                            font: {\n                                weight: 'bold'\n                            }\n                        }\n                    },\n                    tooltip: {\n                        mode: 'index',\n                        intersect: false,\n                        backgroundColor: 'rgba(0, 0, 0, 0.7)',\n                        titleFont: { weight: 'bold' },\n                        bodyFont: { weight: 'normal' }\n                    }\n                },\n                interaction: {\n                    mode: 'index',\n                    intersect: false\n                }\n            }\n        });\n    }, 1000); // Delay for canvas to load\n};\n",
+      "settingsSchema" : "",
+      "dataKeySettingsSchema" : "",
+      "settingsDirective" : "tb-html-card-widget-settings",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"static\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":false,\"backgroundColor\":\"rgb(255, 255, 255)\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{\"cardHtml\":\"<div class='card'>HTML code here</div>\",\"cardCss\":\".card {\\n    font-weight: bold;\\n    font-size: 32px;\\n    color: #999;\\n    width: 100%;\\n    height: 100%;\\n    display: flex;\\n    align-items: center;\\n    justify-content: center;\\n}\"},\"title\":\"safty-worker\",\"dropShadow\":true}"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "a0e2c550-9959-11ef-a3bd-0f61fe9e8422"
+    },
+    "scada" : false,
+    "tags" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

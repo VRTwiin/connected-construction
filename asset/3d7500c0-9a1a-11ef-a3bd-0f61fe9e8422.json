@@ -1,0 +1,52 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "assetProfileId" : {
+      "entityType" : "ASSET_PROFILE",
+      "id" : "7b22c1b0-9a19-11ef-a3bd-0f61fe9e8422"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "4a70b610-8e3b-11ef-a3bd-0f61fe9e8422"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "3d7500c0-9a1a-11ef-a3bd-0f61fe9e8422"
+    },
+    "label" : null,
+    "name" : "Site B - Section 1",
+    "type" : "Site and Section"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "Address",
+      "lastUpdateTs" : 1730662432327,
+      "longValue" : null,
+      "strValue" : "Tarabya, Sarıyer"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 41.1239,
+      "jsonValue" : null,
+      "key" : "Latitude",
+      "lastUpdateTs" : 1730662522193,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 29.0411,
+      "jsonValue" : null,
+      "key" : "Longitude",
+      "lastUpdateTs" : 1730662548655,
+      "longValue" : null,
+      "strValue" : null
+    } ]
+  }
+}

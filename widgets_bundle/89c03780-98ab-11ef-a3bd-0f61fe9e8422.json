@@ -14,7 +14,7 @@
     "scada" : false,
     "title" : "Mixed Card"
   },
-  "fqns" : [ "recycled_year_to_date", "recycled_year_to_date_v0_1", "compact_summary_widget", "recycled_by_category_year_to_date", "co2_emissions_data_for_each_year" ],
+  "fqns" : [ "recycled_year_to_date", "recycled_year_to_date_v0_1", "compact_summary_widget", "recycled_by_category_year_to_date", "co2_emissions_data_for_each_year", "garbage_collection_needed", "garbage_collection_alarm", "change_alarm_status", "waste_prediction_widget", "waste_prediction_widget2", "truck_visits_and_prediction_for_future_visits_", "average_lead_time", "alert_table_widget", "lead_time_performance", "truck_load_widget", "truck_load_widget_v0_1" ],
   "relations" : [ ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]

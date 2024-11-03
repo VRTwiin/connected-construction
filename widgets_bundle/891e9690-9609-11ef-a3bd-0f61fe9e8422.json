@@ -14,7 +14,7 @@
     "scada" : false,
     "title" : "Asra Widgets"
   },
-  "fqns" : [ "test_bar_chart", "weather_forecast", "weather", "security_managment", "performances", "healthy_worker", "material_performance", "machine_failure_prediction", "cost_prediction", "card_healthy", "healthy_card" ],
+  "fqns" : [ "test_bar_chart", "weather_forecast", "security_managment", "performances", "healthy_worker", "material_performance", "machine_failure_prediction", "cost_prediction", "card_healthy", "healthy_card", "safty_worker", "cart_average_safty", "material_cart", "weather_card", "healthy_card2", "elevator_worker", "elevatore_card" ],
   "relations" : [ ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]

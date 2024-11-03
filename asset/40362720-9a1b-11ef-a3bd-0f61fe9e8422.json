@@ -1,0 +1,52 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "assetProfileId" : {
+      "entityType" : "ASSET_PROFILE",
+      "id" : "7b22c1b0-9a19-11ef-a3bd-0f61fe9e8422"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "4a70b610-8e3b-11ef-a3bd-0f61fe9e8422"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "40362720-9a1b-11ef-a3bd-0f61fe9e8422"
+    },
+    "label" : null,
+    "name" : "Site C - Section 2",
+    "type" : "Site and Section"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "Address",
+      "lastUpdateTs" : 1730662763437,
+      "longValue" : null,
+      "strValue" : "İstinye Park, İstinye, Sarıyer"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 41.1091,
+      "jsonValue" : null,
+      "key" : "Latitude",
+      "lastUpdateTs" : 1730662798603,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 29.0326,
+      "jsonValue" : null,
+      "key" : "Longitude",
+      "lastUpdateTs" : 1730662816283,
+      "longValue" : null,
+      "strValue" : null
+    } ]
+  }
+}

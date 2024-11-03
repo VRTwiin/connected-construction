@@ -1,0 +1,52 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "assetProfileId" : {
+      "entityType" : "ASSET_PROFILE",
+      "id" : "7b22c1b0-9a19-11ef-a3bd-0f61fe9e8422"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "4a70b610-8e3b-11ef-a3bd-0f61fe9e8422"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "da2d6fa0-9a1b-11ef-a3bd-0f61fe9e8422"
+    },
+    "label" : null,
+    "name" : "Site B - Section 4",
+    "type" : "Site and Section"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "Address",
+      "lastUpdateTs" : 1730663012751,
+      "longValue" : null,
+      "strValue" : "Yeniköy, Sarıyer"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 41.1381,
+      "jsonValue" : null,
+      "key" : "Latitude",
+      "lastUpdateTs" : 1730663031664,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 29.051,
+      "jsonValue" : null,
+      "key" : "Longitude",
+      "lastUpdateTs" : 1730663046861,
+      "longValue" : null,
+      "strValue" : null
+    } ]
+  }
+}
