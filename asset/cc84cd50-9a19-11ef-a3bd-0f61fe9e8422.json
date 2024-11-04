@@ -27,24 +27,24 @@
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
-      "key" : "Address",
-      "lastUpdateTs" : 1730662493201,
+      "key" : "address",
+      "lastUpdateTs" : 1730669314777,
       "longValue" : null,
       "strValue" : "Hacıosman Metro Station, Sarıyer"
     }, {
       "booleanValue" : null,
-      "doubleValue" : 41.1282,
+      "doubleValue" : 41.1091,
       "jsonValue" : null,
-      "key" : "Latitude",
-      "lastUpdateTs" : 1730662157365,
+      "key" : "latitude",
+      "lastUpdateTs" : 1730671315463,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 29.0348,
+      "doubleValue" : 29.0326,
       "jsonValue" : null,
-      "key" : "Longitude",
-      "lastUpdateTs" : 1730662187652,
+      "key" : "longitude",
+      "lastUpdateTs" : 1730671268213,
       "longValue" : null,
       "strValue" : null
     } ]

@@ -281,45 +281,6 @@
           "col" : 0,
           "id" : "4b9f1ed4-f07e-4d59-b3f3-22e0365672f6"
         },
-        "b35d5c20-6bd1-36ed-3ffb-bb87e6d27d10" : {
-          "typeFullFqn" : "tenant.average_lead_time",
-          "type" : "static",
-          "sizeX" : 7.5,
-          "sizeY" : 3,
-          "config" : {
-            "datasources" : [ {
-              "type" : "static",
-              "name" : "function",
-              "dataKeys" : [ {
-                "name" : "f(x)",
-                "type" : "function",
-                "label" : "Random",
-                "color" : "#2196f3",
-                "settings" : { },
-                "_hash" : 0.15479322438769105,
-                "funcBody" : "var value = prevValue + Math.random() * 100 - 50;\nvar multiplier = Math.pow(10, 2 || 0);\nvar value = Math.round(value * multiplier) / multiplier;\nif (value < -1000) {\n\tvalue = -1000;\n} else if (value > 1000) {\n\tvalue = 1000;\n}\nreturn value;"
-              } ]
-            } ],
-            "timewindow" : {
-              "realtime" : {
-                "timewindowMs" : 60000
-              }
-            },
-            "showTitle" : false,
-            "backgroundColor" : "rgb(255, 255, 255)",
-            "color" : "rgba(0, 0, 0, 0.87)",
-            "padding" : "8px",
-            "settings" : {
-              "cardHtml" : "<div class='card'>HTML code here</div>",
-              "cardCss" : ".card {\n    font-weight: bold;\n    font-size: 32px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}"
-            },
-            "title" : "Average Lead Time",
-            "dropShadow" : true
-          },
-          "row" : 0,
-          "col" : 0,
-          "id" : "b35d5c20-6bd1-36ed-3ffb-bb87e6d27d10"
-        },
         "efc0a98a-0e72-f993-c3b0-d3f9ea977269" : {
           "typeFullFqn" : "tenant.alert_table_widget",
           "type" : "static",
@@ -358,375 +319,6 @@
           "row" : 0,
           "col" : 0,
           "id" : "efc0a98a-0e72-f993-c3b0-d3f9ea977269"
-        },
-        "cabd0360-a479-9679-f245-1f29b3a062c9" : {
-          "typeFullFqn" : "tenant.lead_time_performance",
-          "type" : "timeseries",
-          "sizeX" : 8,
-          "sizeY" : 5,
-          "config" : {
-            "datasources" : [ {
-              "type" : "function",
-              "name" : "",
-              "dataKeys" : [ {
-                "name" : "f(x)",
-                "type" : "function",
-                "label" : "Lead Time Performance",
-                "color" : "#999143",
-                "settings" : { },
-                "_hash" : 0.44330175268413674,
-                "funcBody" : "var value = prevValue + Math.random() * 100 - 50;\nvar multiplier = Math.pow(10, 2 || 0);\nvar value = Math.round(value * multiplier) / multiplier;\nif (value < -1000) {\n\tvalue = -1000;\n} else if (value > 1000) {\n\tvalue = 1000;\n}\nreturn value;",
-                "aggregationType" : null,
-                "units" : null,
-                "decimals" : null,
-                "usePostProcessing" : null,
-                "postFuncBody" : null
-              } ],
-              "alarmFilterConfig" : {
-                "statusList" : [ "ACTIVE" ]
-              }
-            } ],
-            "timewindow" : {
-              "hideAggregation" : false,
-              "hideAggInterval" : false,
-              "hideTimezone" : false,
-              "selectedTab" : 0,
-              "realtime" : {
-                "realtimeType" : 0,
-                "timewindowMs" : 60000,
-                "quickInterval" : "CURRENT_DAY",
-                "interval" : 1000
-              },
-              "aggregation" : {
-                "type" : "AVG",
-                "limit" : 25000
-              },
-              "timezone" : null
-            },
-            "showTitle" : false,
-            "backgroundColor" : "rgba(0, 0, 0, 0)",
-            "color" : "rgba(0, 0, 0, 0.87)",
-            "padding" : "0px",
-            "settings" : {
-              "showLegend" : true,
-              "legendConfig" : {
-                "direction" : "column",
-                "position" : "top",
-                "sortDataKeys" : false,
-                "showMin" : false,
-                "showMax" : false,
-                "showAvg" : true,
-                "showTotal" : false,
-                "showLatest" : false
-              },
-              "thresholds" : [ ],
-              "dataZoom" : true,
-              "stack" : false,
-              "yAxis" : {
-                "show" : true,
-                "label" : "",
-                "labelFont" : {
-                  "family" : "Roboto",
-                  "size" : 12,
-                  "sizeUnit" : "px",
-                  "style" : "normal",
-                  "weight" : "600",
-                  "lineHeight" : "1"
-                },
-                "labelColor" : "rgba(0, 0, 0, 0.54)",
-                "position" : "left",
-                "showTickLabels" : true,
-                "tickLabelFont" : {
-                  "family" : "Roboto",
-                  "size" : 12,
-                  "sizeUnit" : "px",
-                  "style" : "normal",
-                  "weight" : "400",
-                  "lineHeight" : "1"
-                },
-                "tickLabelColor" : "rgba(0, 0, 0, 0.54)",
-                "showTicks" : true,
-                "ticksColor" : "rgba(0, 0, 0, 0.54)",
-                "showLine" : true,
-                "lineColor" : "rgba(0, 0, 0, 0.54)",
-                "showSplitLines" : true,
-                "splitLinesColor" : "rgba(0, 0, 0, 0.12)"
-              },
-              "xAxis" : {
-                "show" : true,
-                "label" : "",
-                "labelFont" : {
-                  "family" : "Roboto",
-                  "size" : 12,
-                  "sizeUnit" : "px",
-                  "style" : "normal",
-                  "weight" : "600",
-                  "lineHeight" : "1"
-                },
-                "labelColor" : "rgba(0, 0, 0, 0.54)",
-                "position" : "bottom",
-                "showTickLabels" : true,
-                "tickLabelFont" : {
-                  "family" : "Roboto",
-                  "size" : 10,
-                  "sizeUnit" : "px",
-                  "style" : "normal",
-                  "weight" : "400",
-                  "lineHeight" : "1"
-                },
-                "tickLabelColor" : "rgba(0, 0, 0, 0.54)",
-                "ticksFormat" : { },
-                "showTicks" : true,
-                "ticksColor" : "rgba(0, 0, 0, 0.54)",
-                "showLine" : true,
-                "lineColor" : "rgba(0, 0, 0, 0.54)",
-                "showSplitLines" : true,
-                "splitLinesColor" : "rgba(0, 0, 0, 0.12)"
-              },
-              "legendLabelFont" : {
-                "family" : "Roboto",
-                "size" : 12,
-                "sizeUnit" : "px",
-                "style" : "normal",
-                "weight" : "400",
-                "lineHeight" : "16px"
-              },
-              "legendLabelColor" : "rgba(0, 0, 0, 0.76)",
-              "showTooltip" : true,
-              "tooltipTrigger" : "axis",
-              "tooltipValueFont" : {
-                "family" : "Roboto",
-                "size" : 12,
-                "sizeUnit" : "px",
-                "style" : "normal",
-                "weight" : "500",
-                "lineHeight" : "16px"
-              },
-              "tooltipValueColor" : "rgba(0, 0, 0, 0.76)",
-              "tooltipShowDate" : true,
-              "tooltipDateFormat" : {
-                "format" : null,
-                "lastUpdateAgo" : false,
-                "custom" : false,
-                "auto" : true,
-                "autoDateFormatSettings" : { }
-              },
-              "tooltipDateFont" : {
-                "family" : "Roboto",
-                "size" : 11,
-                "sizeUnit" : "px",
-                "style" : "normal",
-                "weight" : "400",
-                "lineHeight" : "16px"
-              },
-              "tooltipDateColor" : "rgba(0, 0, 0, 0.76)",
-              "tooltipDateInterval" : true,
-              "tooltipBackgroundColor" : "rgba(255, 255, 255, 0.76)",
-              "tooltipBackgroundBlur" : 4,
-              "background" : {
-                "type" : "color",
-                "color" : "#fff",
-                "overlay" : {
-                  "enabled" : false,
-                  "color" : "rgba(255,255,255,0.72)",
-                  "blur" : 3
-                }
-              },
-              "yAxes" : {
-                "default" : {
-                  "units" : null,
-                  "decimals" : 0,
-                  "show" : true,
-                  "label" : "",
-                  "labelFont" : {
-                    "family" : "Roboto",
-                    "size" : 12,
-                    "sizeUnit" : "px",
-                    "style" : "normal",
-                    "weight" : "600",
-                    "lineHeight" : "1"
-                  },
-                  "labelColor" : "rgba(0, 0, 0, 0.54)",
-                  "position" : "left",
-                  "showTickLabels" : true,
-                  "tickLabelFont" : {
-                    "family" : "Roboto",
-                    "size" : 12,
-                    "sizeUnit" : "px",
-                    "style" : "normal",
-                    "weight" : "400",
-                    "lineHeight" : "1"
-                  },
-                  "tickLabelColor" : "rgba(0, 0, 0, 0.54)",
-                  "ticksFormatter" : null,
-                  "showTicks" : true,
-                  "ticksColor" : "rgba(0, 0, 0, 0.54)",
-                  "showLine" : true,
-                  "lineColor" : "rgba(0, 0, 0, 0.54)",
-                  "showSplitLines" : true,
-                  "splitLinesColor" : "rgba(0, 0, 0, 0.12)",
-                  "id" : "default",
-                  "order" : 0
-                }
-              },
-              "noAggregationBarWidthSettings" : {
-                "strategy" : "group",
-                "groupWidth" : {
-                  "relative" : true,
-                  "relativeWidth" : 2,
-                  "absoluteWidth" : 1000
-                },
-                "barWidth" : {
-                  "relative" : true,
-                  "relativeWidth" : 2,
-                  "absoluteWidth" : 1000
-                }
-              },
-              "animation" : {
-                "animation" : true,
-                "animationThreshold" : 2000,
-                "animationDuration" : 500,
-                "animationEasing" : "cubicOut",
-                "animationDelay" : 0,
-                "animationDurationUpdate" : 300,
-                "animationEasingUpdate" : "cubicOut",
-                "animationDelayUpdate" : 0
-              },
-              "padding" : "12px",
-              "comparisonEnabled" : false,
-              "timeForComparison" : "previousInterval",
-              "comparisonCustomIntervalValue" : 7200000,
-              "comparisonXAxis" : {
-                "show" : true,
-                "label" : "",
-                "labelFont" : {
-                  "family" : "Roboto",
-                  "size" : 12,
-                  "sizeUnit" : "px",
-                  "style" : "normal",
-                  "weight" : "600",
-                  "lineHeight" : "1"
-                },
-                "labelColor" : "rgba(0, 0, 0, 0.54)",
-                "position" : "top",
-                "showTickLabels" : true,
-                "tickLabelFont" : {
-                  "family" : "Roboto",
-                  "size" : 10,
-                  "sizeUnit" : "px",
-                  "style" : "normal",
-                  "weight" : "400",
-                  "lineHeight" : "1"
-                },
-                "tickLabelColor" : "rgba(0, 0, 0, 0.54)",
-                "ticksFormat" : { },
-                "showTicks" : true,
-                "ticksColor" : "rgba(0, 0, 0, 0.54)",
-                "showLine" : true,
-                "lineColor" : "rgba(0, 0, 0, 0.54)",
-                "showSplitLines" : true,
-                "splitLinesColor" : "rgba(0, 0, 0, 0.12)"
-              },
-              "grid" : {
-                "show" : false,
-                "backgroundColor" : null,
-                "borderWidth" : 1,
-                "borderColor" : "#ccc"
-              },
-              "legendColumnTitleFont" : {
-                "family" : "Roboto",
-                "size" : 12,
-                "sizeUnit" : "px",
-                "style" : "normal",
-                "weight" : "400",
-                "lineHeight" : "16px"
-              },
-              "legendColumnTitleColor" : "rgba(0, 0, 0, 0.38)",
-              "legendValueFont" : {
-                "family" : "Roboto",
-                "size" : 12,
-                "sizeUnit" : "px",
-                "style" : "normal",
-                "weight" : "500",
-                "lineHeight" : "16px"
-              },
-              "legendValueColor" : "rgba(0, 0, 0, 0.87)",
-              "tooltipLabelFont" : {
-                "family" : "Roboto",
-                "size" : 12,
-                "sizeUnit" : "px",
-                "style" : "normal",
-                "weight" : "400",
-                "lineHeight" : "16px"
-              },
-              "tooltipLabelColor" : "rgba(0, 0, 0, 0.76)"
-            },
-            "title" : "Lead Time Performance",
-            "dropShadow" : true,
-            "enableFullscreen" : true,
-            "titleStyle" : null,
-            "mobileHeight" : null,
-            "configMode" : "advanced",
-            "actions" : {
-              "headerButton" : [ {
-                "name" : "Lead Time Performance Dashboard",
-                "icon" : "more_horiz",
-                "useShowWidgetActionFunction" : null,
-                "showWidgetActionFunction" : "return true;",
-                "type" : "openDashboardState",
-                "targetDashboardStateId" : "lead_time_performance",
-                "setEntityId" : true,
-                "stateEntityParamName" : null,
-                "openRightLayout" : false,
-                "openInSeparateDialog" : false,
-                "openInPopover" : false,
-                "id" : "c0aa153a-99fd-8bc7-1562-aada403583aa"
-              } ]
-            },
-            "showTitleIcon" : false,
-            "titleIcon" : "thermostat",
-            "iconColor" : "#1F6BDD",
-            "useDashboardTimewindow" : false,
-            "displayTimewindow" : false,
-            "titleFont" : {
-              "size" : 16,
-              "sizeUnit" : "px",
-              "family" : "Roboto",
-              "weight" : "500",
-              "style" : "normal",
-              "lineHeight" : "24px"
-            },
-            "titleColor" : "rgba(0, 0, 0, 0.87)",
-            "titleTooltip" : "",
-            "widgetStyle" : { },
-            "widgetCss" : "",
-            "pageSize" : 1024,
-            "units" : "",
-            "decimals" : null,
-            "noDataDisplayMessage" : "",
-            "timewindowStyle" : {
-              "showIcon" : false,
-              "iconSize" : "24px",
-              "icon" : null,
-              "iconPosition" : "left",
-              "font" : {
-                "size" : 12,
-                "sizeUnit" : "px",
-                "family" : "Roboto",
-                "weight" : "400",
-                "style" : "normal",
-                "lineHeight" : "16px"
-              },
-              "color" : "rgba(0, 0, 0, 0.38)",
-              "displayTypePrefix" : true
-            },
-            "margin" : "0px",
-            "borderRadius" : "0px",
-            "iconSize" : "0px"
-          },
-          "row" : 0,
-          "col" : 0,
-          "id" : "cabd0360-a479-9679-f245-1f29b3a062c9"
         },
         "cfd1b1d4-46c9-d756-8a32-5bf1f23e60da" : {
           "typeFullFqn" : "tenant.truck_load_widget_v0_1",
@@ -1910,6 +1502,45 @@
           "row" : 0,
           "col" : 0,
           "id" : "e82de385-deb5-bb1a-7c0b-b10da84b0e61"
+        },
+        "4b1ccc96-27e7-ebf6-0cca-1d969937e88a" : {
+          "typeFullFqn" : "tenant.average_lead_time_v0_1",
+          "type" : "static",
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "static",
+              "name" : "function",
+              "dataKeys" : [ {
+                "name" : "f(x)",
+                "type" : "function",
+                "label" : "Random",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.15479322438769105,
+                "funcBody" : "var value = prevValue + Math.random() * 100 - 50;\nvar multiplier = Math.pow(10, 2 || 0);\nvar value = Math.round(value * multiplier) / multiplier;\nif (value < -1000) {\n\tvalue = -1000;\n} else if (value > 1000) {\n\tvalue = 1000;\n}\nreturn value;"
+              } ]
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "cardHtml" : "<div class='card'>HTML code here</div>",
+              "cardCss" : ".card {\n    font-weight: bold;\n    font-size: 32px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}"
+            },
+            "title" : "Average Lead Time v0.1",
+            "dropShadow" : true
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "4b1ccc96-27e7-ebf6-0cca-1d969937e88a"
         }
       },
       "states" : {
@@ -1920,83 +1551,76 @@
             "main" : {
               "widgets" : {
                 "07a56049-fac5-3ee9-9d17-fec06976827a" : {
-                  "sizeX" : 153,
+                  "sizeX" : 116,
                   "sizeY" : 4,
                   "row" : 0,
                   "col" : 0
                 },
                 "b5f64770-2a2b-ba94-a74a-0fd21f064032" : {
-                  "sizeX" : 21,
-                  "sizeY" : 37,
-                  "row" : 30,
+                  "sizeX" : 16,
+                  "sizeY" : 29,
+                  "row" : 25,
                   "col" : 0
                 },
                 "b676baf1-a3db-6f4f-1a6d-22028ccd71da" : {
-                  "sizeX" : 34,
-                  "sizeY" : 30,
-                  "row" : 30,
-                  "col" : 21
+                  "sizeX" : 26,
+                  "sizeY" : 23,
+                  "row" : 25,
+                  "col" : 16
                 },
                 "4b9f1ed4-f07e-4d59-b3f3-22e0365672f6" : {
-                  "sizeX" : 30,
-                  "sizeY" : 26,
+                  "sizeX" : 29,
+                  "sizeY" : 21,
                   "row" : 4,
                   "col" : 0
-                },
-                "b35d5c20-6bd1-36ed-3ffb-bb87e6d27d10" : {
-                  "sizeX" : 17,
-                  "sizeY" : 20,
-                  "row" : 32,
-                  "col" : 55
                 },
                 "efc0a98a-0e72-f993-c3b0-d3f9ea977269" : {
-                  "sizeX" : 47,
-                  "sizeY" : 48,
-                  "row" : 34,
-                  "col" : 72
-                },
-                "cabd0360-a479-9679-f245-1f29b3a062c9" : {
-                  "sizeX" : 47,
-                  "sizeY" : 30,
-                  "mobileHeight" : null,
+                  "sizeX" : 55,
+                  "sizeY" : 29,
                   "row" : 4,
-                  "col" : 72
+                  "col" : 61
                 },
                 "cfd1b1d4-46c9-d756-8a32-5bf1f23e60da" : {
-                  "sizeX" : 25,
-                  "sizeY" : 22,
-                  "row" : 6,
-                  "col" : 30
+                  "sizeX" : 19,
+                  "sizeY" : 17,
+                  "row" : 4,
+                  "col" : 42
                 },
                 "67ff129c-3716-48c4-a01a-6eff91c77517" : {
-                  "sizeX" : 17,
-                  "sizeY" : 28,
+                  "sizeX" : 13,
+                  "sizeY" : 21,
                   "row" : 4,
-                  "col" : 55
+                  "col" : 29
                 },
                 "c241ba15-408a-6b31-1e48-b7db03011406" : {
-                  "sizeX" : 17,
-                  "sizeY" : 30,
-                  "row" : 52,
-                  "col" : 55
+                  "sizeX" : 19,
+                  "sizeY" : 13,
+                  "row" : 21,
+                  "col" : 42
                 },
                 "6022934e-f511-c9ff-598c-c85a5d4779a1" : {
-                  "sizeX" : 34,
-                  "sizeY" : 78,
-                  "row" : 4,
-                  "col" : 119
+                  "sizeX" : 55,
+                  "sizeY" : 36,
+                  "row" : 33,
+                  "col" : 61
                 },
                 "25687efa-df72-b7a9-8f45-93c41857e8ba" : {
-                  "sizeX" : 34,
-                  "sizeY" : 22,
-                  "row" : 60,
-                  "col" : 21
+                  "sizeX" : 45,
+                  "sizeY" : 20,
+                  "row" : 48,
+                  "col" : 16
                 },
                 "e82de385-deb5-bb1a-7c0b-b10da84b0e61" : {
-                  "sizeX" : 21,
-                  "sizeY" : 15,
-                  "row" : 67,
+                  "sizeX" : 16,
+                  "sizeY" : 14,
+                  "row" : 54,
                   "col" : 0
+                },
+                "4b1ccc96-27e7-ebf6-0cca-1d969937e88a" : {
+                  "sizeX" : 12,
+                  "sizeY" : 14,
+                  "row" : 34,
+                  "col" : 45
                 }
               },
               "gridSettings" : {

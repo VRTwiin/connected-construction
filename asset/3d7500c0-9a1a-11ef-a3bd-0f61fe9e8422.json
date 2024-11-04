@@ -27,24 +27,24 @@
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
-      "key" : "Address",
-      "lastUpdateTs" : 1730662432327,
+      "key" : "address",
+      "lastUpdateTs" : 1730669513950,
       "longValue" : null,
       "strValue" : "Tarabya, Sarıyer"
     }, {
       "booleanValue" : null,
       "doubleValue" : 41.1239,
       "jsonValue" : null,
-      "key" : "Latitude",
-      "lastUpdateTs" : 1730662522193,
+      "key" : "latitude",
+      "lastUpdateTs" : 1730669535382,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : 29.0411,
       "jsonValue" : null,
-      "key" : "Longitude",
-      "lastUpdateTs" : 1730662548655,
+      "key" : "longitude",
+      "lastUpdateTs" : 1730669549965,
       "longValue" : null,
       "strValue" : null
     } ]

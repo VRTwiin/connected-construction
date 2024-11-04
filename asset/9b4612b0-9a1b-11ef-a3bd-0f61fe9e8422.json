@@ -27,24 +27,24 @@
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
-      "key" : "Address",
-      "lastUpdateTs" : 1730662931228,
+      "key" : "address",
+      "lastUpdateTs" : 1730669640128,
       "longValue" : null,
       "strValue" : "Emirgan Park, Emirgan, Sarıyer"
     }, {
       "booleanValue" : null,
       "doubleValue" : 41.1094,
       "jsonValue" : null,
-      "key" : "Latitude",
-      "lastUpdateTs" : 1730662949115,
+      "key" : "latitude",
+      "lastUpdateTs" : 1730669654669,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : 29.0518,
       "jsonValue" : null,
-      "key" : "Longitude",
-      "lastUpdateTs" : 1730662969117,
+      "key" : "longitude",
+      "lastUpdateTs" : 1730669668486,
       "longValue" : null,
       "strValue" : null
     } ]

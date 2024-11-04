@@ -27,24 +27,24 @@
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
-      "key" : "Address",
-      "lastUpdateTs" : 1730662763437,
+      "key" : "address",
+      "lastUpdateTs" : 1730669574583,
       "longValue" : null,
       "strValue" : "İstinye Park, İstinye, Sarıyer"
     }, {
       "booleanValue" : null,
-      "doubleValue" : 41.1091,
+      "doubleValue" : 41.1282,
       "jsonValue" : null,
-      "key" : "Latitude",
-      "lastUpdateTs" : 1730662798603,
+      "key" : "latitude",
+      "lastUpdateTs" : 1730671305096,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 29.0326,
+      "doubleValue" : 29.0348,
       "jsonValue" : null,
-      "key" : "Longitude",
-      "lastUpdateTs" : 1730662816283,
+      "key" : "longitude",
+      "lastUpdateTs" : 1730671250586,
       "longValue" : null,
       "strValue" : null
     } ]

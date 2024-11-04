@@ -240,7 +240,7 @@
               "dataKeys" : [ {
                 "name" : "f(x)",
                 "type" : "function",
-                "label" : "A100",
+                "label" : "Cement",
                 "color" : "#2196f3",
                 "settings" : { },
                 "_hash" : 0.11413653352004127,
@@ -253,7 +253,7 @@
               }, {
                 "name" : "f(x)",
                 "type" : "function",
-                "label" : "B100",
+                "label" : "Rebar",
                 "color" : "#4caf50",
                 "settings" : { },
                 "_hash" : 0.32952324894093854,
@@ -266,7 +266,7 @@
               }, {
                 "name" : "f(x)",
                 "type" : "function",
-                "label" : "C100",
+                "label" : "Concrete",
                 "color" : "#f44336",
                 "settings" : { },
                 "_hash" : 0.36777979644786907,
@@ -279,7 +279,7 @@
               }, {
                 "name" : "f(x)",
                 "type" : "function",
-                "label" : "D100",
+                "label" : "Lumber",
                 "color" : "#ffc107",
                 "settings" : { },
                 "_hash" : 0.8371379964116037,
@@ -292,7 +292,7 @@
               }, {
                 "name" : "f(x)",
                 "type" : "function",
-                "label" : "E100",
+                "label" : "Bricks",
                 "color" : "#607d8b",
                 "settings" : { },
                 "_hash" : 0.2536998468729559,
@@ -305,7 +305,7 @@
               }, {
                 "name" : "f(x)",
                 "type" : "function",
-                "label" : "F100",
+                "label" : "Insulation Materials",
                 "color" : "#9c27b0",
                 "settings" : { },
                 "_hash" : 0.32235213664968176,
@@ -318,7 +318,7 @@
               }, {
                 "name" : "f(x)",
                 "type" : "function",
-                "label" : "G100",
+                "label" : "Glass",
                 "color" : "#8bc34a",
                 "settings" : { },
                 "_hash" : 0.6096268647129437,
@@ -586,7 +586,7 @@
               "dataKeys" : [ {
                 "name" : "f(x)",
                 "type" : "function",
-                "label" : "A100",
+                "label" : "Cement",
                 "color" : "#2196f3",
                 "settings" : { },
                 "_hash" : 0.5929177245273523,
@@ -599,7 +599,7 @@
               }, {
                 "name" : "f(x)",
                 "type" : "function",
-                "label" : "B100",
+                "label" : "Rebar",
                 "color" : "#4caf50",
                 "settings" : { },
                 "_hash" : 0.07678719229870312,
@@ -612,7 +612,7 @@
               }, {
                 "name" : "f(x)",
                 "type" : "function",
-                "label" : "C100",
+                "label" : "Concrete",
                 "color" : "#f44336",
                 "settings" : { },
                 "_hash" : 0.39322283438120587,
@@ -625,7 +625,7 @@
               }, {
                 "name" : "f(x)",
                 "type" : "function",
-                "label" : "F100",
+                "label" : "Insulation Materials",
                 "color" : "#9C27B0",
                 "settings" : { },
                 "_hash" : 0.38024930795529,
@@ -816,7 +816,7 @@
               "dataKeys" : [ {
                 "name" : "f(x)",
                 "type" : "function",
-                "label" : "A100",
+                "label" : "Cement",
                 "color" : "#2196f3",
                 "settings" : { },
                 "_hash" : 0.5929177245273523,
@@ -829,7 +829,7 @@
               }, {
                 "name" : "f(x)",
                 "type" : "function",
-                "label" : "B100",
+                "label" : "Rebar",
                 "color" : "#4caf50",
                 "settings" : { },
                 "_hash" : 0.07678719229870312,
@@ -842,7 +842,7 @@
               }, {
                 "name" : "f(x)",
                 "type" : "function",
-                "label" : "C100",
+                "label" : "Concrete",
                 "color" : "#f44336",
                 "settings" : { },
                 "_hash" : 0.39322283438120587,
@@ -855,7 +855,7 @@
               }, {
                 "name" : "f(x)",
                 "type" : "function",
-                "label" : "E100",
+                "label" : "Bricks",
                 "color" : "#607d8b",
                 "settings" : { },
                 "_hash" : 0.9625660215842222,
@@ -868,7 +868,7 @@
               }, {
                 "name" : "f(x)",
                 "type" : "function",
-                "label" : "F100",
+                "label" : "Insulation Materials",
                 "color" : "#9C27B0",
                 "settings" : { },
                 "_hash" : 0.38024930795529,
@@ -881,7 +881,7 @@
               }, {
                 "name" : "f(x)",
                 "type" : "function",
-                "label" : "G100",
+                "label" : "Glass",
                 "color" : "#8BC34A",
                 "settings" : { },
                 "_hash" : 0.04339621685639994,
@@ -1072,7 +1072,7 @@
               "dataKeys" : [ {
                 "name" : "f(x)",
                 "type" : "function",
-                "label" : "A100",
+                "label" : "Cement",
                 "color" : "#048AD3",
                 "settings" : { },
                 "_hash" : 0.8598837443512461,
@@ -1085,7 +1085,7 @@
               }, {
                 "name" : "f(x)",
                 "type" : "function",
-                "label" : "D100",
+                "label" : "Lumber",
                 "color" : "#F5DD00",
                 "settings" : { },
                 "_hash" : 0.5649229486456158,
@@ -1098,7 +1098,7 @@
               }, {
                 "name" : "f(x)",
                 "type" : "function",
-                "label" : "G100",
+                "label" : "Glass",
                 "color" : "#8BC34A",
                 "settings" : { },
                 "_hash" : 0.2718644967622812,
@@ -3334,7 +3334,7 @@
                 },
                 "32d2cd0d-7e0d-452f-9b27-1622a51082c1" : {
                   "sizeX" : 12,
-                  "sizeY" : 5,
+                  "sizeY" : 6,
                   "row" : 10,
                   "col" : 12
                 },

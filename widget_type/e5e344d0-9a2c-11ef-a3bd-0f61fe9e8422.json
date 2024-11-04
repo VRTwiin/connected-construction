@@ -1,0 +1,34 @@
+{
+  "entityType" : "WIDGET_TYPE",
+  "entity" : {
+    "fqn" : "average_lead_time_v0_1",
+    "name" : "Average Lead Time v0.1",
+    "deprecated" : false,
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "static",
+      "sizeX" : 7.5,
+      "sizeY" : 3,
+      "resources" : [ ],
+      "templateHtml" : "<div class=\"lead-time-widget\">\r\n    <h3>Average Lead Time</h3>\r\n    <div id=\"lead-time-value\" class=\"lead-time-value\">0%</div>\r\n    <p class=\"lead-time-info\">Percentage of on-time waste collection</p>\r\n</div>\r\n",
+      "templateCss" : ".lead-time-widget {\r\n    text-align: center;\r\n    padding: 20px;\r\n    border: 1px solid #ddd;\r\n    border-radius: 8px;\r\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\r\n    background-color: #fff;\r\n    width: 200px;\r\n    font-family: Arial, sans-serif;\r\n}\r\n\r\n.lead-time-widget h3 {\r\n    font-size: 1.2em;\r\n    margin-bottom: 10px;\r\n    color: #333;\r\n}\r\n\r\n.lead-time-value {\r\n    font-size: 2.5em;\r\n    font-weight: bold;\r\n    color: green; /* Default color for initial load */\r\n    margin-bottom: 10px;\r\n}\r\n\r\n.lead-time-info {\r\n    font-size: 0.9em;\r\n    color: #666;\r\n}\r\n",
+      "controllerScript" : "self.onInit = function() {\r\n    function updateLeadTime() {\r\n        // Set the lead time percentage to a fixed value of 32%\r\n        const leadTimePercentage = 32;\r\n\r\n        // Update the display value\r\n        const leadTimeElement = document.getElementById(\"lead-time-value\");\r\n        leadTimeElement.innerText = leadTimePercentage + \"%\";\r\n\r\n        // Change color based on performance\r\n        if (leadTimePercentage >= 50) {\r\n            leadTimeElement.style.color = \"green\";\r\n        } else {\r\n            leadTimeElement.style.color = \"red\";\r\n        }\r\n    }\r\n\r\n    // Initial update and set an interval to update every minute (for simulation)\r\n    updateLeadTime();\r\n    setInterval(updateLeadTime, 60000); // Update every 1 minute\r\n};\r\n",
+      "settingsSchema" : "",
+      "dataKeySettingsSchema" : "",
+      "settingsDirective" : "tb-html-card-widget-settings",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"static\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":false,\"backgroundColor\":\"rgb(255, 255, 255)\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{\"cardHtml\":\"<div class='card'>HTML code here</div>\",\"cardCss\":\".card {\\n    font-weight: bold;\\n    font-size: 32px;\\n    color: #999;\\n    width: 100%;\\n    height: 100%;\\n    display: flex;\\n    align-items: center;\\n    justify-content: center;\\n}\"},\"title\":\"Average Lead Time v0.1\",\"dropShadow\":true}"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "e5e344d0-9a2c-11ef-a3bd-0f61fe9e8422"
+    },
+    "scada" : false,
+    "tags" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

@@ -27,24 +27,24 @@
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
-      "key" : "Address",
-      "lastUpdateTs" : 1730663012751,
+      "key" : "address",
+      "lastUpdateTs" : 1730669443247,
       "longValue" : null,
       "strValue" : "Yeniköy, Sarıyer"
     }, {
       "booleanValue" : null,
       "doubleValue" : 41.1381,
       "jsonValue" : null,
-      "key" : "Latitude",
-      "lastUpdateTs" : 1730663031664,
+      "key" : "latitude",
+      "lastUpdateTs" : 1730669471277,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : 29.051,
       "jsonValue" : null,
-      "key" : "Longitude",
-      "lastUpdateTs" : 1730663046861,
+      "key" : "longitude",
+      "lastUpdateTs" : 1730669489872,
       "longValue" : null,
       "strValue" : null
     } ]
