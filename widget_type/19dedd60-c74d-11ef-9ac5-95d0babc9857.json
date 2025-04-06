@@ -1,0 +1,34 @@
+{
+  "entityType" : "WIDGET_TYPE",
+  "entity" : {
+    "fqn" : "worker_status",
+    "name" : "worker-status",
+    "deprecated" : false,
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "static",
+      "sizeX" : 7.5,
+      "sizeY" : 3,
+      "resources" : [ ],
+      "templateHtml" : "<div class=\"tb-widget-container\">\n    <div class=\"widget\">\n        <h3 class=\"widget-title\" id=\"widgetTitle\">Worker Status</h3>\n        <div class=\"status-blocks\" id=\"statusBlocks\">\n            <div class=\"status-block good\" id=\"goodStatus\">\n                <span>Good</span>\n            </div>\n            <div class=\"status-block normal\" id=\"normalStatus\">\n                <span>Normal</span>\n            </div>\n            <div class=\"status-block bad\" id=\"badStatus\">\n                <span>Bad</span>\n            </div>\n        </div>\n    </div>\n</div>\n",
+      "templateCss" : "/* Reset styles for ThingsBoard */\n.tb-widget-container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 100%;\n    width: 100%;\n}\n\n.widget {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n    text-align: center;\n    box-sizing: border-box;\n    padding: 10px;\n}\n\n/* Title styling */\n.widget-title {\n    font-size: 1.5rem;\n    color: #333;\n    margin-bottom: 10px;\n}\n\n/* Status block container */\n.status-blocks {\n    display: flex;\n    justify-content: space-between;\n    gap: 10px;\n    width: 100%;\n}\n\n/* Individual status blocks */\n.status-block {\n    flex: 1;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 15px;\n    border-radius: 8px;\n    font-size: 1rem;\n    color: white;\n    opacity: 0.5;\n    transition: all 0.3s ease;\n}\n\n/* Status-specific colors */\n.good {\n    background-color: #4CAF50;\n}\n\n.normal {\n    background-color: #FFEB3B;\n    color: #333;\n}\n\n.bad {\n    background-color: #F44336;\n}\n\n/* Highlight active status */\n.active {\n    opacity: 1;\n    transform: scale(1.1);\n}\n",
+      "controllerScript" : "self.onInit = function() {\n    updateStatus('Good'); // مقدار پیش‌فرض\n    fetchData(); // دریافت اطلاعات از API\n};\n\n// Function to fetch status from API\nfunction fetchData() {\n    if (self.ctx.datasources && self.ctx.datasources.length > 0) {\n        const datasource = self.ctx.datasources[0]; // اولین منبع داده\n        datasource.latestUpdate().then(\n            function (latestData) {\n                // دریافت مقدار \"totalStatus\"\n                const totalStatus = latestData['totalStatus'];\n                if (totalStatus && totalStatus.length > 0) {\n                    updateStatus(totalStatus[0].value); // مقدار را ارسال می‌کنیم\n                } else {\n                    console.error('No data available for totalStatus');\n                }\n            },\n            function (error) {\n                console.error('Error fetching data:', error);\n            }\n        );\n    } else {\n        console.error('No datasources configured!');\n    }\n}\n\n// Function to update the widget status\nfunction updateStatus(status) {\n    const titleElement = document.getElementById('widgetTitle');\n    const goodBlock = document.getElementById('goodStatus');\n    const normalBlock = document.getElementById('normalStatus');\n    const badBlock = document.getElementById('badStatus');\n\n    // Reset all blocks\n    goodBlock.classList.remove('active');\n    normalBlock.classList.remove('active');\n    badBlock.classList.remove('active');\n\n    // Highlight the correct block\n    if (status === 'Good') {\n        goodBlock.classList.add('active');\n        titleElement.textContent = \"Worker is Good\";\n    } else if (status === 'Normal') {\n        normalBlock.classList.add('active');\n        titleElement.textContent = \"Worker is Normal\";\n    } else if (status === 'Bad') {\n        badBlock.classList.add('active');\n        titleElement.textContent = \"Worker is Bad\";\n    }\n}\n\n// Refresh data every 30 seconds\nsetInterval(fetchData, 30000);\n",
+      "settingsSchema" : "",
+      "dataKeySettingsSchema" : "",
+      "settingsDirective" : "tb-html-card-widget-settings",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"static\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":false,\"backgroundColor\":\"rgb(255, 255, 255)\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{\"cardHtml\":\"<div class='card'>HTML code here</div>\",\"cardCss\":\".card {\\n    font-weight: bold;\\n    font-size: 32px;\\n    color: #999;\\n    width: 100%;\\n    height: 100%;\\n    display: flex;\\n    align-items: center;\\n    justify-content: center;\\n}\"},\"title\":\"worker-status\",\"dropShadow\":true}"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "19dedd60-c74d-11ef-9ac5-95d0babc9857"
+    },
+    "scada" : false,
+    "tags" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

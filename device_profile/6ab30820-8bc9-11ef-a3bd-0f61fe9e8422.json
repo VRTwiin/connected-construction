@@ -16,7 +16,10 @@
       "id" : "56928e20-8bc8-11ef-a3bd-0f61fe9e8422"
     },
     "description" : "This is O2 Device Profile.",
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "6ab30820-8bc9-11ef-a3bd-0f61fe9e8422"
+    },
     "firmwareId" : null,
     "id" : {
       "entityType" : "DEVICE_PROFILE",

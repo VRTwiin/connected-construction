@@ -17,7 +17,10 @@
       }
     },
     "etag" : "077aa5c184b273457e2d4a84cb814e120113c5bc826a6e0b509a549b7deaf9be",
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "TB_RESOURCE",
+      "id" : "1dc00240-98b5-11ef-a3bd-0f61fe9e8422"
+    },
     "fileName" : "Metal.png",
     "id" : {
       "entityType" : "TB_RESOURCE",

@@ -3,7 +3,10 @@
   "entity" : {
     "alias" : "asra_widgets",
     "description" : "",
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "WIDGETS_BUNDLE",
+      "id" : "891e9690-9609-11ef-a3bd-0f61fe9e8422"
+    },
     "id" : {
       "entityType" : "WIDGETS_BUNDLE",
       "id" : "891e9690-9609-11ef-a3bd-0f61fe9e8422"

@@ -16,7 +16,10 @@
       "id" : "061534a0-8bb1-11ef-a3bd-0f61fe9e8422"
     },
     "description" : "This is Accelerometer Device Profile.",
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "01261fd0-8bb2-11ef-a3bd-0f61fe9e8422"
+    },
     "firmwareId" : null,
     "id" : {
       "entityType" : "DEVICE_PROFILE",

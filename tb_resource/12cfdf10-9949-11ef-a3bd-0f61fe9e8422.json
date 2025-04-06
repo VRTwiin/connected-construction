@@ -17,7 +17,10 @@
       }
     },
     "etag" : "1786f2cc3038dd940068f86d5db7a3d52dcd6f404968ea9cd8a33d4a06c22e8b",
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "TB_RESOURCE",
+      "id" : "12cfdf10-9949-11ef-a3bd-0f61fe9e8422"
+    },
     "fileName" : "alarm.png",
     "id" : {
       "entityType" : "TB_RESOURCE",

@@ -17,7 +17,10 @@
       }
     },
     "etag" : "8655a7d228528f0fd2fcd8b3d0b99b1c8e70b248b68fdba8cd7d81edb1d5c345",
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "TB_RESOURCE",
+      "id" : "3b18b2e0-90a6-11ef-a3bd-0f61fe9e8422"
+    },
     "fileName" : "logo.png",
     "id" : {
       "entityType" : "TB_RESOURCE",

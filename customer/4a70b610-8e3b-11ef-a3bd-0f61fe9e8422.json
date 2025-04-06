@@ -11,7 +11,10 @@
     "city" : "İstanbul",
     "country" : "Turkey",
     "email" : "info@benesta.com",
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "4a70b610-8e3b-11ef-a3bd-0f61fe9e8422"
+    },
     "id" : {
       "entityType" : "CUSTOMER",
       "id" : "4a70b610-8e3b-11ef-a3bd-0f61fe9e8422"

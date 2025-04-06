@@ -21,7 +21,10 @@
       "basicModeDirective" : "tb-scada-symbol-basic-config",
       "defaultConfig" : "{\"showTitle\":true,\"backgroundColor\":\"rgba(0, 0, 0, 0)\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"0px\",\"settings\":{\"background\":{\"type\":\"color\",\"imageUrl\":null,\"color\":\"rgb(255, 255, 255)\",\"overlay\":{\"enabled\":false,\"color\":\"rgba(255,255,255,0.72)\",\"blur\":3}},\"padding\":\"12px\",\"scadaSymbolUrl\":\"tb-image;/api/images/tenant/fan.svg\",\"scadaSymbolObjectSettings\":{\"behavior\":{},\"properties\":{}}},\"title\":\"Test Fan\",\"dropShadow\":true,\"enableFullscreen\":false,\"widgetStyle\":{},\"actions\":{},\"widgetCss\":\"\",\"noDataDisplayMessage\":\"\",\"titleFont\":{\"size\":16,\"sizeUnit\":\"px\",\"family\":\"Roboto\",\"weight\":\"500\",\"style\":null,\"lineHeight\":\"1.6\"},\"showTitleIcon\":false,\"titleTooltip\":\"\",\"titleStyle\":null,\"pageSize\":1024,\"titleIcon\":\"mdi:lightbulb-outline\",\"iconColor\":\"rgba(0, 0, 0, 0.87)\",\"iconSize\":\"24px\",\"configMode\":\"basic\",\"targetDevice\":null,\"titleColor\":null,\"borderRadius\":\"0px\",\"margin\":\"0px\"}"
     },
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "7528dfd0-9157-11ef-a3bd-0f61fe9e8422"
+    },
     "id" : {
       "entityType" : "WIDGET_TYPE",
       "id" : "7528dfd0-9157-11ef-a3bd-0f61fe9e8422"

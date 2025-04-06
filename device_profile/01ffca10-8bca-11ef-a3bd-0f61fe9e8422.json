@@ -16,7 +16,10 @@
       "id" : "7a2cc850-8bc8-11ef-a3bd-0f61fe9e8422"
     },
     "description" : "This is CO2 Device Profile.",
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "01ffca10-8bca-11ef-a3bd-0f61fe9e8422"
+    },
     "firmwareId" : null,
     "id" : {
       "entityType" : "DEVICE_PROFILE",

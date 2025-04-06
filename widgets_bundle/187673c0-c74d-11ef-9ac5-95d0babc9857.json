@@ -1,0 +1,22 @@
+{
+  "entityType" : "WIDGETS_BUNDLE",
+  "entity" : {
+    "alias" : "asra_custom_widgets",
+    "description" : "",
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGETS_BUNDLE",
+      "id" : "187673c0-c74d-11ef-9ac5-95d0babc9857"
+    },
+    "image" : "",
+    "name" : "Asra-custom-widgets",
+    "order" : null,
+    "scada" : true,
+    "title" : "Asra-custom-widgets"
+  },
+  "fqns" : [ "worker_status", "worker_tabel2", "total_worker", "capacity_worker", "total_fleet", "total_status" ],
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

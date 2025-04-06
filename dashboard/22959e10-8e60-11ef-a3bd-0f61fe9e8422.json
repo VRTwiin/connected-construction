@@ -1,11 +1,14 @@
 {
   "entityType" : "DASHBOARD",
   "entity" : {
-    "assignedCustomers" : null,
+    "assignedCustomers" : [ ],
     "configuration" : {
       "description" : "This dashboard is for doing practices which belongs to Ahmad."
     },
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "DASHBOARD",
+      "id" : "22959e10-8e60-11ef-a3bd-0f61fe9e8422"
+    },
     "id" : {
       "entityType" : "DASHBOARD",
       "id" : "22959e10-8e60-11ef-a3bd-0f61fe9e8422"

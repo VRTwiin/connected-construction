@@ -17,7 +17,10 @@
       }
     },
     "etag" : "ec9f793b61e0dcb1ffb5f208c90a52b5508d2e6ad507b8ffd91874b149a7685a",
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "TB_RESOURCE",
+      "id" : "392fee20-9084-11ef-a3bd-0f61fe9e8422"
+    },
     "fileName" : "smart_bus_tracking_dashboard_widget_bus_locations_marker_image_1.svg",
     "id" : {
       "entityType" : "TB_RESOURCE",

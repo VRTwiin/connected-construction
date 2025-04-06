@@ -17,7 +17,10 @@
       }
     },
     "etag" : "9cd29e07121856de788c5b637fa94c6f5a05f90cd4774714660ceba6ff8a2269",
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "TB_RESOURCE",
+      "id" : "6e49bad0-98ab-11ef-a3bd-0f61fe9e8422"
+    },
     "fileName" : "recycling-truck.png",
     "id" : {
       "entityType" : "TB_RESOURCE",

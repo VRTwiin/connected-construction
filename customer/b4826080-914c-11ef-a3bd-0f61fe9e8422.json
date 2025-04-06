@@ -9,7 +9,10 @@
     "city" : null,
     "country" : null,
     "email" : null,
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "b4826080-914c-11ef-a3bd-0f61fe9e8422"
+    },
     "id" : {
       "entityType" : "CUSTOMER",
       "id" : "b4826080-914c-11ef-a3bd-0f61fe9e8422"

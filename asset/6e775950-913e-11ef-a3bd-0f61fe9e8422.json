@@ -12,7 +12,10 @@
       "entityType" : "CUSTOMER",
       "id" : "4a70b610-8e3b-11ef-a3bd-0f61fe9e8422"
     },
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "ASSET",
+      "id" : "6e775950-913e-11ef-a3bd-0f61fe9e8422"
+    },
     "id" : {
       "entityType" : "ASSET",
       "id" : "6e775950-913e-11ef-a3bd-0f61fe9e8422"
@@ -33,7 +36,7 @@
     },
     "type" : "Contains",
     "typeGroup" : "COMMON",
-    "version" : 685
+    "version" : 242
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -46,7 +49,7 @@
     },
     "type" : "Contains",
     "typeGroup" : "COMMON",
-    "version" : 686
+    "version" : 243
   }, {
     "additionalInfo" : null,
     "from" : {
@@ -59,7 +62,7 @@
     },
     "type" : "Contains",
     "typeGroup" : "COMMON",
-    "version" : 687
+    "version" : 244
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]

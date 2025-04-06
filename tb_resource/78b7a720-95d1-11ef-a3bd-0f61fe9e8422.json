@@ -17,7 +17,10 @@
       }
     },
     "etag" : "83302841301ea25a48b5ee7dc8437d2e3226d7c3e0e39cc0f4ed83c0838ace2b",
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "TB_RESOURCE",
+      "id" : "78b7a720-95d1-11ef-a3bd-0f61fe9e8422"
+    },
     "fileName" : "360_F_724001193_eKGDuOZwvJoLt2zYHQQuFyyf2kQh7qEP.jpg",
     "id" : {
       "entityType" : "TB_RESOURCE",

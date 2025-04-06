@@ -17,7 +17,10 @@
       }
     },
     "etag" : "82243eb9ddbdf71709a713428e1f3023dfca475f7563509da3d6110f9f3a0fea",
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "TB_RESOURCE",
+      "id" : "da053730-9154-11ef-a3bd-0f61fe9e8422"
+    },
     "fileName" : "horizontal-pipe.svg",
     "id" : {
       "entityType" : "TB_RESOURCE",

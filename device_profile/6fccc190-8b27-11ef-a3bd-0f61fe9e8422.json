@@ -16,7 +16,10 @@
       "id" : "df507ea0-8b25-11ef-a3bd-0f61fe9e8422"
     },
     "description" : "This is Temperature Device Profile.",
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "6fccc190-8b27-11ef-a3bd-0f61fe9e8422"
+    },
     "firmwareId" : null,
     "id" : {
       "entityType" : "DEVICE_PROFILE",

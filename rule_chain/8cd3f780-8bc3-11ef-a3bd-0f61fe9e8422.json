@@ -6,7 +6,10 @@
     },
     "configuration" : null,
     "debugMode" : false,
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "8cd3f780-8bc3-11ef-a3bd-0f61fe9e8422"
+    },
     "firstRuleNodeId" : {
       "entityType" : "RULE_NODE",
       "id" : "f20dd0d0-8bc3-11ef-a3bd-0f61fe9e8422"

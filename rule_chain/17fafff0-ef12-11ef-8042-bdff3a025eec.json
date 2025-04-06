@@ -1,0 +1,130 @@
+{
+  "entityType" : "RULE_CHAIN",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "configuration" : null,
+    "debugMode" : false,
+    "externalId" : null,
+    "firstRuleNodeId" : null,
+    "id" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "17fafff0-ef12-11ef-8042-bdff3a025eec"
+    },
+    "name" : "test-api",
+    "root" : false,
+    "type" : "CORE"
+  },
+  "metaData" : {
+    "connections" : [ {
+      "fromIndex" : 0,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 1,
+      "toIndex" : 2,
+      "type" : "Success"
+    } ],
+    "firstNodeIndex" : null,
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 346,
+        "layoutY" : 154
+      },
+      "configuration" : {
+        "restEndpointUrlPattern" : "https://workspace.prod.jibble.io/v1/People?$select=id,email,fullName",
+        "requestMethod" : "GET",
+        "useSimpleClientHttpFactory" : false,
+        "parseToPlainText" : false,
+        "ignoreRequestBody" : false,
+        "enableProxy" : false,
+        "useSystemProxyProperties" : false,
+        "proxyScheme" : null,
+        "proxyHost" : null,
+        "proxyPort" : 0,
+        "proxyUser" : null,
+        "proxyPassword" : null,
+        "readTimeoutMs" : 5000,
+        "maxParallelRequestsCount" : 0,
+        "headers" : {
+          "Content-Type" : "application/json",
+          "Authorization" : "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjkxOTQwQ0I1M0ZFQjhEMERGNEI1QzZBODdERjM4NkNGNDdBQzE5MjdSUzI1NiIsInR5cCI6ImF0K2p3dCIsIng1dCI6ImtaUU10VF9yalEzMHRjYW9mZk9HejBlc0dTYyJ9.eyJuYmYiOjE3NDA2MzI5MjUsImV4cCI6MTc0MDYzNjUyNSwiaXNzIjoiaHR0cHM6Ly9pZGVudGl0eS5wcm9kLmppYmJsZS5pbyIsImF1ZCI6ImFwaTEiLCJjbGllbnRfaWQiOiIyMzAwYWFmYi1jNGI0LTQ0M2ItODgyYi1mODQ5N2QxOWY2NzYiLCJvcmdpZCI6ImQ0ODQxMmQyLThiNGQtNDliNC05MGQ5LTk0ZDNlNzgzMjU1NiIsInByc2lkIjoiYzRjNzY3ZTAtMzFlOC00ZDJjLThlNzQtMGU4NGQ1ZThkNmNhIiwic3ViIjoiNWYwMjI2YWYtMGZhOC00MDBlLWI1ODctY2E3MzYzN2U4NGFmIiwianRpIjoiMzdGNkJFMzg1NjE1QkYxQkM1OURFNkNFRjdCQkZBMjIiLCJpYXQiOjE3NDA2MzI5MjUsInNjb3BlIjpbImFwaTEiXSwiYW1yIjpbImNyZWQiXX0.FPfi3fLKab0gSgsowZW-FEcXGELaWAqekcv5Q2JxEhsigvbz6AEdmHY0YbalW6FiMxgIh5mZm86fCw2-qaQHtkSow8Ycu5xZ7P_rI3qi_A5YRYTXdHQvpWaGIVkPoJWRLyvGuvErl2l1whZ98eXxH1O0Olv8VtCBZTtjfe3k2mPs6iObQ07uySzkVO1TuDzHM77Oll-kbr-cpKXGfhUVhZa3Wspo6z7Rw1tZweleYH3fKIsu4W3SEZ1fUtsB1NaIFu14G0az67NTWZCSgKvSWqXwdaqWECQRIbhUNi5drCKMGLjY0JlEwtP41W0QKUPpWsjCuomkZNEW5_xLe1mBbIKqoPkShKeP2G4QG6Wk5Lw2sz-qS6S2RXdrqz-F7-df99Hg2yC_AJGftsdy4DUXa0PuQblB2lD31_YbZyig09oyk39s-YAf2ylIW3tABM6ltvatr8BZ_jgQ5qc3MRDPqWMTOAxatonx7v9GBkVWr0duefwpWsFbnDqhzyMXLj80hBmmemBc9EUx-_n5ij8jxYh0LVqB2wbFPNAb5L2fkxvVFpta5Y6m-ToE7guWt5NG1aI8HUeV3YD4t3kH9r6J4J4QruJ3EUznMXzwYFMccRN0G5K6TSqfNdHRpbo-JQcc1ULRVF5cM4bZv2Bf787qTcLnW0a4RyD0MxZ3ReNo5DE",
+          "Accept" : "application/json"
+        },
+        "credentials" : {
+          "type" : "anonymous"
+        },
+        "maxInMemoryBufferSizeInKb" : 256
+      },
+      "configurationVersion" : 3,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a0116380-f4ca-11ef-8042-bdff3a025eec"
+      },
+      "name" : "API to connected Jibble",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.rest.TbRestApiCallNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 417,
+        "layoutY" : 329
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var data = JSON.parse(metadata.responseBody);\nvar result = [];\ndata.value.forEach(user => {\n    result.push({\n        id: user.id,\n        email: user.email,\n        fullName: user.fullName\n    });\n});\n\nreturn {\n    metadata: metadata,\n    msg: result\n};\n",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a011b1a0-f4ca-11ef-8042-bdff3a025eec"
+      },
+      "name" : "Script-API-Jibble",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 683,
+        "layoutY" : 483
+      },
+      "configuration" : {
+        "scope" : "SERVER_SCOPE",
+        "notifyDevice" : false,
+        "sendAttributesUpdatedNotification" : false,
+        "updateAttributesOnlyOnValueChange" : true
+      },
+      "configurationVersion" : 2,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a011d8b0-f4ca-11ef-8042-bdff3a025eec"
+      },
+      "name" : "Save-Info",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
+    } ],
+    "ruleChainConnections" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

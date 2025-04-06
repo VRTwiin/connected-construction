@@ -16,7 +16,10 @@
       "id" : "4f58bea0-8bcc-11ef-a3bd-0f61fe9e8422"
     },
     "description" : "This is Heart Rate Device Profile.",
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "ff8091e0-8bcc-11ef-a3bd-0f61fe9e8422"
+    },
     "firmwareId" : null,
     "id" : {
       "entityType" : "DEVICE_PROFILE",

@@ -17,7 +17,10 @@
       }
     },
     "etag" : "ea4c82d0cd852c9de77486dd2ff8463dd83e6142ba01b092f1da1be594954057",
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "TB_RESOURCE",
+      "id" : "61c586e0-951d-11ef-a3bd-0f61fe9e8422"
+    },
     "fileName" : "happy.png",
     "id" : {
       "entityType" : "TB_RESOURCE",

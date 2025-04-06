@@ -1551,76 +1551,76 @@
             "main" : {
               "widgets" : {
                 "07a56049-fac5-3ee9-9d17-fec06976827a" : {
-                  "sizeX" : 116,
-                  "sizeY" : 4,
+                  "sizeX" : 201,
+                  "sizeY" : 7,
                   "row" : 0,
                   "col" : 0
                 },
                 "b5f64770-2a2b-ba94-a74a-0fd21f064032" : {
-                  "sizeX" : 16,
-                  "sizeY" : 29,
-                  "row" : 25,
-                  "col" : 0
+                  "sizeX" : 31,
+                  "sizeY" : 58,
+                  "row" : 46,
+                  "col" : 50
                 },
                 "b676baf1-a3db-6f4f-1a6d-22028ccd71da" : {
-                  "sizeX" : 26,
-                  "sizeY" : 23,
-                  "row" : 25,
-                  "col" : 16
+                  "sizeX" : 49,
+                  "sizeY" : 46,
+                  "row" : 40,
+                  "col" : 0
                 },
                 "4b9f1ed4-f07e-4d59-b3f3-22e0365672f6" : {
-                  "sizeX" : 29,
-                  "sizeY" : 21,
-                  "row" : 4,
+                  "sizeX" : 26,
+                  "sizeY" : 33,
+                  "row" : 7,
                   "col" : 0
                 },
                 "efc0a98a-0e72-f993-c3b0-d3f9ea977269" : {
-                  "sizeX" : 55,
-                  "sizeY" : 29,
-                  "row" : 4,
-                  "col" : 61
+                  "sizeX" : 77,
+                  "sizeY" : 36,
+                  "row" : 7,
+                  "col" : 63
                 },
                 "cfd1b1d4-46c9-d756-8a32-5bf1f23e60da" : {
-                  "sizeX" : 19,
-                  "sizeY" : 17,
-                  "row" : 4,
-                  "col" : 42
+                  "sizeX" : 37,
+                  "sizeY" : 33,
+                  "row" : 7,
+                  "col" : 26
                 },
                 "67ff129c-3716-48c4-a01a-6eff91c77517" : {
-                  "sizeX" : 13,
-                  "sizeY" : 21,
-                  "row" : 4,
-                  "col" : 29
+                  "sizeX" : 27,
+                  "sizeY" : 42,
+                  "row" : 71,
+                  "col" : 81
                 },
                 "c241ba15-408a-6b31-1e48-b7db03011406" : {
-                  "sizeX" : 19,
-                  "sizeY" : 13,
-                  "row" : 21,
-                  "col" : 42
-                },
-                "6022934e-f511-c9ff-598c-c85a5d4779a1" : {
-                  "sizeX" : 55,
-                  "sizeY" : 36,
-                  "row" : 33,
-                  "col" : 61
-                },
-                "25687efa-df72-b7a9-8f45-93c41857e8ba" : {
-                  "sizeX" : 45,
-                  "sizeY" : 20,
-                  "row" : 48,
-                  "col" : 16
-                },
-                "e82de385-deb5-bb1a-7c0b-b10da84b0e61" : {
-                  "sizeX" : 16,
-                  "sizeY" : 14,
-                  "row" : 54,
+                  "sizeX" : 27,
+                  "sizeY" : 27,
+                  "row" : 86,
                   "col" : 0
                 },
+                "6022934e-f511-c9ff-598c-c85a5d4779a1" : {
+                  "sizeX" : 61,
+                  "sizeY" : 106,
+                  "row" : 7,
+                  "col" : 140
+                },
+                "25687efa-df72-b7a9-8f45-93c41857e8ba" : {
+                  "sizeX" : 32,
+                  "sizeY" : 67,
+                  "row" : 46,
+                  "col" : 108
+                },
+                "e82de385-deb5-bb1a-7c0b-b10da84b0e61" : {
+                  "sizeX" : 22,
+                  "sizeY" : 27,
+                  "row" : 86,
+                  "col" : 27
+                },
                 "4b1ccc96-27e7-ebf6-0cca-1d969937e88a" : {
-                  "sizeX" : 12,
-                  "sizeY" : 14,
-                  "row" : 34,
-                  "col" : 45
+                  "sizeX" : 26,
+                  "sizeY" : 28,
+                  "row" : 43,
+                  "col" : 82
                 }
               },
               "gridSettings" : {
@@ -1761,7 +1761,10 @@
         "dashboardCss" : "\n.tb-widget-container > .tb-widget .tb-markdown-view .tb-progress-cover, .tb-widget-container > .tb-widget .tb-markdown-view .mat-drawer-container {\n    background-color: #fff;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-markdown-view .tb-progress-cover, .tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-markdown-view .mat-drawer-container {\n    background: #0D2743;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-widget-loading {\n    background: rgba(13, 39, 67, 0.15);\n}\n\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget img.leaflet-tile {\n    filter: invert(1) saturate(0) brightness(2);\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .leaflet-tile-pane {\n    opacity: 0.4;\n}\n\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .leaflet-container {\n    background-color: #0D2743;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .leaflet-control-container + div {\n    background-color: rgba(13, 39, 67, 0.7) !important;\n}\n\n\n.tb-widget-container > .tb-widget {\n    border-radius: 8px;\n}\n\ngridster-item:not(.tb-noselect) > .tb-widget-container > .tb-widget {\n    cursor: default !important;\n}\n\n.tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-row {\n    cursor: pointer;\n}\n\n.tb-widget-container > .tb-widget .tb-legend-keys {\n    cursor: pointer;\n}\n\n.tb-dashboard-page.dark tb-dashboard > div {\n    background-color: #0A1F36 !important; /* rgb(238, 238, 238)*/\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget {\n    background: #0D2743 !important;\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-time-series-chart-legend-type-label {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-time-series-chart-legend-item-label div {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-time-series-chart-legend-value {\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .flot-text {\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .flot-text > div > div {\n    color: rgba(255, 255, 255, 0.87) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-header-row {\n    background-color: #0D2743 !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-header-cell.mat-mdc-table-sticky {\n    background-color: #0D2743 !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-row .mat-mdc-cell.mat-mdc-table-sticky {\n    background-color: #0D2743 !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-header-cell {\n    color: rgba(255, 255, 255, 0.87) !important;\n    border-bottom-color: rgba(255, 255, 255, 0.2) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-cell {\n    color: rgba(255, 255, 255, 0.87) !important;\n    border-bottom-color: rgba(255, 255, 255, 0.2) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-header-cell .mat-sort-header-arrow {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-divider {\n    border-top-color: rgba(255, 255, 255, 0.2) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-input-element::placeholder {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-input-element::-moz-placeholder {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-input-element::-webkit-input-placeholder {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-input-element:-ms-input-placeholder {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-cell .mdc-checkbox__background,.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-header-cell .mdc-checkbox__background {\n    border-color : rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-cell button.mat-mdc-icon-button mat-icon {\n    color : rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget mat-toolbar.mat-mdc-table-toolbar:not([color=\"primary\"]) button.mat-mdc-icon-button mat-icon {\n    color : rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-table .mat-mdc-cell button.mat-mdc-icon-button[disabled][disabled] mat-icon {\n    color : rgba(255, 255, 255, 0.2) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-paginator {\n    color: rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget button.mat-mdc-icon-button mat-icon,\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget button.mat-mdc-icon-button,\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-paginator button.mat-mdc-icon-button {\n    color : rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget button.mat-mdc-icon-button[disabled][disabled],\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-paginator button.mat-mdc-icon-button[disabled][disabled] {\n    color : rgba(255, 255, 255, 0.2) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .mat-mdc-select-value,\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .tb-table-widget .mat-mdc-paginator .mat-mdc-select-value {\n    color : rgba(255, 255, 255, 0.57) !important;\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .mat-mdc-select-arrow {\n    color : rgba(255, 255, 255, 0.57);\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple:before {\n    border-bottom-color: rgba(255, 255, 255, 0.4);\n}\n\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading, \n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,\n.tb-dashboard-page.dark .tb-widget-container > .tb-widget .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing {\n    border-color: rgba(255, 255, 255, 0.4);\n}\n\n.tb-dashboard-page.dark .tb-markdown-view div,\n.tb-dashboard-page.dark .tb-markdown-view div.param,\n.tb-dashboard-page.dark .tb-markdown-view .header .title,\n.tb-dashboard-page.dark .tb-markdown-view p {\n    color : rgba(255, 255, 255, 0.87);\n}\n\n.tb-dashboard-page.dark .tb-markdown-view div.param-title,\n.tb-dashboard-page.dark .tb-markdown-view .header .subtitle {\n    color : rgba(255, 255, 255, 0.6);\n}\n\n.tb-dashboard-page.dark .tb-powered-by-footer {\n    color : rgba(255, 255, 255, 0.87) !important;\n}\n\n.mat-toolbar {\n    background-color: #5e432b !important; /* Green color */\n}"
       }
     },
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "DASHBOARD",
+      "id" : "969d5b30-98a7-11ef-a3bd-0f61fe9e8422"
+    },
     "id" : {
       "entityType" : "DASHBOARD",
       "id" : "969d5b30-98a7-11ef-a3bd-0f61fe9e8422"

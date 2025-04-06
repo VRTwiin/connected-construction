@@ -17,7 +17,10 @@
       }
     },
     "etag" : "05064e48f1876a1501ebcb95a8abc4de0f9124ad432fc065000eb645964635e3",
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "TB_RESOURCE",
+      "id" : "d9886610-9154-11ef-a3bd-0f61fe9e8422"
+    },
     "fileName" : "top-flow-meter.svg",
     "id" : {
       "entityType" : "TB_RESOURCE",

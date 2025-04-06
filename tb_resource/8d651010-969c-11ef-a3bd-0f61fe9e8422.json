@@ -17,7 +17,10 @@
       }
     },
     "etag" : "64197f86e11c65fe075ab44288940a359f60175f259f77a815c757b8abab2349",
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "TB_RESOURCE",
+      "id" : "8d651010-969c-11ef-a3bd-0f61fe9e8422"
+    },
     "fileName" : "benesta_logo.svg",
     "id" : {
       "entityType" : "TB_RESOURCE",

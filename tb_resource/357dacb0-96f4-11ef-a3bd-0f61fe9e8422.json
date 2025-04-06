@@ -17,7 +17,10 @@
       }
     },
     "etag" : "ec0feb476cd7296e6edfa2dda6087d32fb78d4ea25b0ad2346186967bbad90d0",
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "TB_RESOURCE",
+      "id" : "357dacb0-96f4-11ef-a3bd-0f61fe9e8422"
+    },
     "fileName" : "materials_graph_hpp.png",
     "id" : {
       "entityType" : "TB_RESOURCE",

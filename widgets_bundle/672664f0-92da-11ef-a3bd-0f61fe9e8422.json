@@ -3,7 +3,10 @@
   "entity" : {
     "alias" : "open_alerts_and_assigned_open_alerts",
     "description" : null,
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "WIDGETS_BUNDLE",
+      "id" : "672664f0-92da-11ef-a3bd-0f61fe9e8422"
+    },
     "id" : {
       "entityType" : "WIDGETS_BUNDLE",
       "id" : "672664f0-92da-11ef-a3bd-0f61fe9e8422"

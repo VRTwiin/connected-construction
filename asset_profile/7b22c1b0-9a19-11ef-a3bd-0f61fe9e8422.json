@@ -10,7 +10,10 @@
       "id" : "2c0942f0-8b25-11ef-a3bd-0f61fe9e8422"
     },
     "description" : "For machine failure dashboard",
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "ASSET_PROFILE",
+      "id" : "7b22c1b0-9a19-11ef-a3bd-0f61fe9e8422"
+    },
     "id" : {
       "entityType" : "ASSET_PROFILE",
       "id" : "7b22c1b0-9a19-11ef-a3bd-0f61fe9e8422"

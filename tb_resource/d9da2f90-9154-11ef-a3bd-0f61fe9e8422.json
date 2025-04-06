@@ -17,7 +17,10 @@
       }
     },
     "etag" : "9cd1c74d87251b2e6944a18a62d5d0e81134e094a4450319de1970b180bdb2f3",
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "TB_RESOURCE",
+      "id" : "d9da2f90-9154-11ef-a3bd-0f61fe9e8422"
+    },
     "fileName" : "centrifugal-pump.svg",
     "id" : {
       "entityType" : "TB_RESOURCE",

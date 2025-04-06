@@ -1,0 +1,34 @@
+{
+  "entityType" : "WIDGET_TYPE",
+  "entity" : {
+    "fqn" : "total_status",
+    "name" : "total-status",
+    "deprecated" : false,
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "static",
+      "sizeX" : 7.5,
+      "sizeY" : 3,
+      "resources" : [ ],
+      "templateHtml" : "<div class=\"widget-container\">\n  <div class=\"status-header\">\n    <span id=\"status-icon\"></span>\n    <h1 id=\"status-text\"></h1>\n  </div>\n  <div class=\"status-footer\">\n    <p id=\"total-text\"></p>\n  </div>\n</div>\n",
+      "templateCss" : ".widget-container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  width: 100%;\n  height: 100%;\n  border-radius: 15px;\n  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);\n  overflow: hidden;\n  text-align: center;\n}\n\n.status-header {\n  flex: 3;\n  width: 100%;\n  background-color: #e5e7eb;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  padding: 20px;\n  transition: background-color 0.3s;\n}\n\n.status-header span {\n  font-size: 4rem;\n}\n\n.status-header h1 {\n  margin-top: 10px;\n  font-size: 1.5rem;\n  font-weight: bold;\n  color: #333;\n}\n\n.status-footer {\n  flex: 1;\n  width: 100%;\n  background-color: #f9fafb;\n  padding: 10px 20px;\n  font-size: 1.2rem;\n  color: #555;\n}\n\n@media (max-width: 600px) {\n  .status-header span {\n    font-size: 3rem;\n  }\n\n  .status-header h1 {\n    font-size: 1.2rem;\n  }\n\n  .status-footer {\n    font-size: 1rem;\n  }\n}\n",
+      "controllerScript" : "self.onInit = async function () {\n  const apiUrl = \"https://api.vrtwin.org/api/fleet/on-route-status\";\n  const statusCircle = document.querySelector(\".status-header, .status-circle\");\n  const statusIcon = document.getElementById(\"status-icon\");\n  const statusText = document.getElementById(\"status-text\");\n  const totalText = document.getElementById(\"total-text\");\n\n  const statusConfig = {\n    good: { color: \"#4caf50\", icon: \"✅\" }, // سبز\n    bad: { color: \"#f44336\", icon: \"❌\" }, // قرمز\n    normal: { color: \"#2196f3\", icon: \"⚠️\" }, // آبی\n  };\n\n  try {\n    const response = await fetch(apiUrl);\n    const data = await response.json();\n\n    const status = data.status || \"unknown\";\n    const total = data.total || 0;\n\n    const config = statusConfig[status] || { color: \"#ffeb3b\", icon: \"❓\" };\n    statusCircle.style.backgroundColor = config.color;\n    statusIcon.textContent = config.icon;\n    statusText.textContent = `Status: ${status}`;\n    totalText.textContent = `Total: ${total}`;\n  } catch (error) {\n    console.error(\"Failed to fetch data from API:\", error);\n    statusCircle.style.backgroundColor = \"#9e9e9e\";\n    statusIcon.textContent = \"⚠️\";\n    statusText.textContent = \"Status: Error\";\n    totalText.textContent = \"Total: N/A\";\n  }\n};\n",
+      "settingsSchema" : "",
+      "dataKeySettingsSchema" : "",
+      "settingsDirective" : "tb-html-card-widget-settings",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"static\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":false,\"backgroundColor\":\"rgb(255, 255, 255)\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{\"cardHtml\":\"<div class='card'>HTML code here</div>\",\"cardCss\":\".card {\\n    font-weight: bold;\\n    font-size: 32px;\\n    color: #999;\\n    width: 100%;\\n    height: 100%;\\n    display: flex;\\n    align-items: center;\\n    justify-content: center;\\n}\"},\"title\":\"total-status\",\"dropShadow\":true}"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "99e19460-ca65-11ef-9ac5-95d0babc9857"
+    },
+    "scada" : false,
+    "tags" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

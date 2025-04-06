@@ -1,0 +1,34 @@
+{
+  "entityType" : "WIDGET_TYPE",
+  "entity" : {
+    "fqn" : "capacity_worker",
+    "name" : "capacity-worker",
+    "deprecated" : false,
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "static",
+      "sizeX" : 7.5,
+      "sizeY" : 3,
+      "resources" : [ ],
+      "templateHtml" : "<div class=\"widget-container\">\n    <div class=\"widget-header\">Capacity</div>\n    <div class=\"widget-content\">\n        <div class=\"bar-container\">\n            <div id=\"bar-progress\" class=\"bar-progress\"></div>\n        </div>\n        <div class=\"bar-label\">\n            <span id=\"capacity-percentage\">0%</span>\n        </div>\n    </div>\n    <div class=\"widget-footer\">\n        <span class=\"footer-text\">Capacity in use</span>\n    </div>\n</div>\n",
+      "templateCss" : ".bar-container {\n    width: 100%;\n    height: 20px;\n    background: #eaeaea;\n    border-radius: 10px;\n    overflow: hidden;\n    margin: 20px 0;\n    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);\n}\n\n.bar-progress {\n    height: 100%;\n    width: 0%;\n    background: linear-gradient(90deg, #4caf50, #81c784);\n    transition: width 0.5s ease;\n}\n\n.bar-label {\n    margin-top: 8px;\n    font-size: 18px;\n    font-weight: bold;\n    color: #333;\n}\n",
+      "controllerScript" : "self.onInit = function() {\n    const apiUrl = \"https://api.example.com/capacity\"; // Replace with your API\n\n    function updateCapacity() {\n        fetch(apiUrl)\n            .then(response => response.json())\n            .then(data => {\n                if (data && data.capacityPercentage !== undefined) {\n                    const capacity = Math.min(Math.max(data.capacityPercentage, 0), 100); // Ensure 0-100\n\n                    // Update Circular Progress Bar\n                    const circleProgress = document.getElementById('circle-progress');\n                    if (circleProgress) {\n                        circleProgress.setAttribute('stroke-dasharray', `${capacity}, 100`);\n                    }\n\n                    // Update Horizontal Bar\n                    const barProgress = document.getElementById('bar-progress');\n                    if (barProgress) {\n                        barProgress.style.width = `${capacity}%`;\n                    }\n\n                    // Update Gauge\n                    const gaugeNeedle = document.getElementById('gauge-needle');\n                    if (gaugeNeedle) {\n                        gaugeNeedle.style.transform = `rotate(${(capacity * 1.8) - 90}deg)`; // Map to 0-180 degrees\n                    }\n\n                    // Update Percentage\n                    const capacityPercentage = document.getElementById('capacity-percentage');\n                    if (capacityPercentage) {\n                        capacityPercentage.innerText = `${capacity}%`;\n                    }\n                } else {\n                    console.error(\"Unexpected API response:\", data);\n                }\n            })\n            .catch(error => {\n                console.error(\"Error fetching capacity data:\", error);\n                const capacityPercentage = document.getElementById('capacity-percentage');\n                if (capacityPercentage) {\n                    capacityPercentage.innerText = \"N/A\";\n                }\n            });\n    }\n\n    // Initial load\n    updateCapacity();\n\n    // Update every 30 seconds\n    setInterval(updateCapacity, 30000);\n};\n",
+      "settingsSchema" : "",
+      "dataKeySettingsSchema" : "",
+      "settingsDirective" : "tb-html-card-widget-settings",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"static\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":false,\"backgroundColor\":\"rgb(255, 255, 255)\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{\"cardHtml\":\"<div class='card'>HTML code here</div>\",\"cardCss\":\".card {\\n    font-weight: bold;\\n    font-size: 32px;\\n    color: #999;\\n    width: 100%;\\n    height: 100%;\\n    display: flex;\\n    align-items: center;\\n    justify-content: center;\\n}\"},\"title\":\"capacity-worker\",\"dropShadow\":true}"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "0363ad20-c952-11ef-9ac5-95d0babc9857"
+    },
+    "scada" : false,
+    "tags" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

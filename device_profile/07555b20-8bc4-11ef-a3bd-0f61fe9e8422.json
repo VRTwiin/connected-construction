@@ -16,7 +16,10 @@
       "id" : "8cd3f780-8bc3-11ef-a3bd-0f61fe9e8422"
     },
     "description" : "This is IPS Device Profile.",
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "07555b20-8bc4-11ef-a3bd-0f61fe9e8422"
+    },
     "firmwareId" : null,
     "id" : {
       "entityType" : "DEVICE_PROFILE",

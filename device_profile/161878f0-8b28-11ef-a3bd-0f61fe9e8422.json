@@ -16,7 +16,10 @@
       "id" : "d751fc60-8b25-11ef-a3bd-0f61fe9e8422"
     },
     "description" : "This is Body Temperature Device Profile.",
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "161878f0-8b28-11ef-a3bd-0f61fe9e8422"
+    },
     "firmwareId" : null,
     "id" : {
       "entityType" : "DEVICE_PROFILE",

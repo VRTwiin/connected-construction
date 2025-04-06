@@ -1,0 +1,34 @@
+{
+  "entityType" : "WIDGET_TYPE",
+  "entity" : {
+    "fqn" : "total_worker",
+    "name" : "total-worker",
+    "deprecated" : false,
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "static",
+      "sizeX" : 7.5,
+      "sizeY" : 3,
+      "resources" : [ ],
+      "templateHtml" : "<div class=\"widget-container\">\n    <div class=\"widget-header\">\n        <div class=\"widget-title\">Workers On-Site</div>\n    </div>\n    <div class=\"widget-content\">\n        <div class=\"number-section\">\n            <img id=\"widget-icon\" class=\"widget-icon\" src=\"https://cdn-icons-png.flaticon.com/512/3135/3135715.png\" alt=\"Worker Icon\" />\n            <div id=\"worker-count\" class=\"worker-count\">2</div>\n        </div>\n    </div>\n    <div class=\"widget-footer\">\n        <span class=\"footer-text\">Real-time worker monitoring</span>\n    </div>\n</div>\n",
+      "templateCss" : ".widget-container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: space-between;\n    height: 100%;\n    background: linear-gradient(135deg, #f7f9fc, #e3eaf3);\n    border-radius: 12px;\n    padding: 20px;\n    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);\n    font-family: 'Poppins', sans-serif;\n    color: #333;\n    text-align: center;\n}\n\n.widget-header {\n    font-size: 20px;\n    font-weight: bold;\n    color: #555;\n    margin-bottom: 10px;\n}\n\n.widget-content {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\n.number-section {\n    display: flex;\n    align-items: center;\n    gap: 10px;\n}\n\n.widget-icon {\n    width: 48px;\n    height: 48px;\n    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.2));\n}\n\n.worker-count {\n    font-size: 56px;\n    font-weight: bold;\n    color: #007BFF;\n    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);\n}\n\n.widget-footer {\n    font-size: 14px;\n    color: #777;\n    margin-top: 12px;\n}\n",
+      "controllerScript" : "self.onInit = function() {\n    const apiUrl = \"https://api.vrtwin.org/api/worker/list/onSiteCount\";\n\n    function refreshWorkerCount() {\n        fetch(apiUrl)\n            .then(response => response.json())\n            .then(data => {\n                if (data && data.workersOnSiteCount !== undefined) {\n                    document.getElementById('worker-count').innerText = data.workersOnSiteCount;\n                } else {\n                    console.error(\"Unexpected response:\", data);\n                }\n            })\n            .catch(error => {\n                console.error(\"Error fetching worker count:\", error);\n                document.getElementById('worker-count').innerText = \"N/A\";\n            });\n    }\n\n    // Initial load\n    refreshWorkerCount();\n\n    // Update every 30 seconds\n    setInterval(refreshWorkerCount, 30000);\n};\n",
+      "settingsSchema" : "",
+      "dataKeySettingsSchema" : "",
+      "settingsDirective" : "tb-html-card-widget-settings",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"static\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":false,\"backgroundColor\":\"rgb(255, 255, 255)\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{\"cardHtml\":\"<div class='card'>HTML code here</div>\",\"cardCss\":\".card {\\n    font-weight: bold;\\n    font-size: 32px;\\n    color: #999;\\n    width: 100%;\\n    height: 100%;\\n    display: flex;\\n    align-items: center;\\n    justify-content: center;\\n}\"},\"title\":\"total-worker\",\"dropShadow\":true}"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "9c9323b0-c950-11ef-9ac5-95d0babc9857"
+    },
+    "scada" : false,
+    "tags" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}
